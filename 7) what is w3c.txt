@@ -1,0 +1,9 @@
+what is w3c?
+  
+  w3c stand for world wibe web consortium
+   w3c is an organization 
+   w3c is decided which tag is depricated or not in html
+
+   example :
+       <center></center>
+       <blink></blink>

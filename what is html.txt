@@ -1,0 +1,14 @@
+html is hypertext markup language
+html first time released in 1986 by tim berner lee
+html is uses in create html content
+html is a case sensitive language
+html is a markup language
+
+
+what is a hypertext?
+
+hypertext means redirect one page to another page
+
+
+what is a markup?
+markup means always enguaged with web browers or load on web browser

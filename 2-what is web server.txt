@@ -1,0 +1,10 @@
+web server store information of users on web clouds there we used web server.
+
+example : 1) google
+          2)amazon
+          3)go daddy
+          4)scalahost
+          5)hostinger
+
+
+          A web server is a computer system or software that stores, processes, and delivers web pages to users over the internet or a private network.

@@ -1,0 +1,11 @@
+when we search any content on internet there we can used web browsers
+
+
+example : 1) firefox
+          2)chrome
+          3)safari
+          4)ms edge
+          5)opera
+
+
+          A browser (short for web browser) is a software application used to access and interact with content on the World Wide Web. It retrieves information from web servers and displays it to users in a readable and interactive format.

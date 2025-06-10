@@ -1,0 +1,68 @@
+xammp
+
+XAMPP is a free, open-source software package that helps you easily set up a local web server on your computer for testing and development.
+
+
+✅ Full Form of XAMPP:
+Letter	Meaning
+X	Cross-platform (Windows/Linux/macOS)
+A	Apache (Web Server)
+M	MySQL (Database)
+P	PHP (Scripting Language)
+P	Perl (Another programming language)
+
+
+
+🔧 What You Can Do With XAMPP:
+Run PHP & MySQL websites (like WordPress) on your local PC.
+
+Test web apps before putting them online.
+
+Learn backend development (PHP, database) without needing an internet server.
+
+
+
+
+lamp
+
+LAMP is a popular open-source software stack used for building and hosting dynamic websites and web applications — usually on Linux-based servers.
+
+
+✅ Full Form of LAMP:
+Letter	Stands For	Purpose
+L	Linux	Operating System
+A	Apache	Web Server to handle HTTP requests
+M	MySQL or MariaDB	Database to store data
+P	PHP, Perl, or Python	Backend programming language
+
+
+
+
+wamp
+
+
+WAMP is a software stack similar to LAMP but designed to run on Windows computers for local web development.
+
+
+✅ Full Form of WAMP:
+Letter	Meaning
+W	Windows (Operating System)
+A	Apache (Web Server)
+M	MySQL (Database)
+P	PHP (Programming Language)
+
+
+
+mamp
+
+MAMP is a software stack used to run a local web server environment on macOS (and also available for Windows).
+
+
+
+
+✅ Full Form of MAMP:
+Letter	Meaning
+M	Mac (originally macOS)
+A	Apache (Web Server)
+M	MySQL (Database)
+P	PHP (Programming Language)

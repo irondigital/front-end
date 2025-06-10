@@ -1,0 +1,20 @@
+protocol is a set a rules in website
+
+
+example:
+
+https - hypertext transfer protocol secure - means secure website 
+http - hypertext transfer protocol secure
+
+
+
+A protocol is a set of rules that defines how data is transmitted and received between computers or devices over a network (like the Internet).
+
+✅ Common Internet Protocols:
+Protocol	Stands For	Use Case
+HTTP	HyperText Transfer Protocol	Basic web browsing (insecure)
+HTTPS	HTTP Secure (with encryption)	Secure web browsing (encrypted)
+FTP	File Transfer Protocol	Upload/download files
+SMTP	Simple Mail Transfer Protocol	Sending emails
+IMAP/POP3	Mail protocols	Receiving emails
+TCP/IP	Transmission Control Protocol / Internet Protocol	Core rules for the Internet

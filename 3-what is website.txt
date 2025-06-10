@@ -1,0 +1,19 @@
+collections of information that is called website.
+
+  example 1)messo
+          2)flipcart
+        
+
+        type of website
+
+        1) static website
+                 A website is called static website where we can not changed or update after create a website.
+
+
+
+
+        2) dynamic website
+                 where we can changed or update a data after create a website.
+
+                 1)flipcart
+                 2)messo
