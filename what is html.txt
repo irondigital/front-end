@@ -12,3 +12,14 @@ hypertext means redirect one page to another page
 
 what is a markup?
 markup means always enguaged with web browers or load on web browser
+
+
+type of element
+
+blocked element
+non-blocked element(inline element);
+
+type of tags
+
+paired tag= p,div,form,table
+non-paired tag = br,hr
