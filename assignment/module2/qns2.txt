@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>: 
+this is defines a html version and document type.it can helps a browser for render files.
+
+<html>:
+html is root element and all the content is in there.
+
+<meta>:
+meta data is desicribes a character like using this meta can defines and understand the code.
+
+<tittle>:
+
+title is a using for giving title name and also it can not see in our page but we can see that in tab.
+
+<head>:
+
+in head tags defines many type of tages like meta,title.and aslo using this we can add external file path in head tag using link tag.
+
+<body>:
+
+basically body is our website pages and in body tags we can many more tags and define our page structure.

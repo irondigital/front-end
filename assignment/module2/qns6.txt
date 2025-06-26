@@ -1,0 +1,22 @@
+get method:
+data sent in the url as a query parameters.
+form data is visible in the browser address bar.
+we can send limited amout of data.
+faster and suitable for read-only request.
+less security
+
+used:
+data retrieval only.
+you want urls to be sharable/bookmarkable.
+
+
+post method:
+data sent in the body of http request and  not visible in the url.
+it can handle large amout of data.
+more secure than get.
+used for actions and serve data.
+
+used:
+submitting sensitive data
+uploading large text and files.
+making changes to databases and server. 

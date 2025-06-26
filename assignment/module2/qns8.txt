@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>
+                heading 1
+            </th>
+            <th>heading 2</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>data 1</td>
+
+            <td>data 2</td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
+
+this is a basic structure of table in html. it can used to we can create a table in html.
+
+table:
+it is a container of all table content.it can wrap all the table elements like rows and heading.
+
+thead:
+it stands for table head. group of all header in rows in toghether.
+
+tr:
+it stands for table rows. it defines a single horizontal rows in table.
+
+th:
+stands for table header. it can define a heading in html pages used to table rows.
+
+td:
+stands for table data.it can define a table data in rows.

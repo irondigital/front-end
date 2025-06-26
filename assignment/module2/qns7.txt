@@ -1,0 +1,16 @@
+label element is used to associative a text description for a form controla such as a input,textarea,select. it helps user understable what each input field is for.it can help a browser and seo for understand code.
+
+two main way to use the label tag:
+ 
+ 1.with for attributes:
+ <label for="username">username: </label>
+ <input type="text" id="username" name="username">
+
+2.inside the label tag:
+ <label for="username">username: <input type="text" name="username"></label>
+
+
+ improve acessibility:
+ screen reader can read  label text easily,helping impaired users understand the purpose of each field.
+ clicking on the label text focusing on the corresponding input and improve usebility of all users.
+ it can provides a clear relationship between the field and description so users can easily understand.

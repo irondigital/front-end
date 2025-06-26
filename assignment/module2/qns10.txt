@@ -1,0 +1,25 @@
+html tables were commonly used to create a web pages layout.but this practice is now discoveraged.here why
+
+1.poor accessibility:
+tables used for layouts confuse screen readers which except table to data.
+make it harder for visually impared user to navigate a pages.
+
+2.hard to maintaince:
+layouts table have complex and nested the data.
+editing and updating is time-consuming and error prone.
+
+3.not responsive:
+it can not perfectly work on small screen and different sreen sizes.
+website look like a broken and clutter in small screen.
+
+4.violates separation of corners:
+mixing layout of content break the principal of structuring and style separation.
+
+better alternative:
+we can use many type alternative layouts.
+we can use css layout  it can be a more clear and understandeble format.use this we can create a our website like responsive,clean.
+
+most common layout:
+grid- two dimensional layout
+flexbox-one dimensional layout
+media queries- make responsive website for all screen sizes.

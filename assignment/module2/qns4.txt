@@ -1,0 +1,11 @@
+semnatic tags is used in html.it can clearly describes the meaning of  purpose of the content inside them.that can helps seo and browser to understand why we can use this and what is the purpose of then. also using this developers can understand the content because it can easy and readeble format so mostly companys and developers can use this semnatic tags.
+
+why important in accessibility and seo:
+
+screen reader and assistive technologies can better interrupt and navigate a page.
+it can help a users to understand web pages.
+seo is serach engine optimization.it can improve visibiliity of the content so it read easily and  give better result for users and it can categorise the content. that why important this.
+
+
+ex:
+header,main,article,nav,aside,fingure,fingurcaption etc.

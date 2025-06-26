@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        form{
+            border: 2px solid black;
+            width: 350px;
+            height: 350px;
+            margin: auto;
+            margin-top: 10px;
+            padding-left: 5px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        
+    </style>
+</head>
+<body>
+
+    <form action="post">
+<h1 align="center">form</h1>
+    <label for="name">
+    fullname : <input type="text" id="name" required minlength="5" maxlength="15" >
+    </label>
+    <br><br>
+     <label for="email">
+       email : <input type="email" id="email" required >
+    </label>
+
+    <br><br>
+     <label for="phone number">
+       phone number : <input type="tel" id="number" required maxlength="10" >
+    </label>
+    <br><br>
+    <label for="subject">subject: <select name="subject" id="subject" required>
+              <option value="">--select subject--</option>
+              <option value="maths">maths</option>
+              <option value="science">science</option>
+              <option value="english">english</option>
+              <option value="pps">pps</option>
+              <option value="dsp">dsp</option>
+              <option value="dsd">dsd</option>
+              <option value="ss">ss</option>
+
+
+
+    </select></label>
+    <br> <br>
+
+    <label for="message">message:</label>
+    <textarea name="message" id="message" required minlength="5" maxlength="500"></textarea>
+    <br><br>
+
+    <button type="submit" style="background-color: aqua; text-align: center ;">send message</button>
+    </form>
+</body>
+</html>

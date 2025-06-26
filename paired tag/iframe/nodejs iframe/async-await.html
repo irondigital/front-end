@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">
+        <h1>Node.js Async/Await</h1>
+        <h2>Introduction to Async/Await</h2>
+        <p>Async/await is a modern way to handle asynchronous operations in Node.js, building on top of Promises to create even more readable code.  <br>
+
+Introduced in Node.js 7.6 and standardized in ES2017, async/await allows you to write asynchronous code that looks and behaves more like synchronous code. <br>
+
+Async/await is basically Promises with a more readable syntax. This makes your code cleaner and more maintainable. <br></p>
+
+<div style="background-color: aquamarine;">
+    <p>Async/await makes asynchronous code look and more feel like synchronous code. It does not block the main thread, but is easy to follow and understand.</p>
+</div>
+
+<h2>Syntax and Usage</h2>
+<h4>The syntax consists of two keywords:</h4>
+<ul>
+    <li>async: Used to declare an asynchronous function that returns a Promise</li>
+    <li>await: Used to pause execution until a Promise is resolved, can only be used inside async functions</li>
+</ul>
+
+<div style="background-color: bisque;">
+    <h2>Example: Basic Async/Await</h2>
+    <p>async function getData() {   <br>
+  console.log('Starting...');<br>
+  const result = await someAsyncOperation();<br>
+  console.log(`Result: ${result}`);<br>
+  return result;<br>
+}<br>
+
+function someAsyncOperation() {<br>
+  return new Promise(resolve => {<br>
+    setTimeout(() => resolve('Operation completed'), 1000);<br>
+  });<br>
+}<br>
+
+// Call the async function<br>
+getData().then(data => console.log('Final data:', data));<br></p>
+
+
+</div>
+<button>run example</button>
+    </div>
+    
+</body>
+</html>

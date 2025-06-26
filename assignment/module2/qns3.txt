@@ -1,0 +1,15 @@
+Block element:
+block element is take a full width in his container.
+it can be start in new lines.
+used to create a web pages.
+
+ex:
+div,p,ul,ol,li,h1 to h6,table etc.
+
+inline-element:
+inline element means we can use inline.
+it can not start a new line it can not required full width of container.it can take only required width in web pages.
+used this we can create a web pages.
+
+ex:
+span,a,strong,image,input etc.

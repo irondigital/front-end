@@ -1,0 +1,8 @@
+html is stands for hypertext markup language.it is a markup language used to create a html pages,structure and content.html is uses tag to defines element like div,p,video,audio etc.
+
+PURPOSE:
+html provides a basic structure of web pages and web sites.
+use html we can design our  website structure manually.
+use html we can add media like using audio and video tags.
+use this we can create a forms and tables.
+use this we can defines a chemical formulas like using sup and sub tags

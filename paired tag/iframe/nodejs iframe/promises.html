@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">
+        <h1>Node.js Promises</h1>
+        <h2>Introduction to Promises</h2>
+        <p>Promises in Node.js provide a cleaner way to handle asynchronous operations compared to traditional callbacks. <br>
+
+Promises represent the completion (or failure) of an asynchronous operation and its result.</p>
+<div style="background-color: azure;">
+    <h3>Promise States</h3>
+    <ul>
+        <li>Pending: Initial state, operation not completed</li>
+    <li>Fulfilled: Operation completed successfully</li>
+    <li>Rejected: Operation failed</li>
+    <p>Once a promise is settled (either fulfilled or rejected), its state cannot change.</p>
+</ul>
+</div>
+<hr>
+<div style="background-color: blanchedalmond;">
+    <h3>Benefits of Using Promises</h3>
+    <h4>With Callbacks</h4>
+    <p>getUser(id, (err, user) => {  <br>
+  if (err) return handleError(err); <br>
+  getOrders(user.id, (err, orders) => { <br>
+    if (err) return handleError(err); <br>
+    // Process orders...    br
+  }); <br>
+});</p>
+</div>
+    </div>
+</body>
+</html>

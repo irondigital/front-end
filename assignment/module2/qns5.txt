@@ -1,0 +1,19 @@
+forms are commonly use for collect the user data or input and it send to a server for procesing.
+form is used to we can many type of forms  like :
+
+1.resistration form
+2.login form
+3.contact us form
+
+
+input:
+for create many type of input fields like text,checkbox,radio,email,number,passwords etc...
+
+textarea:
+for use we can create a message box so if any body can send message so that can easily write and send the message.that is use for long type of message
+
+select:
+use this tag we can create selection point using option tag in select. we can use this like subject selection and hobby selections etc... because it can select one or more.
+
+button:
+use this tag we can create submit button and reset button and more. so using this users can click the button send data easily. if it can click in submit button.

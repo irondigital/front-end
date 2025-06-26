@@ -1,0 +1,56 @@
+colspan:
+it is used in table. use this attribute we can create a mulptiple colums into a single horizontal line or cell.
+
+rowspan:
+it can merge a mulptiple rows into a single verticle line or cell.
+
+colspan ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2">fullname</th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>milan</td>
+            <td>dk</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
+
+rowspan ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+         <tr>
+        <th rowspan="2">fullname</th>
+        <td>milan</td>
+     </tr>
+        
+        <tr>
+        <td>devdas</td>
+    </tr>
+    </table>
+    
+    
+</body>
+</html>
