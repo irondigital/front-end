@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      header{
+        background-color: antiquewhite;
+         display: flex;
+            display: inline-flexbox;
+        
+      }
+      header h1{
+        text-transform: uppercase;
+      }
+      nav ul li{
+        display: inline-block;
+         text-align: right;
+       
+          
+      }
+      nav a{
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        font-weight: 800;
+        
+      }
+      *{
+        padding: 3px;
+        margin: 3px;
+      }
+     
+      
+    </style>
 </head>
 <body>
     <header>
         <h1>my page</h1>
-        <nav>
+        <nav class="ui">
             <ul>
                 <li><a href="">home</a></li>
                  <li ><a href="">about</a></li>
@@ -18,8 +48,8 @@
     </header>
 
     <main>
-        <section>
-          <h2>
+        <section > 
+          <h2 style="text-transform: uppercase; text-align:center;">
             this is a section
           </h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, culpa?</p> 

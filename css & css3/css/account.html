@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #1d0950;
+        /* background: -webkit-linear-gradient(left, #1d0950, #f1345e);
+        background: -o-linear-gradient(left, #1d0950, #f1345e);
+        background: -moz-linear-gradient(left, #1d0950, #f1345e);
+        background: linear-gradient(to right, #1d0950, #f1345e); */
+
+        background: linear-gradient(#1d0950, #f1345e);
+      }
+      #content {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        margin-top: 10%;
+        padding: 35px;
+        background-color: #44c3e6;
+      }
+      .login {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        margin-top: 2%;
+        padding: 20px;
+        background-color: white;
+      }
+      .login:hover {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        margin-top: 2%;
+        padding: 20px;
+        background-color: lightgray;
+      }
+      .login h3 {
+        color: #44c3e6;
+        font-weight: 100;
+        text-transform: capitalize;
+      }
+      .login input[type='text'] {
+        width: 300px;
+        height: auto;
+        padding: 8px;
+      }
+
+      .login input[type='submit'] {
+        width: 320px;
+        height: auto;
+        padding: 8px;
+        background-color: #44c3e6;
+        font-size: 20px;
+        border: none;
+      }
+
+      .font-style {
+        font-family: fantasy;
+        font-size: 25px !important;
+      }
+      ::placeholder {
+        font-size: 17px;
+        color: #44c3e6;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="content">
+      <div class="login font-style">
+        <h3>login to your account</h3>
+        <form>
+          <input type="text" placeholder="UserName *" />
+          <br /><br />
+          <input type="text" placeholder="UserName *" />
+          <br /><br />
+
+          <input type="submit" value="SignIn" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
