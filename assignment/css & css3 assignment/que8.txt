@@ -1,0 +1,24 @@
+CSS Grid is a powerful layout system in CSS that allows you to design two-dimensional (2D) layouts — rows and columns at the same time.
+
+it works by dividing a page or container into a grid of rows and columns, and then placing elements (grid items) into defined areas.
+
+css grid:
+
+    its work in 2d direction like rows & columns
+    this is best for full-page or section layouts
+    Place items anywhere in grid cells for items positioning
+    focus on layout structure
+    in this overlapping is possible.
+    you building complex page layouts.
+    you need row and column control.
+    you want to align items in a structured layout.
+
+    flex-box:
+
+    its work on 1d direction
+    its use for alligning items in a single row or column
+    in this items flow are one by one
+    its also focus on content flow
+    in this overlapping is not possinle
+    you are laying out items in a single direction.
+    you want simple, responsive element alignment.

@@ -1,0 +1,38 @@
+flex-direction:
+
+This property defines the main axis — the direction in which the flex items are placed in the flex container.
+     
+we can use this property like row,row-reverse,column,column-reverse.
+
+this is basically use for setup items in row and column.
+
+we can use like:
+
+display: flex;
+flex-direction:row;
+
+
+justify-content:
+
+This property aligns items along the main axis (horizontally in row, vertically in column).
+
+this property is like we can set items like center,space-between,space-evenly,space-around,flex-start,flex-end.
+
+we can use like:
+ 
+ display:flex;
+ justify-content:center;
+
+align-items:
+
+This property aligns items along the cross axis (opposite of flex-direction).
+
+this property is like we can set items like flex-start,flex-end,center,stretch,baseline	
+
+we can use like:
+ 
+ display:flex;
+ align-items:center;
+
+
+

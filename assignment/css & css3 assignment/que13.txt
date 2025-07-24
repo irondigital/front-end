@@ -1,0 +1,56 @@
+The font-family property in CSS is used to set the typeface (font style) for text elements on a webpage.
+
+this is a basic syntax:
+
+.hello {
+  font-family: "Font Name", fallback-font, generic-family;
+}
+
+example:
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+"Arial" is the preferred font.
+sans-serif is a generic fallback in case Arial isn’t available.
+
+You can use fonts from Google Fonts easily in two steps:
+
+ Step 1: Add Link to Google Font
+
+ Place this in the <head> of your HTML:
+
+ <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+Step 2: Use the Font in CSS
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Font Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, Google Fonts!</h1>
+  <p>This text uses the Roboto font loaded from Google Fonts.</p>
+</body>
+</html>
+

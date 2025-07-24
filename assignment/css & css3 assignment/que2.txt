@@ -1,0 +1,11 @@
+CSS specificity is a set of rules used by browsers to determine which CSS rule to apply when multiple rules target the same element.
+
+It is like a scoring system — the higher the score, the more specific the rule is, and that style will be applied.
+
+
+How Conflicts Are Resolved:
+
+highest specificity wins
+if specificity is the same, the one defined last in the CSS file wins
+inline styles override external or internal CSS
+!important can override all — but should be used sparingly

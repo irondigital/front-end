@@ -1,0 +1,496 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box;  */
+}
+
+
+#head{
+    /* display: flex; */
+    width: 100%;
+    height: auto;
+   
+}
+.logo{
+    margin-left: 100px;
+    font-size: 20px;
+    /* width: 100%;  */
+    height: auto;
+    
+    
+    
+}
+.nav{
+    display: inline-block;
+    display: flex;  
+     background-color: rgb(240, 230, 230);
+
+}
+.nav li{
+    list-style-type: none;
+    padding: 20px;
+}
+.nav li a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+.social{
+    /* display: flex; */
+    /* list-style-type: none; */
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.social a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   
+}
+.contact li{
+    /* margin-left: 100px; */
+    font-size: 20px;
+    /* width: 100%; */
+    /* height: auto; */
+    list-style-type: none;
+    text-align: center;
+    /* padding-left: 10px; */
+}
+.contact li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+.contact li a span {
+    color: black;
+    padding-right: 20px;
+    font-size: 20px;
+
+}
+.nav3{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 1%;
+    background-color: rgb(32, 131, 223);
+    margin-left: 100px;
+    
+}
+.helo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* display-wrap: wrap; */
+    /* width: 400px;
+    height: auto;
+     */
+    /* background-color: rgb(240, 230, 230); */
+
+}
+.helo li{
+    list-style-type: none;
+    padding: 5px;
+}
+.helo li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+
+}
+.helo li a select {
+    padding: 5px;
+    font-size: 18px;
+    color: black;
+    background-color:  rgb(32, 131, 223);
+    border-radius: 5px;
+    border: none;
+    width: 120px;
+    color: white;
+}
+#content {
+  width: 80%;
+  height: 440px;
+  /* border-radius: 20px; */
+  margin: auto;
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+
+  
+}
+.division {
+  width: 100%;
+  height: auto;
+  background-color: #b3c1d7;
+  border-radius: 20px;
+/* padding: 20px; */
+  /* align-items: center; */
+}
+.contact-txt {
+  width: 45%;
+  height: 75vh !important;
+  padding: 20px;
+  
+  /* background-color: #f5f4f0; */
+}
+.contact-form {
+  width: 45%;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+}
+.contact-txt h1 {
+  font-size: 45px;
+  color: #2f71eb;
+ 
+  letter-spacing: 3px;
+}
+
+.contact-txt p {
+  font-size: 16px;
+  color: black;
+  margin-top: 10px;
+  /* padding: 20px; */
+}
+.contact-txt address {
+  background-color: #2f71eb;
+  margin-top: 10%;
+  border-radius: 10px;
+  color: white;
+}
+
+.contact-font {
+  /* width: 30px; */
+  /* height: 30px; */
+  background-color: #d8dded;
+  color: #2f71eb;
+  padding: 15px;
+  border-radius: 5%;
+  margin: 10px !important;
+  text-align: center;
+}
+.contact-form input,
+textarea {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #dfe4f3;
+  border-radius: 5px;
+}
+.contact-form button[type='submit'] {
+  width: 28%;
+  height: auto;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #2f71eb;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+ address b{
+    margin-left: 100px;
+    font-size: 20px;
+    color: white;
+ }
+ address  p.pa {
+    margin-left: 120px;
+    font-size: 16px;
+    color: white;
+    /* padding-bottom: -100px; */
+
+ }
+ .h41{
+    font-size: 20px;
+    color: #2f71eb;
+    margin-left: 100px;
+    margin-top: 20px;
+ }
+ .con p{
+    font-size: 25px;
+    color: rgb(106, 62, 62);
+    margin-left: 10px;
+    margin-top: 10px;
+ }
+ .p2{
+    font-size: 16px;
+    color: rgb(255, 0, 0);
+    margin-left: 250px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+ }
+ .p2 a{
+    text-decoration: none;
+    color: rgb(143, 77, 77);
+    font-weight: bold;
+    font-size: 30px;
+ }
+ .p2  p{
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+    margin-left: 10px;
+    margin-top: 10px;
+ }
+ .h11{
+  text-align: center;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+   
+ }
+ #footer{
+  margin-top: 520px;
+   /* background:url("images/h3.webp") no repeat; */
+    background-color: rgb(32, 131, 223);
+    background: linear-gradient(270deg, rgb(186, 195, 203), rgb(234, 182, 182));
+   
+ 
+ }
+ .footer{
+ 
+  height: auto;
+  width: 100%;
+  /* text-align: center; */
+  padding-top: 30px;
+ 
+  
+ }
+ .list{
+  display: flex;
+  justify-content: space-between; 
+  padding: 20px;
+  margin-left: 100px;
+ }
+
+ .list2{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 100px;
+ }
+ .list3{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 100px;
+ }
+ .list4{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 100px;
+ }
+ .list h3{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.list ul li a {
+  text-decoration: none;
+  /* color: white; */
+  font-size: 16px;
+  padding: 5px;
+  /* display: block; */
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+   color: rgb(20, 13, 221);
+}
+.list2 h3{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.list2 ul li a {
+  text-decoration: none;
+  /* color: white; */
+  font-size: 16px;
+  padding: 5px;
+  /* display: block; */
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+  color: rgb(20, 13, 221);
+
+
+}
+.list3 h3{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.list3 ul li a {
+  text-decoration: none;
+  /* color: white; */
+  font-size: 16px;
+  padding: 5px;
+  /* display: block; */
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+   color: rgb(20, 13, 221);
+}
+.list4 h3{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.list4 ul li a {
+  text-decoration: none;
+  /* color: white; */
+  font-size: 16px;
+  padding: 5px;
+  /* display: block; */
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+  color: rgb(20, 13, 221);
+
+}
+.para{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.list4 p{
+  /* color: white; */
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ht{
+  margin-top: 50px;
+}
+
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav li {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .nav li a {
+    font-size: 18px;
+    margin-left: 0;
+    /* padding: 20px; */
+  }
+
+  .social {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .contact {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .contact li {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .nav3 {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .helo {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .helo li a,
+  .helo li a select {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  #content {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+
+  .contact-txt,
+  .contact-form {
+    width: 100%;
+    height: auto;
+  }
+
+  .p2 {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .p2 a {
+    font-size: 22px;
+  }
+
+  .h11 {
+    font-size: 30px;
+  }
+
+  #footer {
+    margin-top: 100px;
+  }
+
+  .list,
+  .list2,
+  .list3,
+  .list4 {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .list h3,
+  .list2 h3,
+  .list3 h3,
+  .list4 h3 {
+    font-size: 18px;
+  }
+
+  .list ul li a,
+  .list2 ul li a,
+  .list3 ul li a,
+  .list4 ul li a {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+}
+

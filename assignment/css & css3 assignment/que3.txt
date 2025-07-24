@@ -1,0 +1,19 @@
+internal css: this is a type of css and we can use this css in html page.like we can use this in head tag and we can target a any id, class and tags.
+
+advantages is we can use use this easily and we can style the html page.
+disadvantages is this is not use for website style because if you can create  a website so in website many lines of code and then css code so this not in readeble form.
+
+
+
+external css : this is using for style in webpages basically we can create a new file and then we can link this file in our html file and then we can starting the style for our webpages.
+
+advantages is this is readeble from and we can use in other files easily.
+
+disadvantages this is lendthi process of developers because we can create a new file and atteched with our html files.
+
+
+internal css: this is also using for style we can use in  elements or tags just we can give a style tag in elements and this is higher priorites compare to other css types.
+
+advantages : it can use like we can create a one page of html.
+
+disadvantages : this not readeble form and this is create a syntac error easily because of difficult to see the style in line.

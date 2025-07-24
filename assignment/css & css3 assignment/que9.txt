@@ -1,0 +1,48 @@
+grid-template-columns:
+
+grid-template-columns: 200px 200px ...; this is syntax.
+
+ex:
+
+.grid{ 
+  display: grid;
+  grid-template-columns: 200px 1fr 100px;
+}
+
+200px: First column is fixed at 200px
+
+1fr: Second column takes remaining space
+
+100px: Third column is 100px wide
+
+
+grid-template-rows:
+
+grid-template-rows: 200px 200px ...; this is a syntax.
+
+ex:
+
+.grid {
+  display: grid;
+  grid-template-rows: 100px auto 50px;
+}
+
+1st row: 100px
+
+2nd row: takes up remaining space
+
+3rd row: 50px
+
+grid-gap:
+
+gap: row-gap column-gap; this is a syntax.
+
+ex:
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px 10px;
+}
+

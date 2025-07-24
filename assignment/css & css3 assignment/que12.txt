@@ -1,0 +1,54 @@
+Web-Safe Fonts:
+
+Web-safe fonts are pre-installed on most devices and operating systems, like Windows, macOS, Linux, iOS, and Android.
+
+Examples:
+
+Arial
+
+Times New Roman
+
+Verdana
+
+Georgia
+
+Courier New
+
+How they work:
+
+When you use a web-safe font in CSS, like font-family: Arial, sans-serif;, the browser displays it using the font already installed on the user’s device.
+
+Custom Web Fonts:
+
+Custom web fonts (like Google Fonts or Adobe Fonts) are not installed on the user's device by default. Instead, they are downloaded via the web when the page loads.
+
+Examples:
+
+Roboto
+
+Open Sans
+
+Lato
+
+Montserrat
+
+How they work:
+
+They are typically loaded using @font-face or linked via a <link> tag from services like Google Fonts:
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+Why Might You Use a Web-Safe Font Over a Custom Font?
+
+Web-safe fonts don’t need to be downloaded, so pages load more quickly.
+
+Guaranteed to work on all devices without fallback issues.
+
+No need for internet connection to load fonts from Google/Adobe.
+
+Ideal for basic sites, emails, or when custom branding isn’t needed.

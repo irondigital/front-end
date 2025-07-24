@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Layout</title>
+  <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header {
+  background-color: #5f6e88;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.main-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch; 
+  padding: 10px;
+}
+
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  flex: 1;
+  max-width: 250px;
+  min-width: 150px;
+}
+
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  flex: 3;
+  margin-left: 10px;
+}
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+     font-size: 60px;
+  }
+    .sidebar {
+        max-width: 100%;
+        min-width: 0;
+        text-align: center;
+        font-size: 60px;
+    }
+    .header, .footer {
+        text-align: center; 
+         font-size: 60px;
+        }
+}
+
+  </style>
+  
+</head>
+<body>
+
+  <header class="header">hello</header>
+
+  <div class="main-container">
+    <aside class="sidebar">about</aside>
+    <main class="content"><p>hello from my side</p></main>
+  </div>
+
+  <footer class="footer">contect:123@gmail.com</footer>
+
+</body>
+</html>

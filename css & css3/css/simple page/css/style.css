@@ -3,6 +3,7 @@ body {
     height: 95vh;
     background: linear-gradient(45deg, rgb(221, 203, 139) 0%, rgb(221, 203, 139) 14.286%, rgb(208, 211, 142) 14.286%, rgb(208, 211, 142) 28.571%, rgb(192, 211, 155) 28.571%, rgb(192, 211, 155) 42.857%, rgb(181, 204, 173) 42.857%, rgb(181, 204, 173) 57.143%, rgb(180, 192, 189) 57.143%, rgb(180, 192, 189) 71.429%, rgb(188, 179, 196) 71.429%, rgb(188, 179, 196) 85.714%, rgb(203, 172, 192) 85.714%, rgb(203, 172, 192) 100%);
     /* background: -webkit-linear-gradient(90deg,rgb(221, 171, 211),rgb(226, 153, 153)); */
+    /* background-image: url("images/photo.jpg"); */
 }
 
 .head {
@@ -36,7 +37,7 @@ header {
 }
 
 .btn {
-    width: 160px;
+    width: 230px;
     height: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15px;
@@ -118,4 +119,11 @@ ul li a {
     color: rgb(255, 253, 253);
     /* /* opacity: 0.5; */}
     
-
+i{
+    font-size: 25px;
+    color: rgb(4, 83, 83);
+    margin-left: 24px;
+    margin-top: 20px;
+    padding-left: 50px;
+    color: #000;
+}

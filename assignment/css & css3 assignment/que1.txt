@@ -1,0 +1,43 @@
+css selectors means use this we can target any html content and we can style like using a id selector , class selector and tag selectors.also this use for styling. use this slelector we can style any html content and specially we can targent one tag and style that.
+
+
+ex.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+        #head {
+            text-align: center;
+            color: darkblue;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        .para {
+            text-align: center;
+            color: darkgreen;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">
+        hello world
+    </h1>
+    <p class="para">
+        this is a simple page for booking
+    </p>
+    
+</body>
+</html>
+
+this is a example for selector and how we can use this.

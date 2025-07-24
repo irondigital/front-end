@@ -1,0 +1,17 @@
+content-box:
+
+this is a default
+
+only the content size is set by width and height.
+
+padding and border are added outside of the set width/height.
+
+total size = content + padding + border
+
+border-box:
+
+the width and height include padding and border.
+
+the content area shrinks to make space for padding and border.
+
+total size = Exactly the width and height you set.

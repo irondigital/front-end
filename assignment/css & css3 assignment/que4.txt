@@ -1,0 +1,35 @@
+The CSS box model describes how every HTML element is structured and how spacing and sizing work in CSS.
+
+Every element is considered as a rectangle box, made up of four components
+
+content:
+
+The actual content inside the element (text, image, input, etc.).
+
+You can set its size using width and height.
+
+Example: width: 200px; height: 100px;
+
+padding:
+
+The space between the content and the border.
+
+Adds inside space around the content.
+
+Example: padding: 10px; 
+
+border:
+
+A line surrounding the padding and content.
+
+You can control its width, color, and style.
+
+Example: border: 2px solid black;
+
+margin:
+
+The space outside the border, between this element and others.
+
+Used to control spacing between elements.
+
+Example: margin: 20px;

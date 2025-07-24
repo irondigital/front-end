@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Webpage</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    
+    nav {
+      background-color: #251b1b;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav h1 {
+      font-size: 24px;
+    }
+
+    
+    .count {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .col {
+      flex: 1;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+    }
+
+    
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+    }
+
+    
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      body {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      nav h1 {
+        font-size: 20px;
+      }
+
+      .column {
+        padding: 15px;
+      }
+
+      footer {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>My Responsive Page</h1>
+  </nav>
+
+  <div class="count">
+    <div class="col">
+      <h2>head 1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, corporis.</p>
+    </div>
+    <div class="col">
+      <h2>head 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates fugiat modi sint?</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
