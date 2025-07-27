@@ -1,0 +1,228 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+
+ 
+#head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #151515;
+  color: white;
+  flex-wrap: wrap;
+}
+
+
+#head h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-left: 60px;
+  padding-top: 5px;
+}
+
+#head h1:hover{
+  color: aqua;
+}
+
+
+.icon {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+  justify-content: flex-end;
+}
+.icon p:hover{
+  color: #d2a309;
+  border-bottom: 3px solid greenyellow;
+}
+
+
+.icon p {
+  font-size: 16px;
+  color:white;
+}
+
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn .list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.btn .list li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+}
+
+.btn .list li a:hover {
+  color: #d2a309;
+  border-color: #00a0df;
+}
+.div1{
+    background: url("/images/cover-image.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: auto;
+    padding: 50px ;
+
+
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 24px;
+}
+
+.div1 p b{
+    font-size: 36px;
+   
+    display: inline-block;
+    color: white;
+    
+}
+.div1 p i{
+    padding-left: 50px;
+    font-size: 36px;
+    color: white;
+
+}
+.section1 .div2{
+    color: white;
+    padding-top: 150px;
+}
+
+footer{
+ 
+  
+  
+  padding: 20px;
+  background-color: #151515;
+  color: white;
+ 
+  max-width: 100%;
+  text-align: center;
+}
+.div3{
+  width: 400px;
+  height: auto;
+  background-color: #ccc;
+ 
+}
+.div3 legend{
+  border: 2px solid black;
+  color: white;
+  background-color: black;
+  font-size: 18px;
+  width: 220px;
+ 
+}
+.div3 fieldset{
+  border: none;
+ 
+}
+.all{
+  padding-left: 83px;
+}
+.div3 .all h2 b{
+  padding-left: 50px;
+  
+}
+.div3 .all button{
+  margin-left: 20px;
+  background-color: #00a0df;
+  width: 40px;
+  height: 30px;
+  border-radius: 6px;
+}
+.div3 .all .p1{
+  color: #00a0df;
+  margin-top: 10px;
+}
+.div3 .all hr{
+  
+  width: 200px;
+}
+
+ .cointainer2 {
+  display: flex;
+  gap: 100px;
+  /* padding: 20px; */
+
+}
+.section3{
+    width: 70%;
+}
+.div5 h2{
+  margin: 10px 0px 10px 0px ;
+}
+.div5 .p2{
+  color: #00a0df;
+  
+}
+.div6 ul li{
+   margin: 20px 0px 10px 0px ;
+   font-weight: 900;
+}
+.div6 ul .btn1{
+  background-color: #151515;
+  color: white;
+  font-size: 20px;
+  margin-left: 500px;
+  border-radius: 5px;
+}
+.div6 ul .btn2{
+  background-color: #00a0df;
+  color: white;
+  font-size: 20px;
+  /* margin-left: 200px; */
+  border-radius: 5px;
+}
+.div6 ul span{
+  margin-left: 429px;
+}
+.div6 ul .btn3{
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #151515;
+  color: white;
+}
+
+.div7{
+  display: flex;
+  margin: 40px 0px 10px 0px  ;
+  justify-items: flex-start;
+}
+.div9{
+  margin-left: 200px;
+  border: 2px solid white;
+  background-color: #00a0df;
+  width: 200px;
+  text-align: justify;
+  /* padding: 5px 5px 0px 5px;  */
+  font-size: 18px;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+.div9 .p6{
+  margin-left: 40px;
+}
+

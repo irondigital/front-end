@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Aircraft </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9fc;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #0a2740, #2d6ca7);
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #0a2740;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .aircraft-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .aircraft-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .aircraft-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .aircraft-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .aircraft-card-content {
+      padding: 20px;
+    }
+
+    .aircraft-card-content h3 {
+      color: #2d6ca7;
+      margin-bottom: 10px;
+    }
+
+    .aircraft-card-content p {
+      font-size: 15px;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #0a2740;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+      /* margin-bottom: 200px; */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i class="fas fa-plane-departure"></i> Our Aircraft</h1>
+    <p>Discover our modern aircrafts</p>
+  </header>
+
+  <section class="container">
+    <h2>Meet Our Fleet</h2>
+    <div class="aircraft-grid">
+
+      <div class="aircraft-card">
+       
+        <div class="aircraft-card-content">
+          <h3>Airbus A320</h3>
+          <p>The Airbus A320 is a short to medium-haul aircraft, perfect for regional routes. It offers excellent fuel efficiency and comfort for up to 180 passengers.</p>
+        </div>
+      </div>
+
+      <div class="aircraft-card">
+        
+        <div class="aircraft-card-content">
+          <h3>Boeing 787 Dreamliner</h3>
+          <p>Known for long-haul flights, the Dreamliner offers a quieter cabin, larger windows, and advanced tech for 296 passengers across continents.</p>
+        </div>
+      </div>
+
+      <div class="aircraft-card">
+        
+        <div class="aircraft-card-content">
+          <h3>ATR 72</h3>
+          <p>The ATR 72 is a turboprop aircraft ideal for short-distance travel and regional connectivity. It accommodates up to 72 passengers comfortably.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Airlines india. All rights reserved.
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  background-color: #1f1f1f;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #b66666;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #facc15;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text .intro {
+  color: #cad6cb;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero-text .highlight {
+  color: #ad9536;
+  font-weight: bold;
+}
+
+.hero-text .subtext {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.hire {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+
+.btn.hire:hover {
+  background-color: #5a4cd9;
+}
+
+.btn.cv {
+  background-color: #facc15;
+  color: #000;
+}
+
+.btn.cv:hover {
+  background-color: #e6b900;
+}
+
+.hero-image img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  background-color: #2e2e2e; /* Dark Gray as in the image */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #13a57c; /* Yellow highlight on hover */
+}
+
+.buttons{
+    width: 178px;
+    height: 40px;
+   
+    /* border: 2px solid red; */
+}
+.buttons button{
+    /* border: 2px solid rgb(181, 111, 32); */
+    font-size: 15px;
+    border-radius: 5px ;
+    background-color: rgb(171, 201, 196);
+   
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #facc15;
+    
+}
