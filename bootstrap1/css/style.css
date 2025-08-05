@@ -1,0 +1,58 @@
+body 
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+overflow-x: hidden;
+}
+.navbar-links
+{
+margin-left: 5%;    
+}
+.navbar-links li 
+{
+display: inline-block;
+padding: 0px 25px;
+
+}
+.navbar-links a 
+{
+color: white;
+text-decoration: none;
+text-transform: capitalize;
+font-size: 18px;
+}
+
+#content
+{
+width: 100%;
+height: auto;
+}
+#content p 
+{
+text-indent: 55px;
+text-align: justify;
+}
+.dropdown:hover .dropdown-menu
+{
+    display: block;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px)
+{
+    #content
+    {
+        width: 100% !important;
+        height: auto;
+    }
+    .navbar-links
+{
+margin-left: 0%;    
+}
+.navbar-links li 
+{
+display: block;
+padding: 15px 10px;
+
+}
+}

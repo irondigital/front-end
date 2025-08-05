@@ -1,0 +1,24 @@
+new tags in html5:
+
+header
+footer
+nav
+article
+section
+main
+aside
+fingure
+fingurecaptoin
+legend
+mark
+time
+audio
+video
+source 
+track
+canvas
+svg
+datalist
+output
+progress
+meter

@@ -1,0 +1,23 @@
+
+html:
+
+
+html is a older and 4.01 version.
+
+
+doctype declerations is must be a long and complecated.
+not support for multimedia.
+directly not support graphics.
+limited javascript apis.
+in form tags like limited input fields.
+
+
+html5:
+
+html5 is work on 5 and latest version.
+declerations is eassy and not complicated.
+its support multimedia.
+native support for canvas and svg.
+some new apis added in this version.
+new input field like color, emails,date and range.
+

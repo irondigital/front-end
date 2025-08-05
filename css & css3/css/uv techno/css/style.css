@@ -255,6 +255,8 @@ textarea {
    /* background:url("images/h3.webp") no repeat; */
     background-color: rgb(32, 131, 223);
     background: linear-gradient(270deg, rgb(186, 195, 203), rgb(234, 182, 182));
+    /* background: url(../images/images.jpg) no-repeat; */
+    /* background-size: cover; */
    
  
  }
@@ -369,6 +371,10 @@ textarea {
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: black;
+  height: auto;
+  font-size: 25px;
+  /* padding-top: 30px; */
 }
 .list4 p{
   /* color: white; */
