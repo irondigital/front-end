@@ -1,0 +1,639 @@
+FLEXBOX Responsive CSS for Education Layout * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333333;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  background-color: #001f3f;
+  color: #ffffff;
+  padding: 20px 0;
+
+
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav a {
+  color: #ffffff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.hero {
+  background-color: #0074d9;
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+   background: url(../image/QT-Indian-students-2.jpg) no-repeat center center/cover !important;
+   background-attachment: fixed;
+   
+}
+
+.btn {
+  background: linear-gradient(90deg rgba(86, 64, 64, 0.1), rgba(123, 109, 109, 0.1));
+  color: #070707;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow-x: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  justify-content: center;
+
+}
+
+.slider {
+  background-color: #f8f7f7;
+}
+
+.box {
+  flex: 0 0 30%;
+  height: 200px;
+  margin: 10px;
+  background-color: rgb(219, 109, 93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  scroll-snap-align: start;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.left {
+  left: 5px;
+}
+
+.right {
+  right: 5px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.sidebar {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  background: #a12222;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.main {
+  background-color: #000;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 2;
+
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.price {
+  /* position: absolute; */
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px 0 5px 0;
+  font-size: 14px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+
+.date {
+  color: #a12222;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.title {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.para {
+  font-size: 13px;
+  color: #555;
+}
+
+
+
+.main-section1 {
+
+  padding: 40px;
+  position: relative;
+  background: url(../image/world-student-day1.webp) no-repeat center center/cover;
+}
+
+
+.main-section1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+
+.main-content1 {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Left column with two stacked boxes */
+.degree1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box4 {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.box4 h3 {
+  margin-top: 0;
+}
+
+.btn-red {
+  background: #e63946;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-yellow {
+  background: #f4a261;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Right column single box */
+.temp {
+  flex: 1;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.temp h4 {
+  color: #f4a261;
+  margin-top: 0;
+}
+
+.temp ul {
+  list-style: none;
+  padding: 0;
+}
+
+.temp ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.temp ul li:last-child {
+  border-bottom: none;
+}
+
+
+
+.courses {
+  background: #1d1d1d;
+  padding: 20px;
+  color: white;
+  align-items: center;
+
+}
+
+.courses h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.course1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.course2 {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  justify-content: center;
+}
+
+.course2::-webkit-scrollbar {
+  display: none;
+}
+
+.detail {
+  background: white;
+  color: black;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 220px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.detail img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.inform {
+  padding: 10px;
+}
+
+.inform h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.rating {
+  color: gold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+}
+
+
+.arrow-btn {
+  background: white;
+  color: black;
+  border: none;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: sticky;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.price {
+  margin-left: 80px;
+}
+
+.funct {
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.funct1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.funct-div h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.funct-div span {
+  color: orange;
+}
+
+.funct-div1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.funct-div2 {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.funct-div2 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: orange;
+}
+
+.funct-div2 p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.funct-div3 .video1 {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.funct-div3 img {
+  width: 50vh;
+  height: auto;
+  /* display: block; */
+}
+
+.playbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  background: rgba(255, 165, 0, 0.8);
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+  background-color: #000;
+}
+
+.contact-form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  flex: 2;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.contact-form1 {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form1 input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  height: 100px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.submit {
+  background-color: #c0392b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.contact-info {
+  background-color: #c0392b;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+  .funct1 {
+    flex-direction: column;
+  }
+
+  .funct-div1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .funct-div3 img {
+    width: 54vh;
+  }
+
+  .contact-info {
+    width: 40%;
+  }
+
+  .contact-form {
+    flex: unset;
+    width: 60%;
+  }
+
+  .contact-form1 {
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    width: 89%;
+    text-align: center;
+  }
+
+  .main .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-container {
+    flex-direction: column;
+  }
+
+  .slider-container .box {
+    padding: 40px 0px;
+  }
+
+  .slider-container .arrow {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .main-content1 {
+    flex-direction: column;
+  }
+
+  .funct-div1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .funct-div3 img {
+    width: 33vh;
+  }
+
+  .contact-section{
+    flex-direction: column;
+  }
+
+  .contact-form{
+    width: 100%;
+  }
+
+  .contact-info{
+    width: 100%;
+  }
+}
