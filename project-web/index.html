@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipcart</title>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* adjust based on total width */
+  }
+  .animate-scroll {
+    animation: scroll 12s linear infinite;
+  }
+</style>
+</head>
+<body>
+    <header class="flex items-center p-4 bg-white-500 text-black-900 border-white-900 shadow-lg">
+        <div>
+        <h1 class="ms-8 text-6xl text-blue-700">Flipcart</h1>
+                   
+        </div>
+        <div>
+            <form action="post" class="border-2 border-black-900 rounded-2xl p-2 ms-14 bg-gray-100 ">
+             <span  class="fa-solid fa-magnifying-glass">  </span><input type="search" class="ms-2 w-80 text-xl bg-gray-100 " placeholder="search for products,brands and more"  >
+            </form>
+        </div>
+        <div>
+            <h2 class="text-3xl ms-20" ><span class="fa-solid fa-user-circle" ></span>Account</h2>
+        </div>
+        <div>
+            <h2 class="text-3xl ms-20" >cart <span class="fa-solid fa-cart-arrow-down"></span></h2>
+        </div>
+
+        <div>
+            <h2 class="text-3xl ms-20" >
+                become a seller
+                <span class="fa-solid fa-shop"></span>
+            </h2>
+        </div>
+        <div>
+            <i class="fa-solid fa-ellipsis-v text-3xl ms-20 "></i> 
+            
+    </header>
+    <!-- <div class="bg-gray-200"> -->
+    <section class="bg-white-200 border-2  p-2 border-black-500">
+       <section class="container mx-auto bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2">
+        <div class="flex p-4 mt-4 gap-4  justify-center space-x-8 bg-white-900 mt-4 ">
+           <img src="images/1.webp" alt="Sample Image"
+     class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+
+            <img src="images/2.webp" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+            <img src="images/3.webp" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+            <img src="images/4.webp" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+            <img src="images/5.webp" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+            <img src="images/chair.png" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+            <img src="images/teddy.png" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+            <img src="images/ele.png" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+            <img src="images/tv.jpg" alt="image" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+
+        </div>
+        </section>
+
+        <section>
+            <div class="relative w-full mt-8  mx-auto overflow-hidden  shadow-lg">
+  <!-- Slides container -->
+  <div id="carousel" class="flex transition-transform duration-700">
+    <img src="images/11.webp" class="w-full transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer flex-shrink-0" />
+    <img src="images/12.webp" class="w-full transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer flex-shrink-0" />
+    <img src="images/13.webp" class="w-full transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer flex-shrink-0" />
+    <img src="images/14.webp" class="w-full transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer flex-shrink-0" />
+  </div>
+
+  <!-- Navigation buttons -->
+  <button onclick="prevSlide()" class="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-700/60 text-white px-3 py-2 rounded-full">❮</button>
+  <button onclick="nextSlide()" class="absolute top-1/2 right-4 -translate-y-1/2 bg-gray-700/60 text-white px-3 py-2 rounded-full">❯</button>
+</div>
+
+ </section>
+
+   <section class="mt-4 m-2">
+    <div class="border-black-900 border-2 rounded-lg border-none"> 
+        
+    <div>
+    <h2 class="ms-4 text-black-900 text-3xl">Best of Electronics </h2>
+    </div>
+    <div class="grid grid-cols-7 gap-4 p-4 bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2 ">
+        <div class="border-black-900 border-2 p-4 rounded-lg">
+     <img src="images/21.webp" alt="" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer"  >
+     <p class="mt-4 text-xl">Best truewireless</p>
+     <strong class="text-xl  text-green-500">Grab now</strong>
+     
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/22.webp" alt="" class="mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-2">Cameras</p>
+        <strong class="text-xl text-green-500">Shop now!</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/23.webp" alt="" class="mt-10 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Smart TVs</p>
+        <strong class="text-xl text-green-500">Visit now</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/24.webp" alt="" class="ms-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer " >
+        <p class="text-xl">Speakers</p>
+        <strong class="text-xl text-green-500">50% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">    
+        <img src="images/25.webp" alt=""   class="mt-10 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Latest TVs </p>
+        <strong class="text-xl text-green-500">20%  off</strong>  
+    </div>
+      
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/26.webp" alt="" class="mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-8 text-xl ">Projector</p>
+                <strong class="text-xl mt-2 text-green-500">New items</strong>
+             </div>
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/27.webp" alt=""  class=" mt-2 h-90 mt-6 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+               
+                </div>   
+                  
+             </div>
+             </div>
+   </section>
+        <section class="mt-4">
+           <div class="border-black-900 border-2 rounded-lg border-none"> 
+    <div>
+    <h2 class="ms-4 text-black-900 text-3xl" >Beuty,Food,Toys and More </h2>
+    </div>
+    <div class="grid grid-cols-7 gap-4 p-4 bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2 ">
+        <div class="border-black-900 border-2 p-4 rounded-lg">
+     <img src="images/31.webp" alt="" class="h-40 mt-7 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+     <p class="mt-6 text-xl ">Cycles</p>
+     <strong class="text-xl  text-green-500 ">33% off</strong>
+     
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/32.webp" alt="" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-2 text-xl ">Toys</p>
+        <strong class=" text-xl text-green-500">50% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/33.webp" alt=""  class="mt-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Toys Cars</p>
+        <strong class="mt-4 text-xl text-green-500">Shop now</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/34.webp" alt="" class="mt-4 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-9 text-xl ">Teddy</p>
+        <strong class="mt-4 text-xl text-green-500">Visit now</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">    
+        <img src="images/35.webp" alt="" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+        <p class="mt-10 text-xl">Pens</p>
+        <strong class="mt-4 text-xl text-green-500 ">23% off</strong>  
+    </div>
+      
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/36.webp" alt="" class="h-40 ms-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-10 text-xl">Almonds</p>
+                <strong class="mt-4 text-xl text-green-500">Upto 5% off</strong>
+             </div>
+              <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/39.webp" alt="" class="h-40 ms-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+                <p class="mt-8 text-xl">Peanut butter</p>
+                <strong class="mt-4 text-xl text-green-500">Upto 23% off</strong>
+             </div>
+                  
+             </div>
+             </div>
+   </section>
+    <section class="mt-4">
+      <div class="border-black-900 border-2 rounded-lg border-none">
+    <div>
+    <h2 class="ms-4 text-black-900 text-3xl">Sports, Helthcare and More </h2>
+    </div>
+    <div class="grid grid-cols-7 gap-4 p-4 bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2 ">
+        <div class="border-black-900 border-2 p-4 rounded-lg w-full">
+     <img src="images/41.webp" alt="" class="ms-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer"  >
+     <p class="mt-4 text-xl">Coffe powder</p>
+     <strong class="text-xl text-green-500">Upto 80% off</strong>
+     
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg w-full">
+        <img src="images/42.webp" alt="" class="ms-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-3">Oats</p>
+        <strong class="text-xl text-green-500">20% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg w-full">
+        <img src="images/43.webp" alt="" class="mt-8 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer"  >
+        <p class="mt-10 text-xl">Musical Toys</p>
+        <strong class="text-xl text-green-500">Under 199</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg w-full">
+        <img src="images/44.webp" alt="" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-3">Primium Tea</p>
+        <strong class="text-xl text-green-500">33% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg w-full">    
+        <img src="images/45.webp" alt=""  class=" h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer"  >
+        <p class="mt-10 text-xl">Toys</p>
+        <strong class="text-xl text-green-500">Under 150</strong>  
+    </div>
+      
+             <div class="border-black-900 border-2 p-4 rounded-lg w-full">
+                <img src="images/48.webp" alt=""  class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-10 text-xl"> Suffola Honey</p>
+                <strong class="text-xl text-green-500">Grab now</strong>
+             </div>
+            
+                  
+             </div>
+             </div>
+   </section>
+    <section class="mt-5">
+  <!-- Outer grid for 3 sections in a row -->
+  <div class="grid grid-cols-3 gap-6">
+    
+    <!-- Section 1 -->
+    <div class="border-2 border-black-900  border-none m-2 rounded-lg"> 
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Discount for you</h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/51.webp" alt="" class="w-full h-45 mt-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-10 text-xl">Usb gadgets</p>
+          <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/52.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-7 text-xl">Shoes</p>
+           <p class="text-xl text-center text-green-500">Widest Range</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/53.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Shoes</p>
+           <p class="text-xl text-center text-green-500">Don't Miss</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/54.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Television</p>
+           <p class="text-xl text-center text-green-500">Tops deals</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 2 -->
+    <div class="border-2 border-black-900  border-none m-2 rounded-lg">
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Best quality</h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/55.webp" alt="" class="w-full h-40 mt-7 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+          <p class="text-center mt-9 text-xl">Mens cargos</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/56.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Mens track pants</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/57.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center  mt-4 text-xl">Mens t-shirts</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/58.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Mobiles</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 3 -->
+    <div class="border-2 border-black-900 border-none  m-2 rounded-lg">
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Mens sports and shoes for you</h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg"> 
+          <img src="images/59.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Blue color</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/60.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Top rated</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/61.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Best discount</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/62.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Best brands</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <section class="mt-5">
+  <!-- Outer grid for 3 sections in a row -->
+  <div class="grid grid-cols-3 gap-6">
+    
+    <!-- Section 1 -->
+    <div class="border-2 border-black-900 border-none m-2 rounded-lg"> 
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Make your home stylish</h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/71.webp" alt="" class="w-full h-40   mt-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-10 text-xl">Kitchen trolly</p>
+          <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/72.webp" alt="" class="w-full mt-4 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-7 text-xl">Wardorobes</p>
+           <p class="text-xl text-center text-green-500">Widest Range</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/73.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Home temples</p>
+           <p class="text-xl text-center text-green-500">Don't Miss</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/74.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Beds</p>
+           <p class="text-xl text-center text-green-500">Tops deals</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 2 -->
+    <div class="border-2 border-black-900 border-none m-2 rounded-lg">
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Navratri Specials</h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/75.webp" alt="" class="w-full h-40 mt-7 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+          <p class="text-center mt-9 text-xl">Dry fruits</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/76.webp" alt="" class="w-full h-40 mt-9 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Mens kurtas</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/77.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center  mt-4 text-xl">Jewellery</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/88.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Mats</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 3 -->
+    <div class="border-2 border-black-900 border-none  m-2 rounded-lg">
+      <h2 class="text-black-900 text-3xl ms-6 p-2" >Tranding gadgets </h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg"> 
+          <img src="images/79.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Shavers</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/80.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Trimmers</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/81.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl"> Cameras</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/82.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Hair  Dryers</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <section class="mt-5">
+  <!-- Outer grid for 3 sections in a row -->
+  <div class="grid grid-cols-3 gap-6">
+    
+    <!-- Section 1 -->
+    <div class="border-2 border-black-900 border-none m-2 rounded-lg"> 
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Shop for TVs</h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/83.webp" alt="" class="w-full h-40  mt-7 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-8 text-xl">LG</p>
+          <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/84.webp" alt="" class="w-full h-40  mt-6 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-8 text-xl ">Top rated</p>
+           <p class="text-xl text-center text-green-500">Widest Range</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/85.webp" alt="" class="w-full h-40 mt-8 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Best discount</p>
+           <p class="text-xl text-center text-green-500">Don't Miss</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/86.webp" alt="" class="w-full   h-40 mt-8 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Best brands</p>
+           <p class="text-xl text-center text-green-500">Tops deals</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 2 -->
+    <div class="border-2 border-black-900 border-none m-2 rounded-lg">
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Home Decor </h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/87.webp" alt="" class="w-full h-40 mt-7 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+          <p class="text-center mt-9 text-xl">Wall clocks</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/88.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">Mats</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/89.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center  mt-4 text-xl">Bed sheets</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/90.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Torches</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 3 -->
+    <div class="border-2 border-black-900 border-none m-2 rounded-lg">
+      <h2 class="text-black-900 text-3xl ms-6 p-2">Travell essentials </h2>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg"> 
+          <img src="images/91.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-5 text-xl">DSLR</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/92.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Mens shorts </p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 p-4 bg-white mt-4 ">
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/93.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Mens caps</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+        <div class="border-black-500 border-2 p-4 rounded-lg">
+          <img src="images/94.webp" alt="" class="w-full h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+          <p class="text-center mt-4 text-xl">Sports and action</p>
+           <p class="text-xl text-center text-green-500">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="mt-4 m-2">
+    <div class="border-black-900 border-2 rounded-lg border-none"> 
+        
+    <div>
+    <h2 class="ms-4 text-black-900 text-3xl">Pick your style </h2>
+    </div>
+    <div class="grid grid-cols-7 gap-4 p-4 bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2 ">
+        <div class="border-black-900 border-2 p-4 rounded-lg">
+     <img src="images/111.webp" alt="" class="h-42 mt-7 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+     <p class="mt-10 text-xl ">Water Bottle</p>
+     <strong class="text-xl  text-green-500">40% off</strong>
+     
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/112.webp" alt="" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-9">Home Decor</p>
+        <strong class="text-xl text-green-500">Shop now!</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/113.webp" alt="" class="mt-10 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Plants</p>
+        <strong class="text-xl text-green-500">33% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/114.webp" alt="" class=" h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-10">Tools</p>
+        <strong class="text-xl text-green-500">50% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">    
+        <img src="images/115.webp" alt=""   class="mt-10 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Gas Stoves </p>
+        <strong class="text-xl text-green-500">20%  off</strong>  
+    </div>
+      
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/116.webp" alt="" class="mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class=" text-xl mt-4 ">Inventer trolly</p>
+                <strong class="text-xl mt-2 text-green-500">New items</strong>
+             </div>
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/117.webp" alt="" class="h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-9 text-xl ">Outdoor Lamp</p>
+                <strong class="text-xl mt-2 text-green-500">Only  799</strong>
+             </div> 
+                  
+             </div>
+             </div>
+   </section>
+   <section class="mt-4 m-2">
+    <div class="border-black-900 border-2 rounded-lg border-none"> 
+        
+    <div>
+    <h2 class="ms-4 text-black-900 text-3xl">Tops Deals </h2>
+    </div>
+    <div class="grid grid-cols-7 gap-4 p-4 bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2 ">
+        <div class="border-black-900 border-2 p-4 rounded-lg">
+     <img src="images/121.webp" alt="" class="h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+     <p class="mt-9 text-xl">Puma,adidas...</p>
+     <strong class="text-xl  text-green-500">Min. 50% off</strong>
+     
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/122.webp" alt="" class="mt-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-8">Apple ipads</p>
+        <strong class="text-xl text-green-500">Shop now!</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/123.webp" alt="" class=" ms-5 mt-8 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Perfume & More</p>
+        <strong class="text-xl text-green-500">40% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/124.webp" alt="" class="mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-7">Car accessories</p>
+        <strong class="text-xl text-green-500">20% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">    
+        <img src="images/125.webp" alt=""   class="mt-7 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Personal Care </p>
+        <strong class="text-xl text-green-500">20%  off</strong>  
+    </div>
+      
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/126.webp" alt="" class="mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-8 text-xl ">Toys and Games</p>
+                <strong class="text-xl mt-2 text-green-500">New items</strong>
+             </div>
+            <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/127.webp" alt="" class=" h-40 mt-9 ms-12 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-8 text-xl ">Apple Pencil</p>
+                <strong class="text-xl mt-2 text-green-500">Shop now</strong>
+             </div>   
+                  
+             </div>
+             </div>
+   </section>
+   <section class="mt-4 m-2">
+    <div class="border-black-900 border-2 rounded-lg border-none"> 
+        
+    <div>
+    <h2 class="ms-4 text-black-900 text-3xl">Some Extra </h2>
+    </div>
+    <div class="grid grid-cols-7 gap-4 p-4 bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2 ">
+        <div class="border-black-900 border-2 p-4 rounded-lg">
+     <img src="images/131.webp" alt=""  class="h-40 mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+     <p class="mt-10 text-xl">Helmet</p>
+     <strong class="text-xl  text-green-500">20% now</strong>
+     
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/132.webp" alt="" class="mt-10 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-2">Bike Bulb</p>
+        <strong class="text-xl text-green-500">Shop now!</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/133.webp" alt="" class="mt-10 ms-7 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Car air freasher</p>
+        <strong class="text-xl text-green-500">50% off now</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/134.webp" alt="" class=" mt-10  transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-8"> watching clothes</p>
+        <strong class="text-xl text-green-500">50% off</strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">    
+        <img src="images/135.webp" alt=""   class="mt-10 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">Stickers </p>
+        <strong class="text-xl text-green-500">20%  off</strong>  
+    </div>
+      
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/136.webp" alt="" class="mt-5 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-8 text-xl ">bike cover</p>
+                <strong class="text-xl mt-2 text-green-500">Only 299</strong>
+             </div>
+              <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/137.webp" alt="" class="mt-10 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-10 text-xl ">Car bulb</p>
+                <strong class="text-xl mt-2 text-green-500">Only 249</strong>
+             </div>
+               
+                  
+             </div>
+             </div>
+   </section>
+   <section>
+    <div>
+      <div class="mt-2 grid grid-cols-3 gap-4 p-4">
+        
+          <img src="images/141.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+               <img src="images/142.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+               <img src="images/143.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+        
+
+      </div>
+      <div class="mt-2 grid grid-cols-3 gap-4 p-4">
+        
+          <img src="images/144.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+               <img src="images/145.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+               <img src="images/146.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        
+
+      </div>
+      <div>
+      <img src="images/147.webp" alt="" class="w-full rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+      </div>
+      <div class="mt-2 grid grid-cols-3 gap-4 p-4">
+        
+          <img src="images/148.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+               <img src="images/149.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+               <img src="images/150.webp" alt="" class="w-full  rounded-lg transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+        
+
+      </div>
+    </div>
+   </section>
+    <section class="mt-4 m-2">
+    <div class="border-black-900 border-2 rounded-lg border-none"> 
+        
+    <div>
+    <h2 class="ms-4 text-black-900 text-3xl">Recently Viewed </h2>
+    </div>
+    <div class="grid grid-cols-7 gap-4 p-4 bg-white-900 mt-4 md:border-2 border-white-900 border-none shadow-2 ">
+        <div class="border-black-900 border-2 p-4 rounded-lg">
+     <img src="images/151.webp" alt=""  class="w-full transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+     <p class="mt-10 text-xl">Iphone 13</p>
+     <strong class="text-xl  text-green-500">44999 <del class="text-red-700">49999</del></strong>
+     
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/152.webp" alt="" class="mt-10 w-full h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-8">frameless 80 cm Tv </p>
+        <strong class="text-xl text-green-500">10499 <del class="text-red-700">14499</del></strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/153.webp" alt="" class="mt-10 h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-10 text-xl">HD 80 cm</p>
+        <strong class="text-xl text-green-500">10499 <del class="text-red-700">14499</del></strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">
+        <img src="images/154.webp" alt="" class=" w-full mt-4  transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="text-xl mt-8"> V50e  5g</p>
+        <strong class="text-xl text-green-500">28999 <del class="text-red-700">34499</del></strong>
+    </div>
+    <div class="border-black-900 border-2 p-4 rounded-lg">    
+        <img src="images/155.webp" alt=""   class=" w-full transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+        <p class="mt-7 text-xl">cargos </p>
+        <strong class="text-xl text-green-500">599 <del class="text-red-700">799</del></strong>  
+    </div>
+      
+             <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/156.webp" alt="" class="mt-8 w-full h-40 transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-8 text-xl ">T-shirts</p>
+                <strong class="text-xl mt-2 text-green-500">Only 299 <del class="text-red-700">499</del> </strong>
+             </div>
+              <div class="border-black-900 border-2 p-4 rounded-lg">
+                <img src="images/157.webp" alt="" class="  w-full transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer" >
+                <p class="mt-8 text-xl ">printed t-shirts</p>
+                <strong class="text-xl mt-2 text-green-500">Only 549 <del class="text-red-700">799</del></strong>
+             </div>
+               
+                  
+             </div>
+             </div>
+   </section>
+</section>
+
+<footer class="bg-gray-900 p-2 mt-5">
+  <section class=" grid grid-cols-6 text-white text-l mt-8">
+    <div>
+      <h3 class="ms-10">ABOUT </h3>
+      <ul class="mt-5">
+        <li>
+          <a class="ms-10" href="contact.html">contact us</a>
+        </li>
+         <li>
+          <a class="ms-10" href="about.html">About us</a>
+        </li>
+         <li>
+          <a class="ms-10" href="carrier.html">carrier</a>
+        </li>
+         <li>
+          <a class="ms-10" href="story.html">Flipcart story</a>
+        </li>
+         <li>
+          <a class="ms-10" href="press.html">press</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>GROUP COMPANIES </h3>
+      <ul class="mt-5">
+        <li>
+          <a href="https://www.myntra.com/?utm_source=dms_google&utm_medium=dms_searchbrand_cpc&utm_campaign=dms_google_searchbrand_cpc_Search_Brand_Myntra_Brand_India_BM_TROAS_SOK_New&gad_source=1&gad_campaignid=20443628324&gbraid=0AAAAADoxBh5g8mrOIypWm9LcgFQ8walmC&gclid=CjwKCAjw_fnFBhB0EiwAH_MfZjU5J4xFisczC99cCAOvkhaEzqtVGMSvOcoiXbMJ9EXCesLqLyPcSRoChnMQAvD_BwE " target="_blank">Myntra</a>
+        </li>
+         <li>
+          <a href="https://www.shopsy.in/" target="_blank">Shopsy</a>
+        </li>
+         <li>
+          <a href="https://www.cleartrip.com/flights?utm_source=google&utm_medium=cpc&utm_campaign=BR_Cleartrip-Desktab&dxid=CjwKCAjw_fnFBhB0EiwAH_MfZnzGcy8Apo4opz356-29_OSlnHj55T7qe_XcnWyTez8co0lNYKTRsxoC_sEQAvD_BwE&gad_source=1&gad_campaignid=88884643&gbraid=0AAAAADsvfF3COburnTpdd435W40X9uaSa&gclid=CjwKCAjw_fnFBhB0EiwAH_MfZnzGcy8Apo4opz356-29_OSlnHj55T7qe_XcnWyTez8co0lNYKTRsxoC_sEQAvD_BwE" target="_blank">Cleartrip</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div>
+      <h3>HELP </h3>
+      <ul class="mt-5">
+        <li>
+          <a href="payment.html">Payments</a>
+        </li>
+         <li>
+          <a href="shipping.html">Shiping</a>
+        </li>
+         <li>
+          <a href="return.html">Cancellation & Returns</a>
+        </li>
+         <li>
+          <a href="faq.html">FAQ</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div>
+      <h3>CONSUMER POLICY </h3>
+      <ul class="mt-5">
+        <li>
+          <a href="return.html">Cancellation & Returns</a>
+        </li>
+         <li>
+          <a href="security.html">Security</a>
+        </li>
+         <li>
+          <a href="privecy.html">privacy</a>
+        </li>
+         <li>
+          <a href="sitemap.html">Sitemap</a>
+        </li>
+         
+      </ul>
+    </div>
+    <div>
+      <h3>MAIL US </h3>
+       <p class="mt-5 text-sm">
+        Flipkart Internet Private Limited,
+        <br>
+        Buildings Alyssa, Begonia & Clove Embassy Tech Village,
+        <br>
+        Outer Ring Road, Devarabeesanahalli Village,
+        <br>
+        Bengaluru, 560103,
+        <br>
+        Karnataka, India
+
+       </p>
+       <h3 class="mt-5 text-gray-300">
+        Social :
+         <div class="mt-5 text-white">
+        <a href="https://www.facebook.com/flipkart/"><i class="fa-brands fa-facebook fa-xl mx-2"></i></a>
+        <a href="https://x.com/flipkart?lang=gu"><i class="fa-brands fa-twitter fa-xl mx-2"></i></a>
+        <a href="https://www.instagram.com/flipkart/"><i class="fa-brands fa-instagram fa-xl mx-2"></i></a>                
+        <a href="https://www.youtube.com/flipkart"><i class="fa-brands fa-youtube fa-xl mx-2"></i></a>
+        </div>
+       </h3>
+    </div>
+    <div>
+      <h3>RESISTERED OFFICE ADDRESS </h3>
+        <p class="mt-5 text-sm">
+          Flipkart Internet Private Limited,
+          <br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,
+          <br>
+          Outer Ring Road, Devarabeesanahalli Village,
+          <br>
+          Bengaluru, 560103,
+          <br>
+          Karnataka, India
+          <br>
+          CIN : U51109KA2012PTC066107
+          <br>
+          Telephone: 044-45614700
+        </p>  
+  </section>
+  <hr class="mt-8 border-gray-700">
+      <div class="text-white mt-2 flex justify-between items-center">
+        <div>
+          <p class=""><i class="m-2 fa fa-shop text-yellow-400"></i>Become a seller </p>
+        </div>
+         <div>
+          <p class=""><i class=" m-2 fa fa-chart-line text-yellow-400"></i>Advertise </p>
+        </div>
+         <div>
+          <p class=""><i class="m-2 fa fa-gift text-yellow-400"></i>Gift cards </p>
+        </div>
+         <div>
+          <p class=""><i class="m-2 fa fa-question text-yellow-400"></i>Help center </p>
+        </div>
+         <div>
+          <p>&copy;   2007-2025 Flipcart.com</p>
+        </div>
+         <div>
+        <img src="images/165.svg" alt="" class="transition duration-500 hover:opacity-6 hover:scale-110 cursor-pointer">
+        </div>
+      </div>
+</footer>
+
+</div>
+
+  
+    </section>
+    <script>
+  const carousel = document.getElementById("carousel");
+  const slides = carousel.children.length;
+  let index = 0;
+
+  function showSlide() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + slides) % slides;
+    showSlide();
+  }
+
+  // autoplay every 3s
+  setInterval(nextSlide, 3000);
+</script>
+</body>
+</html>

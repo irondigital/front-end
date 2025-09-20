@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flipkart Security Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-8 text-center">
+    <h1 class="text-4xl font-bold">Flipkart Security Center</h1>
+    <p class="mt-2 text-lg">Committed to your online safety and data protection</p>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="max-w-4xl mx-auto p-4">
+    <div x-data="{ tab: 'overview' }" class="space-y-6">
+
+      <!-- Tab Buttons -->
+      <div class="flex space-x-4 border-b">
+        <button 
+          class="py-2 px-4 focus:outline-none"
+          :class="tab === 'overview' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'overview'"
+        >Security Overview</button>
+
+        <button 
+          class="py-2 px-4 focus:outline-none"
+          :class="tab === 'data-protection' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'data-protection'"
+        >Data Protection Practices</button>
+
+        <button 
+          class="py-2 px-4 focus:outline-none"
+          :class="tab === 'safe-tips' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'safe-tips'"
+        >Tips for Safe Shopping</button>
+      </div>
+
+      <!-- Security Overview -->
+      <div x-show="tab === 'overview'" x-transition class="space-y-8">
+
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🔐 Security Overview</h2>
+          <p class="text-gray-700 mb-4">
+            At Flipkart, we prioritize your security by implementing industry-standard technologies and protocols to ensure a safe shopping experience.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>✅ Secure SSL encryption for all transactions</li>
+            <li>✅ Regular security audits by certified agencies</li>
+            <li>✅ Proactive monitoring of suspicious activities</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Data Protection Practices -->
+      <div x-show="tab === 'data-protection'" x-transition class="space-y-8">
+
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🛡️ Data Protection Practices</h2>
+          <p class="text-gray-700 mb-4">
+            Your data is handled with the highest level of security and transparency.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>✔️ Personal data stored securely with encrypted databases</li>
+            <li>✔️ Limited access based on role-based policies</li>
+            <li>✔️ Data retention strictly in line with legal requirements</li>
+            <li>✔️ Regular updates to security policies as per global standards</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Tips for Safe Shopping -->
+      <div x-show="tab === 'safe-tips'" x-transition class="space-y-8">
+
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🛍️ Tips for Safe Online Shopping</h2>
+
+          <ul class="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong>🔹 Use strong and unique passwords</strong> for your Flipkart account.</li>
+            <li><strong>🔹 Enable Two-Factor Authentication (2FA)</strong> for extra account protection.</li>
+            <li><strong>🔹 Avoid using public Wi-Fi</strong> when making purchases.</li>
+            <li><strong>🔹 Verify product sellers</strong> and read reviews carefully.</li>
+            <li><strong>🔹 Be cautious of phishing emails</strong> asking for personal info.</li>
+            <li><strong>🔹 Regularly review your orders</strong> and account activity.</li>
+          </ul>
+        </section>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-6 mt-10">
+    © 2025 Flipkart Security Center - Protecting Your Digital Experience
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flipkart Payment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-8 text-center">
+    <h1 class="text-4xl font-bold">Secure Payment - Flipkart</h1>
+    <p class="mt-2 text-lg">Fast, safe, and easy payment for your orders</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto p-6 space-y-10">
+
+    <!-- Section: Payment Summary -->
+    <section class="bg-white rounded-lg shadow-md p-8">
+      <h2 class="text-2xl font-semibold mb-4">🛒 Order Summary</h2>
+      <div class="space-y-2 text-gray-700">
+        <p><strong>Items:</strong> 3 Products</p>
+        <p><strong>Total Price:</strong> ₹15,999</p>
+        <p><strong>Shipping:</strong> Free Delivery</p>
+        <p><strong>Grand Total:</strong> ₹15,999</p>
+      </div>
+    </section>
+
+    <!-- Section: Payment Methods -->
+    <section class="bg-blue-50 rounded-lg shadow-md p-8">
+      <h2 class="text-2xl font-semibold mb-6">💳 Select Payment Method</h2>
+
+      <form class="space-y-6">
+
+        <!-- Card Payment -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="card" class="form-radio" checked>
+            <span class="text-lg font-medium">Credit / Debit Card</span>
+          </label>
+
+          <div class="mt-4 space-y-4">
+            <input type="text" placeholder="Card Number" class="w-full p-3 border rounded"/>
+            <div class="flex space-x-4">
+              <input type="text" placeholder="MM/YY" class="flex-1 p-3 border rounded"/>
+              <input type="text" placeholder="CVV" class="flex-1 p-3 border rounded"/>
+            </div>
+            <input type="text" placeholder="Cardholder Name" class="w-full p-3 border rounded"/>
+          </div>
+        </div>
+
+        <!-- UPI Payment -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="upi" class="form-radio">
+            <span class="text-lg font-medium">UPI Payment</span>
+          </label>
+
+          <div class="mt-4">
+            <input type="text" placeholder="Enter UPI ID (e.g., yourname@upi)" class="w-full p-3 border rounded"/>
+          </div>
+        </div>
+
+        <!-- Net Banking Payment -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="netbanking" class="form-radio">
+            <span class="text-lg font-medium">Net Banking</span>
+          </label>
+
+          <div class="mt-4">
+            <select class="w-full p-3 border rounded">
+              <option selected disabled>Select Your Bank</option>
+              <option>State Bank of India (SBI)</option>
+              <option>HDFC Bank</option>
+              <option>ICICI Bank</option>
+              <option>Axis Bank</option>
+              <option>Other Banks</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Pay Later Option -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="paylater" class="form-radio">
+            <span class="text-lg font-medium">Flipkart Pay Later</span>
+          </label>
+
+          <div class="mt-4 text-gray-700">
+            Pay after 15 days with no extra charge. Eligibility based on account status.
+          </div>
+        </div>
+
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
+          Proceed to Pay ₹15,999
+        </button>
+
+      </form>
+    </section>
+
+    <!-- Section: Important Info -->
+    <section class="bg-white rounded-lg shadow-md p-8">
+      <h2 class="text-2xl font-semibold mb-4">🔔 Important Information</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>✔️ All payments are secured and encrypted.</li>
+        <li>✔️ Card details are never stored on Flipkart servers.</li>
+        <li>✔️ UPI transactions are processed instantly.</li>
+        <li>✔️ Support available 24/7 for payment issues.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-6 mt-10">
+    © 2025 Flipkart Payments - Secure & Reliable Checkout
+  </footer>
+
+</body>
+
+</html>

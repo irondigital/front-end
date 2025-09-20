@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flipkart FAQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-8 text-center">
+    <h1 class="text-4xl font-bold">Flipkart Help Center</h1>
+    <p class="mt-2 text-lg">Find answers to your questions about shopping with Flipkart</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto p-6 space-y-10">
+
+    <!-- FAQ Section -->
+    <section class="bg-white rounded-lg shadow-md p-8">
+      <h2 class="text-3xl font-semibold mb-6">❓ Frequently Asked Questions</h2>
+
+      <div x-data="{ openIndex: null }" class="space-y-4">
+
+        <!-- Question 1 -->
+        <div class="border rounded-lg p-4">
+          <button 
+            class="w-full text-left text-lg font-medium focus:outline-none flex justify-between items-center"
+            @click="openIndex = openIndex === 1 ? null : 1"
+          >
+            What is Flipkart’s return policy?
+            <span x-text="openIndex === 1 ? '-' : '+'" class="text-xl font-bold"></span>
+          </button>
+          <div class="mt-2 text-gray-700" x-show="openIndex === 1" x-transition>
+            You can return most items within 30 days of delivery. Make sure the item is in original condition with packaging.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="border rounded-lg p-4">
+          <button 
+            class="w-full text-left text-lg font-medium focus:outline-none flex justify-between items-center"
+            @click="openIndex = openIndex === 2 ? null : 2"
+          >
+            How do I track my order?
+            <span x-text="openIndex === 2 ? '-' : '+'" class="text-xl font-bold"></span>
+          </button>
+          <div class="mt-2 text-gray-700" x-show="openIndex === 2" x-transition>
+            Visit your Flipkart account → My Orders → Click ‘Track’ next to your order to see the latest status.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="border rounded-lg p-4">
+          <button 
+            class="w-full text-left text-lg font-medium focus:outline-none flex justify-between items-center"
+            @click="openIndex = openIndex === 3 ? null : 3"
+          >
+            Do you offer customer support?
+            <span x-text="openIndex === 3 ? '-' : '+'" class="text-xl font-bold"></span>
+          </button>
+          <div class="mt-2 text-gray-700" x-show="openIndex === 3" x-transition>
+            Yes, our customer support is available 24/7 via live chat, email, and phone.  
+            Visit Flipkart Help Center for direct support links.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section class="bg-blue-50 rounded-lg shadow-md p-8">
+      <h2 class="text-3xl font-semibold mb-4">🔔 Additional Information</h2>
+      <p class="mb-4">
+        Flipkart is India’s largest online marketplace offering millions of products in electronics, fashion, home appliances, books, and much more.  
+        Whether you are shopping for daily essentials or the latest gadgets, we offer the best prices and fastest delivery.
+      </p>
+      <ul class="list-disc list-inside space-y-2">
+        <li>✅ Easy Returns within 30 days</li>
+        <li>✅ Multiple Payment Options (Credit/Debit cards, UPI, EMI)</li>
+        <li>✅ 24/7 Customer Support</li>
+        <li>✅ Special offers for Flipkart Plus Members</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-6 mt-10">
+    © 2025 Flipkart Help Center - Simplifying Shopping
+  </footer>
+
+</body>
+
+</html>

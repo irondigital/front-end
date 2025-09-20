@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flipkart Sitemap Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-8 text-center">
+    <h1 class="text-4xl font-bold">Flipkart Sitemap</h1>
+    <p class="mt-2 text-lg">Navigate all important Flipkart sections easily</p>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="max-w-5xl mx-auto p-4">
+    <div x-data="{ tab: 'main' }" class="space-y-6">
+
+      <!-- Tab Buttons -->
+      <div class="flex space-x-4 border-b">
+        <button 
+          class="py-2 px-4 focus:outline-none"
+          :class="tab === 'main' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'main'"
+        >Main Sections</button>
+
+        <button 
+          class="py-2 px-4 focus:outline-none"
+          :class="tab === 'categories' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'categories'"
+        >Categories & Services</button>
+
+        <button 
+          class="py-2 px-4 focus:outline-none"
+          :class="tab === 'help' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'help'"
+        >Help & Support</button>
+      </div>
+
+      <!-- Main Sections Content -->
+      <div x-show="tab === 'main'" x-transition class="space-y-8">
+
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🏠 Main Sections</h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li><a href="#" class="text-blue-600 hover:underline">Home</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">My Account</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Cart</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Orders</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Flipkart Plus</a></li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Categories & Services Content -->
+      <div x-show="tab === 'categories'" x-transition class="space-y-8">
+
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🛍️ Categories & Services</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Popular Categories</h3>
+              <ul class="list-disc list-inside space-y-2">
+                <li><a href="#" class="text-blue-600 hover:underline">Mobiles</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Electronics</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Home Appliances</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Fashion</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Beauty</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Services</h3>
+              <ul class="list-disc list-inside space-y-2">
+                <li><a href="#" class="text-blue-600 hover:underline">Flipkart Plus Membership</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Gift Cards</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Product Exchange</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Easy EMI</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- Help & Support Content -->
+      <div x-show="tab === 'help'" x-transition class="space-y-8">
+
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🛎️ Help & Support</h2>
+
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li><a href="#" class="text-blue-600 hover:underline">Order Cancellation</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Returns & Refunds</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Payment Issues</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Account Settings</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Contact Support</a></li>
+          </ul>
+        </section>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-6 mt-10">
+    © 2025 Flipkart Sitemap Center - Explore Everything Seamlessly
+  </footer>
+
+</body>
+
+</html>
