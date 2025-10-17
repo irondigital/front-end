@@ -892,6 +892,62 @@
 
   // autoplay every 3s
   setInterval(nextSlide, 3000);
+
+  /* JavaScript for Mobile Menu Toggle and Structure Adjustment */
+
+// Get the header element
+const header = document.querySelector('header');
+
+// Get the main navigation links (Account, Cart, Seller, Ellipsis)
+const accountDiv = header.querySelector('div:nth-child(3)');
+const cartDiv = header.querySelector('div:nth-child(4)'); // Cart is kept outside the menu for quick access
+const sellerDiv = header.querySelector('div:nth-child(5)');
+const ellipsisDiv = header.querySelector('div:nth-child(6)'); // The Mobile Menu button
+
+// --- 1. Create and populate the Mobile Navigation Container ---
+
+// Create the new container for the hidden links
+const navContainer = document.createElement('div');
+navContainer.classList.add('nav-links-container'); 
+
+// Append the links (Account and Seller) to the new container
+navContainer.appendChild(accountDiv.cloneNode(true)); // Clone to keep desktop visibility logic separate
+navContainer.appendChild(sellerDiv.cloneNode(true));
+
+// Append the new container to the header
+header.appendChild(navContainer);
+
+
+// --- 2. Setup the Mobile Toggle Button (Ellipsis) ---
+
+// Change the ellipsis icon to a hamburger icon for clarity
+const ellipsisIcon = ellipsisDiv.querySelector('.fa-ellipsis-v');
+
+if (ellipsisIcon) {
+    ellipsisIcon.classList.remove('fa-ellipsis-v');
+    ellipsisIcon.classList.add('fa-bars'); // Use the hamburger icon for the menu toggle
+}
+
+// --- 3. Add Toggle Functionality ---
+
+ellipsisDiv.addEventListener('click', () => {
+    // Toggle the 'active' class on the navigation container
+    navContainer.classList.toggle('active');
+    
+    // Optional: Change icon from hamburger to X
+    if (navContainer.classList.contains('active')) {
+        ellipsisIcon.classList.remove('fa-bars');
+        ellipsisIcon.classList.add('fa-times');
+    } else {
+        ellipsisIcon.classList.remove('fa-times');
+        ellipsisIcon.classList.add('fa-bars');
+    }
+});
+
+// Since the header structure is complex and we cannot modify the HTML directly, 
+// we must ensure the original elements (Account/Seller) are hidden on mobile 
+// so only the ones inside the new navContainer are visible.
+// The CSS handles this using the nth-child selector on the original elements.
 </script>
 </body>
 </html>

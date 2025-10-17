@@ -1,0 +1,37 @@
+<!-- 
+what is jquery ?
+  jquery is a client side scripting language 
+  jquery is a library of javascript 
+  jquery is used to provides effects 
+  There are three types of effects in jquery ...
+   a) hide b) show c) toggle 
+  jquery file extension .js 
+  jquery is a case-senstive client side scripting language  
+How to call jquery ...
+  jquery called inside of <body> and <head> tags using script> tag
+  jquery is called via its CDN.
+  jquery is always best to called inside of <body> 
+  jquery is used as programming language just like javascript
+  jquery is more lighter than javascript 
+  jquery used operators just like javascript
+  jquery used function just like javascript
+  jquery used variables just like javascript   
+  jquery used data type  just like javascript
+  jquery used inbuild events
+      a) click
+      b) hover
+      c) ondbclick
+      d) onsubmit
+   jquery provides css selectors to used style on webpage..
+      a) element selector 
+      b) id selector 
+      c) class selector 
+          
+      
+what is CDN ?
+  CDN stands for content delivery network 
+  There two type of CDN ...
+  a) offline CDN
+  b) online CDN 
+  
+How to call jquery via CDN....

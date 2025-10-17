@@ -1,0 +1,7 @@
+javascript is a client side scripting language.
+it is use for creating a dymaic or static webpages because it is high level,interpreted and object-oriented programing language.
+in js we can use variables so we can store any type of data like array, string or object etc...
+in this language we have multiple data type so we can use easily any type of value and stores in variables.
+it is easy to implement and also in readeble form.
+it directly run in browser
+this is onne of the most popular language in  the world beacuse we can use in many type of apps,website , etc...

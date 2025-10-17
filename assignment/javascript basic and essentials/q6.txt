@@ -1,0 +1,11 @@
+undefined means we can decleare a variable but not assigned value.
+
+ex:
+let x; 
+console.log(x); // undefined
+
+A variable is explicitly assigned “no value”
+
+ex:
+let x= null; 
+console.log(x); // null

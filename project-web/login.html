@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Login Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Flipkart Color Palette: Blue (#2874f0), White (#ffffff), Yellow/Orange (#fb641b) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f3f6; /* Flipkart's light gray background */
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header Styling (Blue bar on top) --- */
+.login-header {
+    background-color: #2874f0;
+    padding: 10px 0;
+}
+
+.login-logo-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.tagline {
+    color: #fff;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* --- Main Login Container --- */
+.login-container {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+    border-radius: 2px;
+}
+
+/* --- Left Section (Welcome Text) --- */
+.welcome-section {
+    flex: 1;
+    background-color: #2874f0;
+    color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome-section h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* --- Right Section (Form) --- */
+.form-section {
+    flex: 1;
+    padding: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+    font-size: 16px;
+    outline: none;
+    transition: border-bottom-color 0.2s;
+}
+
+.input-group input:focus {
+    border-bottom-color: #2874f0;
+}
+
+.input-group label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    color: #878787;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+}
+
+/* Float label up when input is focused or has content */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -8px;
+    font-size: 12px;
+    color: #2874f0;
+}
+
+.forgot-link {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    font-size: 14px;
+    color: #2874f0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.policy-text {
+    font-size: 12px;
+    color: #878787;
+    margin-bottom: 15px;
+}
+
+.policy-text a {
+    color: #2874f0;
+    text-decoration: none;
+}
+
+/* --- Buttons --- */
+.login-button {
+    background-color: #fb641b; /* Flipkart's distinct orange/yellow for primary action */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.or-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #878787;
+    margin: 10px 0;
+}
+
+.or-separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.or-separator span {
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.otp-button {
+    background-color: #ffffff;
+    color: #2874f0;
+    border: 1px solid #e0e0e0;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-bottom: auto; /* Pushes the 'New User' link to the bottom */
+}
+
+.new-user-link {
+    text-align: center;
+    color: #2874f0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+/* --- Responsiveness for smaller screens --- */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        margin: 20px;
+        box-shadow: none;
+    }
+    
+    .welcome-section {
+        border-radius: 2px 2px 0 0;
+        min-height: 150px;
+        padding: 20px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .form-section {
+        padding: 20px;
+        border-radius: 0 0 2px 2px;
+        /* The form content will scroll slightly if the screen is very small, 
+           but the general layout is preserved. */
+    }
+    
+    .new-user-link {
+        margin-top: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-header">
+            <div class="login-logo-container">
+                <h1 class="logo-text">Flipkart</h1>
+                <p class="tagline">Explore Plus $\star$</p>
+            </div>
+        </div>
+
+        <div class="login-container">
+            <div class="welcome-section">
+                <h2>Login</h2>
+                <p>Get access to your Orders, Wishlist and Recommendations</p>
+                </div>
+
+            <div class="form-section">
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <input type="text" id="email" required>
+                        <label for="email">Enter Email/Mobile Number</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Enter Password</label>
+                        <a href="#" class="forgot-link">Forgot?</a>
+                    </div>
+                    
+                    <p class="policy-text">By continuing, you agree to Flipkart's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+                    
+                    <button type="submit" class="login-button">Login</button>
+                    
+                    <div class="or-separator">
+                        <hr>
+                        <span>OR</span>
+                        <hr>
+                    </div>
+                    
+                    <button type="button" class="otp-button">Request OTP</button>
+                    
+                    <a href="#" class="new-user-link">New to Flipkart? Create an account</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

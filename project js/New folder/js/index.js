@@ -1,12 +1,12 @@
 // create a function for clearAll
 
 function clearAll() {
-    document.getElementById("result").value = "";
+    document.getElementById("result").value = " 0";
 };  
 
 function one(){
     var a = document.getElementById("result").value;
-    var b =a.slice(0,-1);
+    var b = a.slice(0,-1);
     document.getElementById("result").value = b;  
 }
 

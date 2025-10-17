@@ -1,0 +1,12 @@
+
+
+const hello = (str)=>{
+    const vowels = "aeiou";
+    for(let char of vowels){
+        if(!str.includes(char)){
+            return false;
+        }
+       
+    } return true;
+}
+console.log(hello( "aeiou"))

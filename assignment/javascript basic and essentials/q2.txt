@@ -1,0 +1,27 @@
+javascript
+
+Mainly used for web development (frontend + backend via Node.js)
+Runs directly in browsers (and Node.js on servers)
+Lightweight, flexible
+Dynamic typing (no need to declare variable type)
+Interpreted (by browser engines like V8)
+Very fast in browsers
+
+python
+
+General-purpose: AI, Data Science, Web, Automation
+Runs on the Python interpreter
+Very clean and readable
+Dynamic typing
+Interpreted
+Slower for computation-heavy tasks
+
+
+java
+
+General-purpose: Web, Android, Enterprise Apps
+Runs on the Java Virtual Machine (JVM)
+Strict and verbose (requires type declarations)
+Static typing (must declare data type)
+Compiled + Interpreted (bytecode runs on JVM)
+Faster (compiled bytecode)

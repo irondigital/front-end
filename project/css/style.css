@@ -1,228 +1,471 @@
-*{
+/* Base styles - Mobile First (Up to 767px) */
+* {
     margin: 0px;
     padding: 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 17px;
+    box-sizing: border-box; /* Crucial for responsive design */
 }
 
- 
-#head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #151515;
-  color: white;
-  flex-wrap: wrap;
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-
-#head h1 {
-  font-size: 24px;
-  margin: 0;
-  font-weight: 600;
-  line-height: 1.2;
-  padding-left: 60px;
-  padding-top: 5px;
-}
-
-#head h1:hover{
-  color: aqua;
-}
-
-
-.icon {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 10px;
-  justify-content: flex-end;
-}
-.icon p:hover{
-  color: #d2a309;
-  border-bottom: 3px solid greenyellow;
-}
-
-
-.icon p {
-  font-size: 16px;
-  color:white;
-}
-
-
-.btn {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.btn .list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
-}
-
-.btn .list li a {
-  text-decoration: none;
-  color: #ccc;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 5px 10px;
-  border-bottom: 2px solid transparent;
-}
-
-.btn .list li a:hover {
-  color: #d2a309;
-  border-color: #00a0df;
-}
-.div1{
-    background: url("/images/cover-image.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* background-attachment: fixed; */
-    height: auto;
-    padding: 50px ;
-
-
-}
-.container{
-    max-width: 1200px;
+.container {
     margin: 0 auto;
     padding: 0px 24px;
 }
 
-.div1 p b{
-    font-size: 36px;
-   
-    display: inline-block;
+/* --- Header Section (Mobile) --- */
+#head {
+    display: flex;
+    flex-direction: column; /* Stacked on mobile */
+    align-items: center; /* Center items for mobile */
+    padding: 20px;
+    background-color: #151515;
     color: white;
+    flex-wrap: wrap;
+}
+
+#head h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+    padding-left: 0;
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#head h1:hover {
+    color: aqua;
+}
+
+.icon {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    justify-content: center;
+    width: 100%;
     
 }
-.div1 p i{
-    padding-left: 50px;
-    font-size: 36px;
+
+.icon p:hover {
+    color: #d2a309;
+    border-bottom: 3px solid greenyellow;
+}
+
+.icon p {
+    font-size: 16px;
     color: white;
-
 }
-.section1 .div2{
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stacked menu items for mobile */
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.btn .list li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    display: block;
+    text-align: center;
+}
+
+.btn .list li a:hover {
+    color: #d2a309;
+    border-color: #00a0df;
+}
+
+/* --- Section 1 - Hero/Cover Image (Mobile) --- */
+.div1 {
+    background: url("/images/cover-image.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.div1 p b {
+    font-size: 28px;
+    display: block;
     color: white;
-    padding-top: 150px;
+    text-align: center;
 }
 
-footer{
- 
-  
-  
-  padding: 20px;
-  background-color: #151515;
-  color: white;
- 
-  max-width: 100%;
-  text-align: center;
-}
-.div3{
-  width: 400px;
-  height: auto;
-  background-color: #ccc;
- 
-}
-.div3 legend{
-  border: 2px solid black;
-  color: white;
-  background-color: black;
-  font-size: 18px;
-  width: 220px;
- 
-}
-.div3 fieldset{
-  border: none;
- 
-}
-.all{
-  padding-left: 83px;
-}
-.div3 .all h2 b{
-  padding-left: 50px;
-  
-}
-.div3 .all button{
-  margin-left: 20px;
-  background-color: #00a0df;
-  width: 40px;
-  height: 30px;
-  border-radius: 6px;
-}
-.div3 .all .p1{
-  color: #00a0df;
-  margin-top: 10px;
-}
-.div3 .all hr{
-  
-  width: 200px;
+.div1 p i {
+    padding-left: 0;
+    font-size: 24px;
+    color: white;
+    display: block;
+    text-align: center;
 }
 
- .cointainer2 {
-  display: flex;
-  gap: 100px;
-  /* padding: 20px; */
-
+.section1 .div2 {
+    color: white;
+    padding-top: 50px;
+    text-align: center;
 }
-.section3{
-    width: 70%;
-}
-.div5 h2{
-  margin: 10px 0px 10px 0px ;
-}
-.div5 .p2{
-  color: #00a0df;
-  
-}
-.div6 ul li{
-   margin: 20px 0px 10px 0px ;
-   font-weight: 900;
-}
-.div6 ul .btn1{
-  background-color: #151515;
-  color: white;
-  font-size: 20px;
-  margin-left: 500px;
-  border-radius: 5px;
-}
-.div6 ul .btn2{
-  background-color: #00a0df;
-  color: white;
-  font-size: 20px;
-  /* margin-left: 200px; */
-  border-radius: 5px;
-}
-.div6 ul span{
-  margin-left: 429px;
-}
-.div6 ul .btn3{
-  font-size: 20px;
-  border-radius: 5px;
-  background-color: #151515;
-  color: white;
+.section1 .div2 .p1 {
+    font-size: 14px;
 }
 
-.div7{
-  display: flex;
-  margin: 40px 0px 10px 0px  ;
-  justify-items: flex-start;
-}
-.div9{
-  margin-left: 200px;
-  border: 2px solid white;
-  background-color: #00a0df;
-  width: 200px;
-  text-align: justify;
-  /* padding: 5px 5px 0px 5px;  */
-  font-size: 18px;
-  border-radius: 10px;
-  padding-left: 20px;
-}
-.div9 .p6{
-  margin-left: 40px;
+/* --- Section 2 & 3 - Main Content (Mobile) --- */
+.cointainer2 {
+    display: flex;
+    flex-direction: column; /* Stack sections on mobile */
+    gap: 30px;
+    padding: 30px 0;
 }
 
+.section2 {
+    width: 100%; /* Full width on mobile */
+    order: 2; /* Form after main content (optional design choice) */
+}
+
+.div3 {
+    width: 100%;
+    height: auto;
+    background-color: #ccc;
+    padding: 0;
+}
+
+.div3 legend {
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    width: 220px;
+    margin: 0 auto;
+}
+
+.div3 fieldset {
+    border: none;
+}
+
+.all {
+    padding: 20px;
+}
+
+.div3 .all h2 {
+    text-align: center;
+}
+
+.div3 .all h2 b {
+    padding-left: 0;
+}
+
+.div3 .all input[type="text"],
+.div3 .all input[type="date"],
+.div3 .all input[type="time"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block;
+}
+.div3 .all input[type="date"],
+.div3 .all input[type="time"] {
+    display: inline-block;
+    width: calc(50% - 15px); /* Half-width for date/time side-by-side */
+    margin-right: 5px;
+}
+
+
+.div3 .all button {
+    margin-left: 10px;
+    background-color: #00a0df;
+    width: 40px;
+    height: 30px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+}
+
+.div3 .all .p1 {
+    color: #00a0df;
+    margin-top: 10px;
+}
+
+.div3 .all hr {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.section3 {
+    width: 100%; /* Full width on mobile */
+    order: 1; /* Main content first */
+}
+
+.div5 h2 {
+    margin: 10px 0px 10px 0px;
+}
+
+.div5 .p2 {
+    color: #00a0df;
+    line-height: 1.5;
+}
+
+.div6 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.div6 ul li {
+    margin: 20px 0px 10px 0px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.div6 ul .btn1 {
+    background-color: #151515;
+    color: white;
+    font-size: 16px;
+    margin-left: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.div6 ul span {
+    margin-left: 0;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.div6 ul .btn2,
+.div6 ul .btn3 {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    flex-grow: 1;
+    max-width: 150px;
+    text-align: center;
+}
+
+.div6 ul .btn2 {
+    background-color: #00a0df;
+    color: white;
+}
+
+.div6 ul .btn3 {
+    background-color: #151515;
+    color: white;
+}
+
+.div7 {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    margin: 40px 0 10px 0;
+    gap: 20px;
+}
+
+.div9 {
+    margin-left: 0;
+    border: 2px solid white;
+    background-color: #00a0df;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+.div9 p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.div9 .p6 {
+    margin-left: 0;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* --- Footer (Mobile) --- */
+footer {
+    padding: 20px;
+    background-color: #151515;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* --- Desktop/Tablet Styles (min-width: 768px) --- */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+        padding: 0px 24px;
+    }
+    
+    /* Header/Navigation */
+    #head {
+        flex-direction: row; /* Horizontal layout */
+        align-items: flex-start;
+        padding-bottom: 0;
+        justify-content: space-between;
+    }
+
+    #head h1 {
+        padding-left: 60px;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .icon {
+        width: auto;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        width: 60%; /* Allow navigation to take up space for right alignment */
+        justify-content: flex-end;
+        align-self: flex-end;
+    }
+
+    .btn .list {
+        flex-direction: row; /* Horizontal menu */
+        gap: 30px;
+    }
+
+    .btn .list li a {
+        font-size: 14px;
+        text-align: left;
+    }
+    
+    /* Section 1 - Hero/Cover Image */
+    .div1 {
+        height: 450px; /* Taller hero section */
+        padding: 50px;
+    }
+
+    .div1 p b {
+        font-size: 36px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .div1 p i {
+        padding-left: 50px;
+        font-size: 36px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .section1 .div2 {
+        padding-top: 150px;
+        text-align: left;
+    }
+    .section1 .div2 .p1 {
+        font-size: 17px;
+    }
+
+    /* Section 2 & 3 - Main Content */
+    .cointainer2 {
+        flex-direction: row; /* Side-by-side layout */
+        gap: 50px; /* Reduced gap slightly for wider screens */
+        padding: 30px 0;
+    }
+    
+    .section2 {
+        width: 400px; /* Fixed width for the form section as per original */
+        order: initial;
+        flex-shrink: 0;
+    }
+    
+    .div3 {
+        width: 100%; /* Fills 400px of section2 */
+    }
+
+    .all {
+        padding-left: 83px; /* Back to original padding */
+        padding-right: 20px;
+    }
+    
+    .div3 .all h2 {
+        text-align: left;
+    }
+    
+    .div3 .all input[type="date"],
+    .div3 .all input[type="time"] {
+        width: calc(50% - 10px); /* Back to near original side-by-side */
+    }
+
+    .section3 {
+        width: calc(100% - 450px); /* Fill remaining space */
+        order: initial;
+    }
+
+    .div6 ul .btn1 {
+        margin-left: 500px; /* Back to original positioning */
+        display: inline-block;
+        width: auto;
+    }
+    
+    .div6 ul span {
+        margin-left: 429px;
+        justify-content: flex-start;
+    }
+
+    .div6 ul .btn2,
+    .div6 ul .btn3 {
+        flex-grow: 0;
+        max-width: none;
+    }
+
+    /* Our Clients and Testimonial */
+    .div7 {
+        flex-direction: row; /* Side-by-side layout */
+        margin: 40px 0 10px 0;
+        justify-content: flex-start;
+        gap: 100px;
+    }
+
+    .div9 {
+        margin-left: 0; /* Resetting mobile alignment */
+        width: 200px;
+        flex-shrink: 0;
+    }
+    
+    .div9 .p6 {
+        margin-left: 40px;
+    }
+    
+    .div8 {
+        flex-grow: 1;
+    }
+}

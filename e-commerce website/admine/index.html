@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-3 px-4 flex flex-wrap items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-bold">Flipkart</span>
+      <span class="text-xs italic">Explore Plus</span>
+    </div>
+    <div class="flex-1 mx-4">
+      <input type="text" placeholder="Search for products, brands and more" class="w-full p-2 rounded-md text-black" id="search">
+    </div>
+    <div class="flex items-center space-x-4">
+      <button class="flex items-center space-x-1">
+        <span class="material-icons">shopping_cart</span>
+        <span>Cart</span>
+      </button>
+      <button class="bg-white text-blue-600 px-3 py-1 rounded-md font-semibold">Login</button>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="w-full bg-white shadow-md overflow-hidden">
+    <img src="https://picsum.photos/1200/300" alt="banner" class="w-full object-cover">
+  </section>
+
+  <!-- Categories -->
+  <section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 p-4 bg-white mt-4">
+    <div class="text-center">
+      <img src="https://picsum.photos/100" class="mx-auto rounded-lg">
+      <p class="mt-2 font-semibold">Mobiles</p>
+    </div>
+    <div class="text-center">
+      <img src="https://picsum.photos/101" class="mx-auto rounded-lg">
+      <p class="mt-2 font-semibold">Electronics</p>
+    </div>
+    <div class="text-center">
+      <img src="https://picsum.photos/102" class="mx-auto rounded-lg">
+      <p class="mt-2 font-semibold">Fashion</p>
+    </div>
+    <div class="text-center">
+      <img src="https://picsum.photos/103" class="mx-auto rounded-lg">
+      <p class="mt-2 font-semibold">Home</p>
+    </div>
+    <div class="text-center">
+      <img src="https://picsum.photos/104" class="mx-auto rounded-lg">
+      <p class="mt-2 font-semibold">Appliances</p>
+    </div>
+    <div class="text-center">
+      <img src="https://picsum.photos/105" class="mx-auto rounded-lg">
+      <p class="mt-2 font-semibold">Beauty</p>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="p-4">
+    <h2 class="text-2xl font-semibold mb-4">Top Deals</h2>
+    <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center py-4 mt-8">
+    <p>© 2025 Flipkart Clone | Made for learning</p>
+  </footer>
+
+  <script>
+    const products = [
+      {id:1, name:'Smartphone', price:9999, img:'https://picsum.photos/200?1'},
+      {id:2, name:'Headphones', price:1999, img:'https://picsum.photos/200?2'},
+      {id:3, name:'Shoes', price:2999, img:'https://picsum.photos/200?3'},
+      {id:4, name:'T-shirt', price:899, img:'https://picsum.photos/200?4'},
+      {id:5, name:'Washing Machine', price:15999, img:'https://picsum.photos/200?5'},
+      {id:6, name:'Laptop', price:49999, img:'https://picsum.photos/200?6'},
+      {id:7, name:'Smart Watch', price:4999, img:'https://picsum.photos/200?7'},
+      {id:8, name:'Camera', price:29999, img:'https://picsum.photos/200?8'},
+      {id:9, name:'Microwave', price:7999, img:'https://picsum.photos/200?9'},
+      {id:10, name:'Bag', price:1299, img:'https://picsum.photos/200?10'},
+      {id:11, name:'Mixer Grinder', price:2499, img:'https://picsum.photos/200?11'},
+      {id:12, name:'Keyboard', price:1499, img:'https://picsum.photos/200?12'}
+    ];
+
+    const grid = document.getElementById('productGrid');
+
+    products.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'bg-white p-3 rounded-lg shadow hover:shadow-lg transition flex flex-col';
+      card.innerHTML = `
+        <img src="${p.img}" alt="${p.name}" class="w-full h-40 object-cover rounded">
+        <h3 class="mt-2 font-semibold">${p.name}</h3>
+        <p class="text-gray-600">₹${p.price}</p>
+        <button class="bg-blue-600 text-white py-1 mt-auto rounded hover:bg-blue-700">Add to Cart</button>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>

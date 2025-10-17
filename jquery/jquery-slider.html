@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://malsup.github.io/min/jquery.cycle2.min.js"></script>
+  <script>
+    
+    $(function(){
+        $(".img").cycle({
+            fx:"scrollHorz",
+            next:".img",
+            prev:".img",
+            pager:".img",
+            timeout:3000
+        });
+    });
+  </script>
+</head>
+<body>
+    <div class="img">
+        <img src="https://thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="" style="width: 90% " height="400px">
+        <img src="https://cdn.pixabay.com/photo/2025/10/05/15/06/autumn-9875155_1280.jpg" alt="" style="width: 90% " height="400px">
+        <img src="https://cdn.pixabay.com/photo/2025/09/18/14/08/woman-9841247_1280.jpg" alt="" style="width: 90% " height="400px">
+        <img src="https://cdn.pixabay.com/photo/2025/09/10/10/32/pumpkins-9826071_1280.jpg" alt="" style="width: 90% " height="400px">
+    </div>
+</body>
+</html>
