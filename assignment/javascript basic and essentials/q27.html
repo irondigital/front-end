@@ -1,0 +1,117 @@
+Error handling is crucial in JavaScript because it helps your application stay stable, secure, and user-friendly, even when something goes wrong.
+
+1. try...catch Statement:
+The try...catch statement allows you to test a block of code for errors (try block)
+and handle those errors gracefully (catch block).
+Here is the syntax:
+try {
+  // Code that may throw an error
+} catch (error) {
+  // Code to handle the error
+}
+Example of try...catch:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error Handling Example</title>
+</head>
+<body>
+  <h2>JavaScript Error Handling</h2>
+
+  <script>
+    try {
+      // Code that may cause an error
+      let x = 5;
+      let y = 0;
+      
+      if (y === 0) {
+        throw new Error("Division by zero is not allowed!");
+      }
+
+      let result = x / y;
+      console.log(result);
+    } 
+    catch (error) {
+      // Handle the error
+      console.log("An error occurred: " + error.message);
+    } 
+    finally {
+      // Always runs
+      console.log("Code inside finally block executed.");
+    }
+  </script>
+</body>
+
+</html>
+
+2. finally Block:
+The finally block is optional and will always execute after the try and catch blocks, regardless of whether an error occurred or not. It is typically used for cleanup code.
+Here is the syntax:
+try {
+  // Code that may throw an error
+} catch (error) {
+  // Code to handle the error
+} finally {
+  // Code that will always run
+}
+Example of finally block:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finally Block Example</title>
+</head>
+<body>
+  <h2>JavaScript Finally Block Example</h2>
+
+  <script>
+    function testFinally() {
+      try {
+        console.log("Inside try block.");
+        // Simulate an error
+        throw new Error("An error occurred!");
+      } 
+      catch (error) {
+        console.log("Caught an error: " + error.message);
+      } 
+      finally {
+        console.log("This will always execute, regardless of errors.");
+      }
+    }
+
+    testFinally();
+  </script>
+</body>
+
+</html>
+3. throw Statement:
+The throw statement allows you to create custom errors. You can throw exceptions using the throw keyword followed by an error object or any value.
+Here is the syntax:
+throw expression;
+Example of throw statement:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Throw Statement Example</title>
+</head>
+<body>
+  <h2>JavaScript Throw Statement Example</h2>
+
+  <script>
+    function validateAge(age) {
+      if (age < 18) {
+        throw new Error("Age must be at least 18.");
+      } else {
+        console.log("Age is valid.");
+      }
+    }
+
+    try {
+      validateAge(15);
+    } 
+    catch (error) {
+      console.log("Validation error: " + error.message);
+    }
+  </script>
+</body>
+</html>
+

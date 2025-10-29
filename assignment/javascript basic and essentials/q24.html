@@ -1,0 +1,63 @@
+In JavaScript, setTimeout() and setInterval() are built-in timing functions used to schedule code execution after a certain amount of time.
+
+They are part of the Web APIs, not the JavaScript engine itself, and help create delays, animations, and repeated actions in web applications.
+
+
+1. setTimeout():
+The setTimeout() function is used to execute a function once after a specified delay (in milliseconds). It takes two main arguments: the function to be executed and the delay time.
+Here is the syntax:
+setTimeout(function, delay);
+Example of setTimeout():
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setTimeout Example</title>
+</head>
+<body>
+    <h2>setTimeout Example</h2>
+    <p id="demo">Wait for it...</p>
+    
+    <script>
+        function showMessage() {
+        document.getElementById("demo").textContent = "Hello after 2 seconds!";
+        }
+    
+        // Call showMessage after 2000 milliseconds (2 seconds)
+        setTimeout(showMessage, 2000);
+    </script>
+</body>
+
+</html>
+
+2. setInterval():
+The setInterval() function is used to execute a function repeatedly at specified intervals (in milliseconds).
+Here is the syntax:
+setInterval(function, interval);
+Example of setInterval():
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval Example</title>
+</head>
+<body>
+    <h2>setInterval Example</h2>
+    <p id="counter">0</p>
+    
+    <script>
+        let count = 0;
+        function updateCounter() {
+        count++;
+        document.getElementById("counter").textContent = count;
+        }
+    
+        // Call updateCounter every 1000 milliseconds (1 second)
+        setInterval(updateCounter, 1000);
+    </script>
+</body>
+
+</html>

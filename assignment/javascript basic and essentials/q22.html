@@ -1,0 +1,38 @@
+The DOM (Document Object Model) is a programming interface provided by the browser that represents the structure of a web page as a tree of objects.
+Each part of an HTML document — like elements, attributes, and text — becomes a node in this tree.
+
+
+In this example, the <html>, <body>, <h1>, and <p> tags are all represented as nodes in the DOM tree. JavaScript can interact with these nodes to manipulate the content, structure, and style of the web page dynamically.
+JavaScript provides several methods to interact with the DOM, such as:
+1. getElementById(): Selects an element by its ID.          
+2. getElementsByClassName(): Selects elements by their class name.
+3. getElementsByTagName(): Selects elements by their tag name.
+4. querySelector(): Selects the first element that matches a CSS selector.
+5. querySelectorAll(): Selects all elements that match a CSS selector.
+Here is an example of how to use JavaScript to manipulate the DOM:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h2>DOM Manipulation Example</h2>
+  <p id="myParagraph">This is the original paragraph.</p>
+  <button id="changeTextButton">Change Text</button>
+
+  <script>
+    // Get the paragraph and button elements
+    const paragraph = document.getElementById('myParagraph');
+    const button = document.getElementById('changeTextButton');
+
+    // Add a click event listener to the button
+    button.addEventListener('click', function() {
+      // Change the text content of the paragraph
+      paragraph.textContent = 'The text has been changed!';
+    });
+  </script>
+</body>
+</html>

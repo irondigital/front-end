@@ -1,0 +1,110 @@
+1. getElementById():
+    Selects one single element from the DOM using its unique id attribute.
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <p id="message">Hello!</p>
+
+<script>
+  let element = document.getElementById("message");
+  element.style.color = "blue";
+</script>
+</body>
+</html>
+
+2. getElementsByClassName():
+    Selects all elements that share the same class name and returns them as a live HTMLCollection.
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <p class="note">Note 1</p>
+ <p class="note">Note 2</p>
+ <p class="note">Note 3</p>
+<script>
+  let elements = document.getElementsByClassName("note");
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.fontWeight = "bold";
+  }
+</script>
+</body>
+</html>          
+
+
+3. getElementsByTagName():
+
+    Selects all elements with the specified tag name and returns them as a live HTMLCollection.
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <h2>Heading 1</h2>
+ <h2>Heading 2</h2>
+ <h2>Heading 3</h2>
+<script>
+  let headings = document.getElementsByTagName("h2");
+  for (let i = 0; i < headings.length; i++) {
+    headings[i].style.textDecoration = "underline";
+  }
+</script>
+</body>
+</html>
+
+4. querySelector():
+    Selects the first element that matches a specified CSS selector.
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <div class="container">
+   <p class="info">First Info Paragraph</p>
+   <p class="info">Second Info Paragraph</p>
+ </div>
+<script>
+  let firstInfo = document.querySelector(".info");
+  firstInfo.style.backgroundColor = "yellow";
+</script>
+</body>
+</html>
+5. querySelectorAll():
+    Selects all elements that match a specified CSS selector and returns them as a static NodeList.
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <div class="items">
+
+    <span class="item">Item 1</span>
+    <span class="item">Item 2</span>
+    <span class="item">Item 3</span>
+    </div>
+<script>
+    let allItems = document.querySelectorAll(".item");
+    allItems.forEach(function(item) {
+        item.style.color = "green";
+    });
+</script>
+</body>
+</html>
+

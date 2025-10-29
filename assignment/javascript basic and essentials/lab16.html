@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Background After 5 Seconds</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      transition: background-color 1s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wait for 5 seconds...</h1>
+
+  <script>
+    // Function to change background color
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = "lightblue";
+      document.querySelector("h1").textContent = "Background Changed!";
+    }
+
+    // Use setTimeout to delay the function call
+    setTimeout(changeBackgroundColor, 5000); // 5000ms = 5 seconds
+  </script>
+</body>
+</html>

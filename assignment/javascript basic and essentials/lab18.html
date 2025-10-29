@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Division by Zero Example</title>
+</head>
+<body>
+  <h2>Division by Zero Error Handling</h2>
+
+  <script>
+    try {
+      let numerator = 10;
+      let denominator = 0;
+
+     
+      if (denominator === 0) {
+        throw new Error(" Division by zero is not allowed!");
+      }
+
+      let result = numerator / denominator;
+      console.log("Result: " + result);
+    } 
+    catch (error) {
+      
+      console.log("An error occurred: " + error.message);
+      document.write("<p style='color:red;'>" + error.message + "</p>");
+    } 
+    finally {
+      
+      console.log("Program execution completed.");
+    }
+  </script>
+</body>
+</html>

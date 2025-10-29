@@ -1,0 +1,30 @@
+In JavaScript, an object is a collection of key–value pairs.
+Each key (also called a property) is a string (or symbol), and each value can be any data type — a number, string, array, function, or even another object.
+
+Objects are used to store and organize data in a structured way.
+
+Example:
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <script>
+        let person = {
+  name: "Alice",
+  age: 30,
+  isStudent: false,
+  greet: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};  
+console.log(person.name); // Output: Alice
+console.log(person.age);  // Output: 30
+person.greet();          // Output: Hello, my name is Alice
+    </script>
+</body>
+</html>
+Objects allow you to group related data and functionality together, making your code more organized and easier to manage.
+            

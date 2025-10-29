@@ -1,0 +1,47 @@
+A switch statement is used to test a variable (or expression) against multiple possible values and execute different blocks of code depending on which value matches.
+
+It’s often used instead of multiple if–else if conditions when you are comparing the same variable to different values.
+
+ex:
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let day = 3;
+let dayName;
+
+switch (day) {
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  case 7:
+    dayName = "Sunday";
+    break;
+  default:
+    dayName = "Invalid day";
+}
+
+console.log(dayName);
+
+    </script>
+</body>
+</html>

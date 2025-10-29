@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {  
+    font-weight: bold; 
+    margin-top: 10px; 
+    display: block; 
+}
+input, textarea, select {
+  width: 100%; 
+  padding: 8px; 
+  margin-top: 5px; 
+  border-radius: 5px; 
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 15px;  
+  width: 100%;
+  padding: 10px;
+  background: #0066ff; 
+  border: none; 
+  color: white; 
+  cursor: pointer; 
+  border-radius: 5px;
+}
+
+#taskList {
+  list-style: none; 
+  padding: 0;
+}
+
+#taskList li {
+  background: #f7f7f7; 
+  padding: 10px; 
+  margin-top: 8px; 
+  border-radius: 5px;
+  display: flex;
+   justify-content: space-between; 
+   align-items: center;
+}
+
+.view-btn {
+  display: block;
+   margin-top: 20px; 
+   text-align: center; 
+   background: #333; 
+   color: white;
+  padding: 10px; 
+  border-radius: 5px; 
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .container { width: 95%; }
+}

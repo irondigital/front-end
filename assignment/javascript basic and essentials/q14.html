@@ -1,0 +1,38 @@
+1. Function Declaration:
+A function declaration defines a named function using the "function" keyword. It can be called before its definition due to hoisting.
+
+Syntax:
+
+function functionName(parameters) { 
+  // code to be executed 
+}       
+example:
+<script>
+    function greet() {
+  console.log("Hello, World!");
+}
+
+greet();  // ✅ Can be called before or after declaration
+
+</script>
+
+2. Function Expression:
+A function expression defines a function as part of a larger expression, typically by assigning it to a variable. It cannot be called before its definition.  
+
+Syntax:
+
+const functionName = function(parameters) {
+  // code block
+};
+
+
+
+
+
+example:
+
+<script>
+let functionName = function(parameters) { 
+  // code to be executed 
+};
+</script>

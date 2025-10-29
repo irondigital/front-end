@@ -1,0 +1,36 @@
+Error handling in JavaScript means writing code that can detect and manage errors gracefully — instead of letting the program crash.
+
+JavaScript provides a special structure called try...catch...finally to handle errors safely.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error Handling Example</title>
+</head>
+<body>
+  <h2>JavaScript Error Handling</h2>
+
+  <script>
+    try {
+      // Code that may cause an error
+      let x = 5;
+      let y = 0;
+      
+      if (y === 0) {
+        throw new Error("Division by zero is not allowed!");
+      }
+
+      let result = x / y;
+      console.log(result);
+    } 
+    catch (error) {
+      // Handle the error
+      console.log("An error occurred: " + error.message);
+    } 
+    finally {
+      // Always runs
+      console.log("Code inside finally block executed.");
+    }
+  </script>
+</body>
+</html>
