@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        text-align: center;
+        margin-top: 15%;
+
+        
+    }
+     body{
+        background-color: rgb(42, 39, 39);
+     }
+     h1{
+        color: white;
+        font-size: 50px;
+         text-transform: uppercase;
+         font-weight: 900;
+     }
+     #inp{
+        width: 28%;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 10px;
+        
+     }
+     input::placeholder{
+       color: black;
+       font-weight: 900;
+     }
+     #btn{
+        width: 8%;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-left: 20px;
+        font-weight: 900;
+     }
+     li{
+        color: white;
+        list-style-type:none;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin: 10px;
+     }
+        button{
+            margin-left: 20px;
+            font-weight: 900;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            color: white;
+            border: none;
+        }
+     
+    </style>
+</head>
+<body>
+    <div>
+        <h1>to do list</h1>
+        <input type="text" id="inp" placeholder="enter value....">
+        <button type="button" id="btn" onclick="add()" >add</button>
+        <ul id="result">
+
+        </ul>
+       
+    </div>
+
+    <script>
+   const add = ()=>{
+    const input  = document.getElementById("inp");
+    const trimval = input.value.trim();
+    if(trimval === ""){
+        alert("pls enter a task");
+        return; 
+    }
+
+    const li = document.createElement("li");
+    li.textContent = trimval;
+
+    const deletebutton = document.createElement("button");
+    deletebutton.textContent = "X";
+    deletebutton.onclick = function(){
+        li.remove();
+    };
+    li.appendChild(deletebutton);
+    document.getElementById("result").appendChild(li);
+
+    input.value = "";
+
+   }
+          
+        
+    </script>
+</body>
+</html>
