@@ -1,0 +1,31 @@
+Question 2: What are keys in React, and what happens if you do not provide a unique key?
+
+Keys are special attributes used in React when rendering lists of elements.
+
+They help React uniquely identify each element in a list.
+
+
+Why Are Keys Important?
+
+Keys help React:
+
+Track which items are added, removed, or updated
+
+Optimize re-rendering performance
+
+Maintain component state correctly
+
+Avoid UI inconsistencies
+
+UI Bugs Can Occur (Important!)
+
+Without unique keys:
+
+React may reuse wrong components
+
+Input fields may lose or mix values
+
+Animations may behave incorrectly
+
+
+Keys are unique identifiers used by React to track list items efficiently. Without unique keys, React shows warnings, causes performance issues, and may lead to UI bugs.

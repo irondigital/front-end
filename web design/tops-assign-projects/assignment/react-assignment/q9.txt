@@ -1,0 +1,31 @@
+Question 3: What is the role of render()in class components?
+
+What does render() do?
+
+The render() method:
+
+Returns JSX (UI elements)
+
+Converts component state and props into UI
+
+Is called automatically by React
+
+Re-runs whenever state or props change
+
+    ex:
+
+    import React from "react";
+
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, React!</h1>;
+  }
+}
+
+
+Important Rules of render()
+
+Must return JSX or null
+Must be pure (no side effects like API calls)
+Should not modify state directly
+Can return only one parent element (or Fragment)

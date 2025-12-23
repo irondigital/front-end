@@ -1,0 +1,21 @@
+Question 1: What is React.js? How is it different from other JavaScript frameworks
+andlibraries?
+
+React.js is an open-source JavaScript library developed by Facebook (Meta) for building user interfaces, especially single-page applications (SPAs).
+
+React focuses mainly on the UI (View layer) of an application. It helps you build fast, interactive, and reusable UI components.
+
+
+Why Use React.js?
+
+ Reusable components
+Fast performance
+Huge community & job market
+Easy to integrate with other libraries
+Used by companies like Facebook, Instagram, Netflix, Airbnb
+
+react is js libery that we can use as a frontend design in our websites or other things.
+
+react is components based so easy to maintain code for browser and developer.
+
+ we can reuse a components 

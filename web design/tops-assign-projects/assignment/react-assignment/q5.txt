@@ -1,0 +1,25 @@
+ Question 2: How is JSX different from regular JavaScript? Can you write JavaScript
+insideJSX?
+
+JSX is a syntax extension of JavaScript used in React to describe UI.
+It looks like HTML but actually gets converted into JavaScript.
+
+
+
+JSX
+	                                                     
+HTML-like syntax	                                         
+Used mainly in React                                         
+Compiled by Babel	                                         
+Easier to visualize UI	                                      
+
+
+Regular JavaScript
+
+Harder to visualize UI
+Runs directly
+Runs directly
+components	Used everywhere
+        
+
+JSX differs from regular JavaScript because it allows developers to write HTML-like syntax inside JavaScript, which is compiled into JavaScript by Babel. Yes, JavaScript can be written inside JSX using curly braces, but only expressions are allowed, not statements.

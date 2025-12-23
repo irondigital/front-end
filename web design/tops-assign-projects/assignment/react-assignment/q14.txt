@@ -1,0 +1,27 @@
+Question 2: What are some common event handlers in React.js? Provide examples of
+onClick, onChange, and onSubmit.
+
+ex:
+
+function LoginForm() {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Email: ${email}`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button type="submit">Login</button>
+    </form>
+  );
+}
+
+
+Common React event handlers include onClick for clicks, onChange for input changes, and onSubmit for form submission. They are written in camelCase and use React’s Synthetic Events.

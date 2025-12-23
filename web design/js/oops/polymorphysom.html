@@ -1,0 +1,46 @@
+<!-- overloading -->
+ <!-- its means we can work with same functions but its can behaves differently based his argu -->
+
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+
+        function add(a,b,c){
+            if(c !== undefined){
+                return a+c+b;
+            }
+            return a+b;
+        }
+        console.log(add(2,3));
+        console.log(add(2,3,4))
+    </script>
+    
+ </body>
+ </html> -->
+
+ <!-- overriding -->
+
+ <script>
+    class animal{
+        sound(){
+            console.log("animal")
+        }
+    }
+
+    class dog extends animal{
+        sound(){
+            console.log("dog");
+        }
+    }
+
+    let a = new animal();
+    let d = new dog();
+    a.sound();
+    d.sound()
+ </script>

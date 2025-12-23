@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My resume</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f3ff, #ffffff);
+            padding-bottom: 60px;
+        }
+
+        /* CARD STYLE CONTAINER */
+        .resume-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0px 10px 35px rgba(0,0,0,0.12);
+            padding-bottom: 40px;
+            overflow: hidden;
+        }
+
+        /* HEADER SECTION */
+        #contain {
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            background: #0f172a;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        #par {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #64748b;
+        }
+
+        #divas {
+            margin-left: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        #contain p {
+            margin: 6px 0;
+            font-size: 15px;
+        }
+
+        /* SECTION TITLES */
+        h2 {
+            padding: 20px 40px 10px;
+            font-size: 26px;
+            color: #0f172a;
+            border-left: 6px solid #3b82f6;
+            margin-top: 25px;
+        }
+
+        h4 {
+            padding-left: 40px;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* LIST */
+        ul {
+            padding-left: 65px;
+            margin-top: 10px;
+            line-height: 1.7rem;
+        }
+
+        /* TABLE STYLING */
+        table {
+            width: 85%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+        }
+
+        th {
+            background: #1e293b;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+        }
+
+        td {
+            padding: 12px;
+            font-size: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tr:hover td {
+            background: #f1f5f9;
+        }
+
+        /* CONTACT LINKS */
+        div a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        div a:hover {
+            text-decoration: underline;
+        }
+
+        /* DOWNLOAD BUTTON */
+        button {
+            margin: 25px 40px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #0f172a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #334155;
+        }
+
+        /* ---------------------
+            RESPONSIVE
+        -----------------------*/
+        @media (max-width: 768px) {
+            #contain {
+                text-align: center;
+                justify-content: center;
+            }
+
+            #divas {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            table {
+                width: 95%;
+            }
+
+            ul {
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #par {
+                height: 90px;
+                width: 90px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            ul {
+                padding-left: 25px;
+                font-size: 14px;
+            }
+
+            button {
+                margin-left: 25px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+
+    <div id="contain">
+        <div>
+            <img id="par" src="../images/DSC_0686.JPG" alt="my photo">
+        </div>
+
+        <div id="divas">
+            <h1>BALAS MILAN</h1>
+            <p><strong>Address:</strong> bagasara(ghed)-362620, Junagadh, Gujarat</p>
+            <p id="para"><strong>Contact:</strong> +91 9173034163</p>
+        </div>
+    </div>
+
+    <h2>EDUCATION :</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>School / College</th>
+            <th>Course</th>
+            <th>Percentage</th>
+            <th>Year</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Sansain School</td>
+            <td>SSC</td>
+            <td>93.75</td>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <td>Shree Parishram Science School</td>
+            <td>HSC</td>
+            <td>50</td>
+            <td>2018–19</td>
+        </tr>
+        <tr>
+            <td>Government Engineering College</td>
+            <td>Electronics & Communication</td>
+            <td>76.30</td>
+            <td>2019–23</td>
+        </tr>
+    </table>
+
+    <h2>PROJECTS AND KNOWLEDGE</h2>
+    <h4>Language Knowledge :-</h4>
+    <ul>
+        <li>HTML, CSS, Bootstrap, Tailwind, JavaScript (ES6)</li>
+        <li>Strong JS Knowledge (Functions, CRUD, Operators)</li>
+        <li>Node JS, Express JS, MongoDB, Mongoose</li>
+        <li>API development & backend logic</li>
+    </ul>
+
+    <h4>Projects :-</h4>
+    <ul>
+        <li>Login System with Node JS, Express, MongoDB</li>
+        <li>Single Page Responsive Website (frontend + backend)</li>
+    </ul>
+
+    <h2>SKILLS</h2>
+    <ul>
+        <li>Good communication & English skills</li>
+        <li>Fast learner, passionate developer</li>
+        <li>Good in Cricket, Badminton, Kabaddi</li>
+    </ul>
+
+    <h2>CONTACT</h2>
+    <p style="padding-left: 52px; font-size: 18px;">
+        <strong>Email :</strong> <a href="#">milanbalas123@gmail.communication</a><br>
+        <strong>GitHub :</strong> <a href="https://github.com/irondigital">https://github.com/irondigital</a><br>
+        <strong>LinkedIn :</strong> <a href="#">milanbalas123</a>
+    </p>
+
+    <a href="index.html" download="download"><button>Download</button></a>
+
+</div>
+
+</body>
+</html>

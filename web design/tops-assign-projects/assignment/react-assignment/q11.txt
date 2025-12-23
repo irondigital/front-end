@@ -1,0 +1,40 @@
+Question 2: Explain the concept of state in React and how it is used to manage
+componentdata
+
+State is a built-in object that stores data specific to a component.
+It represents dynamic information that can change over time and affect what is displayed on the UI.
+
+
+Why Do We Need State?
+
+State is used when:
+
+Data changes because of user interaction
+
+Data changes over time
+
+UI needs to update dynamically
+
+Examples:
+
+Button clicks
+
+Form inputs
+
+Counters
+
+API response data
+
+ex:
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+    </>
+  );
+}

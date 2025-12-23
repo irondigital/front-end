@@ -1,0 +1,14 @@
+Question 1: How are events handled in React compared to vanilla JavaScript? Explain
+theconcept of synthetic events.
+
+React handles events using JSX and camelCase syntax, unlike vanilla JavaScript which uses direct DOM listeners. React uses Synthetic Events, which are cross-browser wrappers around native events, providing consistent behavior and better performance.
+
+ex:
+
+<button id="btn">Click</button>
+
+<script>
+  document.getElementById("btn").addEventListener("click", function () {
+    alert("Button clicked");
+  });
+</script>

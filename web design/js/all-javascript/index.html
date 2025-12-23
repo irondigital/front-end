@@ -1,0 +1,2860 @@
+ChatGPT said:
+
+Got it Milan!
+We will not follow the big list now.
+You will give me ONE topic at a time, and I will explain it perfectly with examples.
+
+✔ Clear
+✔ Easy to understand
+✔ Interview-focused
+✔ With code examples
+
+Just send your first topic, and I’ll start!
+
+You said:
+1️⃣ BASICS (Core Foundation)
+
+✔ What is JavaScript
+✔ Features of JS
+✔ How JS runs (Browser + Node.js)
+✔ Variables: var, let, const
+✔ Data Types
+
+Primitive (string, number, boolean, null, undefined, symbol, bigint)
+
+Non-primitive (objects, arrays, functions)
+
+✔ Operators
+
+Arithmetic
+
+Assignment
+
+Comparison
+
+Logical
+
+Ternary
+
+Bitwise
+
+Nullish Coalescing ??
+
+Optional chaining ?.
+
+✔ Template literals
+✔ Type conversion (implicit + explicit)
+ChatGPT said:
+
+Perfect Milan — now I will explain ALL BASICS (Core Foundation) in clean, interview-ready style with examples.
+Not too long, not too short — everything you must know for interview.
+
+⭐ 1️⃣ What is JavaScript?
+
+JavaScript is a high-level, dynamic, interpreted programming language used to:
+
+✔ Make web pages interactive
+✔ Handle logic in frontend
+✔ Build backend (Node.js)
+✔ Build mobile apps (React Native)
+✔ Build desktop apps (Electron)
+
+✔ Example (browser)
+console.log("Hello JavaScript!");
+
+⭐ 2️⃣ Features of JavaScript
+
+✔ Lightweight
+✔ Interpreted
+✔ Dynamic typing
+✔ Single-threaded
+✔ Prototype-based
+✔ Supports OOP, FP, and imperative style
+✔ Works in both browser and server (Node.js)
+✔ Huge ecosystem (NPM)
+
+⭐ 3️⃣ How JavaScript Runs (Browser + Node.js)
+Browser
+
+Uses V8 engine (Chrome)
+
+Executes JS inside HTML
+
+Has access to DOM, Window, Events
+
+✔ Example:
+<script>
+  console.log("Running in Browser");
+</script>
+
+Node.js
+
+JavaScript runs outside browser
+
+No DOM
+
+Built-in modules (fs, http, path)
+
+Used for backend
+
+✔ Example:
+console.log("Running in Node.js");
+
+⭐ 4️⃣ Variables: var, let, const
+var
+
+✔ Function-scoped
+✔ Re-declaration allowed
+✔ Hoisted (initialized as undefined)
+
+var x = 10;
+var x = 20;  // allowed
+
+let
+
+✔ Block-scoped
+✔ Re-declaration NOT allowed
+✔ Hoisted but in TDZ (Temporal Dead Zone)
+
+let a = 10;
+// let a = 20; ❌ not allowed
+
+const
+
+✔ Block-scoped
+✔ Cannot reassign
+✔ Must have initial value
+
+const pi = 3.14;
+// pi = 3.15 ❌ error
+
+⭐ 5️⃣ Data Types
+Primitive (Stored by value)
+
+✔ string
+✔ number
+✔ boolean
+✔ null
+✔ undefined
+✔ symbol
+✔ bigint
+
+✔ Example:
+let name = "Milan";        // string
+let age = 20;              // number
+let isActive = true;       // boolean
+let x = null;              // null
+let y = undefined;         // undefined
+let sym = Symbol("id");    // symbol
+let big = 1234567890123n;  // bigint
+
+Non-Primitive (Stored by reference)
+
+✔ Objects
+✔ Arrays
+✔ Functions
+
+✔ Object
+let user = { name: "Milan", age: 20 };
+
+✔ Array
+let numbers = [1, 2, 3];
+
+✔ Function
+function greet() {
+  console.log("Hello!");
+}
+
+⭐ 6️⃣ Operators
+A) Arithmetic
+let a = 10, b = 3;
+console.log(a + b, a - b, a * b, a / b, a % b, a ** b);
+
+B) Assignment
+let x = 10;
+x += 5;  // 15
+
+C) Comparison
+console.log(10 == "10");   // true
+console.log(10 === "10");  // false (strict)
+
+D) Logical
+console.log(true && false);  // false
+console.log(true || false);  // true
+console.log(!true);          // false
+
+E) Ternary
+let age = 20;
+let result = age >= 18 ? "Adult" : "Minor";
+
+F) Bitwise (rare in interview)
+console.log(5 & 1);  // AND
+console.log(5 | 1);  // OR
+
+G) Nullish Coalescing (??)
+
+Returns right side only when left is null or undefined
+
+let name = null;
+console.log(name ?? "Guest"); // Guest
+
+H) Optional Chaining (?.)
+
+Prevents error when accessing deep properties
+
+let user = { profile: { age: 20 } };
+
+console.log(user.profile?.age);   // 20
+console.log(user.address?.city);  // undefined (no error)
+
+⭐ 7️⃣ Template Literals
+
+Use backticks (`) to embed variables easily.
+
+let name = "Milan";
+console.log(`Hello ${name}, Welcome!`);
+
+⭐ 8️⃣ Type Conversion
+A) Implicit (Automatic)
+console.log("10" + 5);  // "105"
+console.log("10" - 5);  // 5
+console.log(true + 1);  // 2
+
+B) Explicit
+Number("123");   // 123
+String(123);     // "123"
+Boolean(0);      // false
+parseInt("12px");// 12
+parseFloat("3.14");
+
+🎯 Interview Summary
+
+✔ JS is single-threaded, dynamic, interpreted
+✔ var/let/const differences
+✔ 7 primitive types
+✔ Arrays/objects/functions = reference type
+✔ Optional chaining + nullish operator
+✔ Template literals
+✔ Type conversion (very common question!)
+
+If you want next topic, send 2 or type the next topic name.
+
+You said:
+2️⃣ CONTROL FLOW
+
+✔ Conditional statements
+
+if, else, else if
+
+switch
+
+✔ Loops
+
+for
+
+while
+
+do while
+
+for...of
+
+for...in
+
+✔ Loop control
+
+break
+
+continue
+
+Labels (rare but good to know)
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 2️⃣ CONTROL FLOW — all conditional statements, loops, and loop control with clear examples.
+
+⭐ CONTROL FLOW
+
+Control flow means how JS decides which block of code to run and in what order.
+
+A) CONDITIONAL STATEMENTS
+1. if / else
+
+Executes a block of code if a condition is true; else executes another block.
+
+let age = 20;
+
+if (age >= 18) {
+  console.log("Adult");
+} else {
+  console.log("Minor");
+}
+
+2. else if
+
+Checks multiple conditions sequentially.
+
+let marks = 85;
+
+if (marks >= 90) {
+  console.log("Grade A");
+} else if (marks >= 75) {
+  console.log("Grade B");
+} else if (marks >= 50) {
+  console.log("Grade C");
+} else {
+  console.log("Fail");
+}
+
+3. switch
+
+Used when multiple cases depend on the same variable.
+
+let day = 3;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  default:
+    console.log("Invalid day");
+}
+
+B) LOOPS
+
+Loops repeat a block of code multiple times.
+
+1. for loop
+
+Used when you know the number of iterations.
+
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+2. while loop
+
+Executes as long as condition is true.
+
+let i = 1;
+while (i <= 5) {
+  console.log(i);
+  i++;
+}
+
+3. do...while loop
+
+Executes at least once, then checks condition.
+
+let i = 1;
+do {
+  console.log(i);
+  i++;
+} while (i <= 5);
+
+4. for...of loop
+
+Used for arrays or iterable objects.
+
+let arr = [10, 20, 30];
+for (let value of arr) {
+  console.log(value);
+}
+
+5. for...in loop
+
+Used for objects (iterates keys).
+
+let user = { name: "Milan", age: 20 };
+for (let key in user) {
+  console.log(key, user[key]);
+}
+
+C) LOOP CONTROL
+1. break
+
+Stops the loop immediately.
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) break;
+  console.log(i);
+}
+// Output: 1 2
+
+2. continue
+
+Skips the current iteration, continues with next.
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) continue;
+  console.log(i);
+}
+// Output: 1 2 4 5
+
+3. Labels (rare, advanced)
+
+Used to break/continue outer loops.
+
+outerLoop:
+for (let i = 1; i <= 3; i++) {
+  for (let j = 1; j <= 3; j++) {
+    if (j === 2) break outerLoop;
+    console.log(i, j);
+  }
+}
+// Output: 1 1
+
+🎯 INTERVIEW TIPS
+
+✔ if / else / else if / switch
+✔ Know the difference between for, while, do-while
+✔ for…of → arrays / iterable
+✔ for…in → objects
+✔ break / continue / labels (advanced)
+
+Send 3 or type the next topic to continue with FUNCTIONS.
+
+You said:
+3️⃣ FUNCTIONS
+
+✔ Function declaration
+✔ Function expression
+✔ Arrow functions (ES6)
+✔ Higher-order functions
+✔ Callback functions
+✔ IIFE (Immediately Invoked Function Expressions)
+✔ Default parameters
+✔ Rest parameter (...args)
+✔ Spread operator (...)
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 3️⃣ FUNCTIONS — all types and concepts, with examples and interview focus.
+
+⭐ FUNCTIONS in JavaScript
+
+A function is a block of code designed to perform a specific task. Functions are reusable and can accept inputs and return outputs.
+
+A) Function Declaration
+
+Declared using the function keyword. Hoisted, so you can call it before defining.
+
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet("Milan"); // Hello, Milan!
+
+B) Function Expression
+
+Assigned to a variable. Not hoisted.
+
+const add = function(a, b) {
+  return a + b;
+};
+
+console.log(add(5, 3)); // 8
+
+C) Arrow Functions (ES6)
+
+Shorter syntax. No this binding of its own.
+
+const multiply = (a, b) => a * b;
+console.log(multiply(4, 5)); // 20
+
+
+Single parameter, implicit return:
+
+const square = n => n * n;
+console.log(square(5)); // 25
+
+D) Higher-Order Functions
+
+A function that accepts another function as an argument or returns a function.
+
+function higher(fn) {
+  fn();
+}
+
+higher(() => console.log("Hi from HOF!"));
+
+E) Callback Functions
+
+A function passed as an argument to another function.
+
+function greet(name, callback) {
+  console.log(`Hello ${name}`);
+  callback();
+}
+
+greet("Milan", () => console.log("Welcome!"));
+
+F) IIFE (Immediately Invoked Function Expression)
+
+A function that runs immediately after definition.
+
+(function() {
+  console.log("IIFE executed!");
+})();
+
+G) Default Parameters
+
+If a parameter is not provided, a default value is used.
+
+function sum(a, b = 10) {
+  return a + b;
+}
+
+console.log(sum(5)); // 15
+
+H) Rest Parameter (...args)
+
+Collects all remaining arguments into an array.
+
+function total(...nums) {
+  return nums.reduce((sum, n) => sum + n, 0);
+}
+
+console.log(total(1, 2, 3, 4)); // 10
+
+I) Spread Operator (...)
+
+Expands an array or object elements.
+
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5];
+console.log(arr2); // [1,2,3,4,5]
+
+
+Used to pass multiple arguments easily:
+
+const numbers = [10, 20, 30];
+console.log(Math.max(...numbers)); // 30
+
+🎯 INTERVIEW TIPS
+
+✔ Know difference between declaration, expression, arrow
+✔ Callbacks + HOFs are essential for async JS
+✔ IIFE is common for module pattern
+✔ Default params, rest, spread are modern JS essentials
+
+Send 4 or type the next topic to continue with JAVASCRIPT EXECUTION MODEL.
+
+You said:
+4️⃣ JAVASCRIPT EXECUTION MODEL
+
+✔ How JS executes code
+✔ Execution context
+
+Global
+
+Functional
+
+Eval
+
+✔ Call stack
+✔ Hoisting
+✔ Lexical scope
+✔ Scope chain
+✔ Block scope vs function scope
+✔ Variable environment
+✔ TDZ (Temporal Dead Zone)
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 4️⃣ JAVASCRIPT EXECUTION MODEL — very important for interviews, especially for hoisting, scope, and call stack.
+
+⭐ JAVASCRIPT EXECUTION MODEL
+
+JavaScript code is executed in two main phases:
+
+Creation Phase – JS sets up memory space for variables and functions.
+
+Execution Phase – JS executes code line by line.
+
+A) Execution Context
+
+An Execution Context (EC) is like a container where JS code runs. Every code has an EC.
+Types:
+
+Global Execution Context (GEC) – default context when JS starts.
+
+Function Execution Context (FEC) – created when a function is called.
+
+Eval Execution Context – rarely used, created by eval().
+
+B) Call Stack
+
+Keeps track of which function is currently running.
+
+function a() { b(); }
+function b() { c(); }
+function c() { console.log("Hi"); }
+
+a(); // Call stack order: a → b → c → execute
+
+C) Hoisting
+
+JS moves declarations (not initializations) to the top of their scope.
+
+console.log(x); // undefined
+var x = 10;
+
+console.log(y); // ❌ ReferenceError
+let y = 20;
+
+greet(); // works
+function greet() { console.log("Hello!"); }
+
+
+Key Points:
+
+var → hoisted, initialized as undefined
+
+let & const → hoisted but in TDZ (cannot access before declaration)
+
+Function declarations → hoisted fully
+
+D) Lexical Scope
+
+JS looks for variables in the scope where function is defined, not where it’s called.
+
+let x = 10;
+
+function outer() {
+  let y = 20;
+  function inner() {
+    console.log(x + y);
+  }
+  inner();
+}
+
+outer(); // 30
+
+E) Scope Chain
+
+If a variable is not found in current scope → JS checks outer scopes sequentially.
+
+F) Block Scope vs Function Scope
+
+Block scope: let & const → {}
+
+Function scope: var → function body
+
+{
+  let a = 10;
+  const b = 20;
+  var c = 30;
+}
+
+console.log(a, b); // ❌ Error
+console.log(c);    // 30
+
+G) Variable Environment & TDZ
+
+Variable Environment (VE): where all variables & functions are stored in memory.
+
+TDZ (Temporal Dead Zone): time between entering scope & initializing let/const.
+
+console.log(a); // ❌ ReferenceError
+let a = 5;
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Understand Creation vs Execution Phase
+✔ Know GEC vs FEC
+✔ Hoisting differences: var vs let/const vs function
+✔ Lexical scope & scope chain
+✔ Call stack
+✔ TDZ is a common tricky question
+
+Send 5 or type the next topic to continue with DOM & BOM.
+
+You said:
+5️⃣ DOM & BOM
+
+✔ Selecting elements:
+
+getElementById
+
+querySelector
+
+querySelectorAll
+
+✔ Changing content
+✔ Changing styles
+✔ Creating elements
+✔ Removing elements
+✔ Event Listeners
+✔ Event Delegation
+✔ Event Bubbling & Capturing
+✔ Form handling
+✔ Keyboard & mouse events
+
+BOM:
+✔ window object
+✔ alert, prompt, confirm
+✔ Location API
+✔ History API
+✔ Navigator API
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 5️⃣ DOM & BOM — a very important topic for frontend interviews.
+
+⭐ 5️⃣ DOM (Document Object Model)
+
+DOM is a tree-like structure of HTML elements. JS can use it to access, modify, add, and remove elements.
+
+A) Selecting Elements
+1. getElementById
+let title = document.getElementById("mainTitle");
+console.log(title.textContent);
+
+2. querySelector
+
+Selects first matching element.
+
+let btn = document.querySelector(".btn");
+
+3. querySelectorAll
+
+Selects all matching elements → returns NodeList.
+
+let items = document.querySelectorAll("li");
+items.forEach(item => console.log(item.textContent));
+
+B) Changing Content
+document.getElementById("msg").textContent = "Hello Milan!";
+document.getElementById("msg").innerHTML = "<b>Bold Text</b>";
+
+C) Changing Styles
+document.getElementById("box").style.backgroundColor = "blue";
+document.getElementById("box").style.width = "200px";
+
+D) Creating & Adding Elements
+let li = document.createElement("li");
+li.textContent = "New Item";
+
+document.querySelector("ul").appendChild(li);
+
+E) Removing Elements
+let li = document.querySelector("li");
+li.remove();
+
+F) Event Listeners
+let btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+  alert("Button clicked!");
+});
+
+G) Event Delegation
+
+Attach event on parent, handle children dynamically.
+
+document.querySelector("ul").addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    console.log("Clicked:", e.target.textContent);
+  }
+});
+
+H) Event Bubbling & Capturing
+
+Bubbling: child → parent (default)
+
+Capturing: parent → child
+
+element.addEventListener("click", handler, true);  // capturing
+element.addEventListener("click", handler, false); // bubbling
+
+I) Form Handling
+let form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // prevent page reload
+  console.log("Form submitted!");
+});
+
+J) Keyboard & Mouse Events
+document.addEventListener("keydown", (e) => {
+  console.log("Key pressed:", e.key);
+});
+
+document.addEventListener("mousemove", (e) => {
+  console.log("Mouse X:", e.clientX, "Y:", e.clientY);
+});
+
+⭐ BOM (Browser Object Model)
+
+BOM = Objects that interact with the browser, not the page.
+
+1. window object
+
+Global object in browsers.
+
+console.log(window.innerWidth);
+window.alert("Hello!");
+
+2. Dialog Boxes
+alert("Hello!");                // simple alert
+let ans = confirm("Are you sure?"); // true/false
+let name = prompt("Enter name:");   // string input
+
+3. Location API
+console.log(location.href);
+location.reload();
+location.assign("https://google.com");
+
+4. History API
+history.back();
+history.forward();
+history.go(-1);
+
+5. Navigator API
+console.log(navigator.userAgent);
+console.log(navigator.onLine);  // true/false
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Know selecting elements: getElementById vs querySelector
+✔ Changing content & styles
+✔ Creating, appending, removing elements
+✔ Event listeners + delegation
+✔ Bubbling vs Capturing
+✔ Forms & keyboard/mouse events
+✔ BOM: window, alert/prompt/confirm, location, history, navigator
+
+Send 6 or type the next topic to continue with OBJECTS.
+
+You said:
+6️⃣ OBJECTS
+
+✔ Object literals
+✔ Accessing properties
+✔ Adding/removing properties
+✔ Object methods
+✔ this keyword
+✔ Constructor function
+✔ Prototype
+✔ Prototypal inheritance
+✔ Object.freeze, Object.seal
+✔ Object.keys, Object.values, Object.entries
+✔ Spread & Rest with objects
+✔ Destructuring objects
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 6️⃣ OBJECTS — everything you need to know with examples.
+
+⭐ 6️⃣ OBJECTS in JavaScript
+
+Objects store data as key-value pairs. Keys are strings (or symbols), values can be anything.
+
+let user = {
+  name: "Milan",
+  age: 20
+};
+
+A) Object Literals
+
+Most common way to create objects.
+
+let person = {
+  name: "Milan",
+  age: 20,
+  isActive: true
+};
+
+B) Accessing Properties
+Dot notation
+console.log(person.name); // Milan
+
+Bracket notation
+console.log(person["age"]); // 20
+
+C) Adding / Removing Properties
+person.city = "Surat";  // Add
+delete person.isActive; // Remove
+
+D) Object Methods
+
+Functions inside objects.
+
+let car = {
+  brand: "BMW",
+  start() {
+    console.log("Car started");
+  }
+};
+
+car.start(); // Car started
+
+E) this Keyword
+
+Refers to the object calling the method.
+
+let user = {
+  name: "Milan",
+  greet() {
+    console.log(`Hello ${this.name}`);
+  }
+};
+
+user.greet(); // Hello Milan
+
+F) Constructor Function
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+let p1 = new Person("Milan", 20);
+console.log(p1.name); // Milan
+
+G) Prototype
+
+Allows sharing methods between all objects created by a constructor.
+
+Person.prototype.sayHello = function() {
+  console.log(`Hi, I am ${this.name}`);
+};
+
+p1.sayHello(); // Hi, I am Milan
+
+H) Prototypal Inheritance
+
+Object inherits from another object.
+
+let parent = { greet() { console.log("Hello"); } };
+let child = Object.create(parent);
+
+child.greet(); // Hello (inherited)
+
+I) Object.freeze() & Object.seal()
+let obj = { a: 1, b: 2 };
+
+Object.freeze(obj);
+obj.a = 10; // ❌ cannot change
+
+Object.seal(obj);
+obj.b = 20; // ✔ can change
+obj.c = 30; // ❌ cannot add
+
+J) Object.keys, Object.values, Object.entries
+let user = { name: "Milan", age: 20 };
+
+console.log(Object.keys(user));   // ["name","age"]
+console.log(Object.values(user)); // ["Milan",20]
+console.log(Object.entries(user)); // [["name","Milan"], ["age",20]]
+
+K) Spread & Rest with Objects
+Spread
+let user1 = { name: "Milan" };
+let user2 = { ...user1, age: 20 };
+console.log(user2); // { name: "Milan", age: 20 }
+
+Rest
+let { name, ...rest } = user2;
+console.log(name); // Milan
+console.log(rest); // { age: 20 }
+
+L) Destructuring Objects
+let user = { name: "Milan", age: 20 };
+let { name, age } = user;
+
+console.log(name); // Milan
+console.log(age);  // 20
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Object literal & constructor function
+✔ Access/add/remove properties
+✔ Object methods + this
+✔ Prototype & inheritance
+✔ Object.freeze / seal
+✔ Object.keys / values / entries
+✔ Spread / Rest / Destructuring
+
+Send 7 or type the next topic to continue with ARRAYS.
+
+You said:
+7️⃣ ARRAYS
+
+✔ Array methods (MOST IMPORTANT)
+
+Mutating:
+
+push()
+
+pop()
+
+shift()
+
+unshift()
+
+splice()
+
+sort()
+
+reverse()
+
+Non-mutating:
+
+map()
+
+filter()
+
+reduce()
+
+find()
+
+findIndex()
+
+every()
+
+some()
+
+flat()
+
+flatMap()
+
+includes()
+
+concat()
+
+✔ Array destructuring
+✔ Spread operator
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 7️⃣ ARRAYS — one of the most important topics for interviews.
+
+⭐ 7️⃣ ARRAYS in JavaScript
+
+Arrays = ordered list of items (can store any type).
+
+let arr = [10, 20, 30, "Milan", true];
+
+A) Creating Arrays
+let arr1 = [1, 2, 3];
+let arr2 = new Array(4, 5, 6);
+
+B) Access & Modify Elements
+console.log(arr[0]); // 10
+arr[1] = 50;         // modify
+
+C) Mutating Methods (Change original array)
+1. push() → add at end
+arr.push(40);
+
+2. pop() → remove from end
+arr.pop();
+
+3. unshift() → add at start
+arr.unshift(5);
+
+4. shift() → remove from start
+arr.shift();
+
+5. splice() → add/remove at specific index
+let nums = [1,2,3,4];
+nums.splice(1, 2, 20, 30); // remove 2 items, add 20 & 30
+console.log(nums); // [1,20,30,4]
+
+6. sort()
+let a = [3,1,4,2];
+a.sort((x,y)=>x-y);
+
+7. reverse()
+a.reverse();
+
+D) Non-Mutating Methods (Return new array)
+1. map()
+let nums = [1,2,3];
+let doubled = nums.map(n => n*2); // [2,4,6]
+
+2. filter()
+let filtered = nums.filter(n => n>1); // [2,3]
+
+3. reduce()
+let total = nums.reduce((sum,n)=>sum+n,0); // 6
+
+4. find()
+let n = nums.find(n=>n>1); // 2
+
+5. findIndex()
+let index = nums.findIndex(n=>n>1); // 1
+
+6. every()
+nums.every(n => n>0); // true
+
+7. some()
+nums.some(n => n>2); // true
+
+8. flat()
+let arr2d = [1,[2,3],[4,[5]]];
+arr2d.flat(2); // [1,2,3,4,5]
+
+9. flatMap()
+[1,2,3].flatMap(n => [n,n*2]); // [1,2,2,4,3,6]
+
+10. includes()
+nums.includes(2); // true
+
+11. concat()
+[1,2].concat([3,4]); // [1,2,3,4]
+
+E) Array Destructuring
+let [a,b,...rest] = [10,20,30,40];
+console.log(a,b,rest); // 10 20 [30,40]
+
+F) Spread Operator
+let arr1 = [1,2];
+let arr2 = [3,4];
+let merged = [...arr1, ...arr2];
+console.log(merged); // [1,2,3,4]
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Know mutating vs non-mutating methods
+✔ map/filter/reduce/find → very common
+✔ flat & flatMap for nested arrays
+✔ Spread & destructuring for modern JS
+
+Send 8 or type the next topic to continue with ADVANCED FUNCTIONS.
+
+You said:
+8️⃣ ADVANCED FUNCTIONS
+
+✔ Closures
+✔ Currying
+✔ Debouncing
+✔ Throttling
+✔ Memoization
+✔ Recursion
+✔ Pure vs Impure functions
+✔ Functional programming basics
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 8️⃣ ADVANCED FUNCTIONS — very important for interviews, especially closures, currying, debouncing, throttling, and functional programming concepts.
+
+⭐ 8️⃣ ADVANCED FUNCTIONS
+A) Closures
+
+A closure is when a function remembers variables from its outer scope, even after the outer function has finished execution.
+
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+counter(); // 3
+
+
+Interview Tip: Closures are used in data privacy and callbacks.
+
+B) Currying
+
+Transform a function with multiple arguments into a sequence of functions.
+
+function add(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+
+console.log(add(2)(3)); // 5
+
+
+ES6 Arrow Function Version
+
+const add = a => b => a + b;
+console.log(add(5)(10)); // 15
+
+C) Debouncing
+
+Limits how often a function is called, usually on events like typing or scrolling.
+
+function debounce(func, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+const search = debounce(() => console.log("Search API called"), 500);
+
+
+Usage: Called only after user stops typing.
+
+D) Throttling
+
+Ensures a function runs at most once in a given time.
+
+function throttle(func, limit) {
+  let lastCall = 0;
+  return function(...args) {
+    const now = Date.now();
+    if (now - lastCall >= limit) {
+      func.apply(this, args);
+      lastCall = now;
+    }
+  };
+}
+
+const log = throttle(() => console.log("Throttled!"), 1000);
+
+E) Memoization
+
+Caching results of expensive function calls to improve performance.
+
+function memoize(fn) {
+  const cache = {};
+  return function(n) {
+    if (cache[n]) return cache[n];
+    let result = fn(n);
+    cache[n] = result;
+    return result;
+  };
+}
+
+const factorial = memoize(n => n <= 1 ? 1 : n * factorial(n-1));
+console.log(factorial(5)); // 120
+
+F) Recursion
+
+Function calls itself.
+
+function factorial(n) {
+  if(n === 0) return 1;
+  return n * factorial(n-1);
+}
+
+console.log(factorial(5)); // 120
+
+G) Pure vs Impure Functions
+
+Pure: Output depends only on input. No side effects.
+
+Impure: May depend on external variables or modify outside state.
+
+// Pure
+function sum(a, b) {
+  return a + b;
+}
+
+// Impure
+let x = 5;
+function addToX(y) {
+  x += y;
+  return x;
+}
+
+H) Functional Programming Basics
+
+✔ Avoid side-effects (pure functions)
+✔ Use map, filter, reduce
+✔ Prefer immutability
+✔ Compose small reusable functions
+
+const nums = [1,2,3];
+const doubled = nums.map(n => n*2).filter(n => n>2);
+console.log(doubled); // [4,6]
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Closures → data privacy / callbacks
+✔ Currying → partial application
+✔ Debounce / Throttle → optimize event handling
+✔ Memoization → caching expensive operations
+✔ Recursion → solving problems iteratively
+✔ Pure functions → functional programming
+✔ Know map/filter/reduce for FP
+
+Send 9 or type the next topic to continue with ASYNC JAVASCRIPT.
+
+You said:
+9️⃣ ASYNC JAVASCRIPT (VERY IMPORTANT FOR INTERVIEW)
+
+✔ Synchronous vs Asynchronous
+✔ Callback Hell
+✔ Promises
+
+then()
+
+catch()
+
+finally()
+
+Promise states
+
+✔ Promise methods:
+
+Promise.all()
+
+Promise.race()
+
+Promise.any()
+
+Promise.allSettled()
+
+✔ async / await
+✔ Microtask queue
+✔ Macrotask queue
+✔ Event loop
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 9️⃣ ASYNC JAVASCRIPT — extremely important for interviews, especially event loop, promises, and async/await.
+
+⭐ 9️⃣ ASYNC JAVASCRIPT
+
+JavaScript is single-threaded, but it can handle asynchronous operations like API calls, timers, or file reading.
+
+A) Synchronous vs Asynchronous
+
+Synchronous: executes line by line.
+
+console.log("1");
+console.log("2");
+console.log("3");
+
+
+Asynchronous: doesn't wait, executes later.
+
+console.log("1");
+setTimeout(() => console.log("2"), 1000);
+console.log("3");
+// Output: 1 3 2
+
+B) Callback Hell
+
+Multiple nested callbacks → hard to read/maintain.
+
+doSomething(data, function(result){
+    doSomethingElse(result, function(newResult){
+        doThirdThing(newResult, function(finalResult){
+            console.log(finalResult);
+        });
+    });
+});
+
+
+Solution: Use Promises / async-await.
+
+C) Promises
+
+Represents a future value.
+
+States
+
+Pending
+
+Fulfilled
+
+Rejected
+
+let promise = new Promise((resolve, reject) => {
+  let success = true;
+  if(success) resolve("Done");
+  else reject("Error");
+});
+
+promise.then(res => console.log(res))
+       .catch(err => console.log(err))
+       .finally(() => console.log("Finished"));
+
+D) Promise Methods
+1. Promise.all()
+
+Waits for all promises to resolve. Rejects if any fail.
+
+Promise.all([Promise.resolve(1), Promise.resolve(2)])
+  .then(console.log); // [1,2]
+
+2. Promise.race()
+
+Resolves/rejects first promise to complete.
+
+Promise.race([p1, p2]).then(console.log);
+
+3. Promise.any()
+
+Resolves first fulfilled. Ignores rejections.
+
+Promise.any([Promise.reject(), Promise.resolve(10)]).then(console.log); // 10
+
+4. Promise.allSettled()
+
+Waits for all to settle, returns array of statuses.
+
+Promise.allSettled([Promise.resolve(1), Promise.reject("err")])
+  .then(console.log);
+// [{status:"fulfilled", value:1}, {status:"rejected", reason:"err"}]
+
+E) async / await
+
+Syntactic sugar over promises for cleaner code.
+
+function fetchData() {
+  return new Promise(resolve => setTimeout(() => resolve("Data"), 1000));
+}
+
+async function getData() {
+  const data = await fetchData();
+  console.log(data);
+}
+
+getData(); // "Data" after 1s
+
+F) Event Loop, Microtask & Macrotask Queue
+1. Event Loop
+
+JS uses call stack + task queue to manage async code.
+
+Call Stack: executes current code
+
+Task Queue: holds callbacks (setTimeout, events)
+
+Microtask Queue: promises callbacks, executed before macrotasks
+
+2. Example
+console.log("Start");
+
+setTimeout(() => console.log("Timeout"), 0);
+
+Promise.resolve().then(() => console.log("Promise"));
+
+console.log("End");
+
+// Output:
+// Start
+// End
+// Promise
+// Timeout
+
+
+Explanation:
+
+Promise → microtask → executes before setTimeout (macrotask)
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Know sync vs async
+✔ Understand callback hell
+✔ Promises → then / catch / finally
+✔ Promise.all / race / any / allSettled
+✔ async / await → cleaner code
+✔ Event loop → microtask vs macrotask
+✔ Be ready to explain promise resolution order
+
+Send 10 or type the next topic to continue with ES6+ COMPLETE LIST.
+
+You said:
+🔟 ES6+ COMPLETE LIST
+
+✔ let, const
+✔ Arrow functions
+✔ Template literals
+✔ Classes
+✔ Inheritance with extends + super
+✔ Modules:
+
+import
+
+export
+
+✔ Enhanced object literals
+✔ Destructuring
+✔ Spread & Rest
+✔ Symbols
+✔ Iterators
+✔ Generators
+✔ Sets
+✔ Maps
+✔ WeakSet, WeakMap
+✔ Default parameters
+✔ Optional chaining ?.
+✔ Nullish coalescing ??
+✔ BigInt
+✔ Dynamic import
+✔ Promises + async/await
+✔ ES Modules
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 🔟 ES6+ FEATURES — modern JavaScript essentials for interviews. I’ll explain each with examples.
+
+⭐ 10️⃣ ES6+ COMPLETE LIST
+A) let & const
+
+✔ Block-scoped variables, no hoisting issues like var.
+
+let a = 10;
+const b = 20;
+a = 15; // allowed
+// b = 25; ❌ Error
+
+B) Arrow Functions
+
+✔ Shorter syntax, lexical this.
+
+const sum = (x, y) => x + y;
+console.log(sum(5, 10)); // 15
+
+C) Template Literals
+
+✔ Backticks (`) allow embedding variables.
+
+let name = "Milan";
+console.log(`Hello, ${name}!`); // Hello, Milan!
+
+D) Classes
+
+✔ Syntactic sugar over constructor functions.
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log(`Hi, I am ${this.name}`);
+  }
+}
+
+const p1 = new Person("Milan", 20);
+p1.greet();
+
+E) Inheritance (extends + super)
+class Student extends Person {
+  constructor(name, age, grade) {
+    super(name, age);
+    this.grade = grade;
+  }
+}
+
+const s1 = new Student("Milan", 20, "A");
+console.log(s1.name, s1.grade); // Milan A
+
+F) Modules (import/export)
+
+export.js
+
+export const pi = 3.14;
+export function sum(a,b){ return a+b; }
+
+
+import.js
+
+import { pi, sum } from './export.js';
+console.log(pi, sum(2,3));
+
+G) Enhanced Object Literals
+let name = "Milan";
+let user = { name, greet() { console.log("Hi"); } };
+
+H) Destructuring
+
+✔ Extract values from objects/arrays easily.
+
+let [a,b] = [1,2];
+let {name, age} = {name:"Milan", age:20};
+
+I) Spread & Rest
+
+✔ Spread → expand iterable
+✔ Rest → collect multiple values
+
+let arr = [1,2];
+let arr2 = [...arr,3,4]; // [1,2,3,4]
+
+function sum(...nums){ return nums.reduce((a,b)=>a+b,0); }
+sum(1,2,3); // 6
+
+J) Symbols
+
+✔ Unique and immutable keys for objects.
+
+let id = Symbol("id");
+let user = {[id]: 123};
+console.log(user[id]);
+
+K) Iterators
+
+✔ Manually traverse iterable objects.
+
+let arr = [1,2,3];
+let iter = arr[Symbol.iterator]();
+console.log(iter.next()); // {value:1, done:false}
+
+L) Generators
+
+✔ Functions that can pause and resume execution.
+
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+let g = gen();
+console.log(g.next().value); // 1
+console.log(g.next().value); // 2
+
+M) Sets
+
+✔ Unique values collection
+
+let set = new Set([1,2,2,3]);
+console.log(set); // {1,2,3}
+
+N) Maps
+
+✔ Key-value collection, keys can be anything
+
+let map = new Map();
+map.set("name","Milan");
+console.log(map.get("name")); // Milan
+
+O) WeakSet & WeakMap
+
+✔ Hold weak references → garbage collected if no references
+
+let ws = new WeakSet();
+let obj = {};
+ws.add(obj);
+
+P) Default Parameters
+function greet(name="Guest"){ console.log(name); }
+greet(); // Guest
+
+Q) Optional Chaining (?.)
+let user = {};
+console.log(user.profile?.age); // undefined
+
+R) Nullish Coalescing (??)
+let x = null;
+console.log(x ?? "Default"); // Default
+
+S) BigInt
+
+✔ For large integers beyond Number.MAX_SAFE_INTEGER
+
+let big = 12345678901234567890n;
+
+T) Dynamic import
+
+✔ Load modules dynamically
+
+import("./module.js").then(module => module.sum(2,3));
+
+U) Promises + async/await
+
+✔ Already covered in Async JS (9️⃣)
+
+V) ES Modules
+
+✔ import/export to split code into modules (browser & Node.js)
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Know modern syntax: let/const, arrow, template literals
+✔ Classes + inheritance + super
+✔ Modules + import/export
+✔ Destructuring, spread/rest
+✔ Sets, Maps, WeakSet/WeakMap
+✔ Optional chaining + nullish
+✔ BigInt for large numbers
+✔ Generators & iterators → advanced interview questions
+
+Send 11 or type the next topic to continue with ERROR HANDLING.
+
+You said:
+1️⃣1️⃣ ERROR HANDLING
+
+✔ try / catch / finally
+✔ Throwing custom errors
+✔ Built-in error types
+
+SyntaxError
+
+ReferenceError
+
+TypeError
+
+RangeError
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 1️⃣1️⃣ ERROR HANDLING — essential for writing robust JS code and a common interview topic.
+
+⭐ 11️⃣ ERROR HANDLING
+
+JavaScript provides mechanisms to handle runtime errors using try, catch, finally, and throw.
+
+A) try / catch / finally
+try {
+  // Code that may throw an error
+  let result = riskyOperation();
+  console.log(result);
+} catch (err) {
+  // Runs if error occurs
+  console.log("Error caught:", err.message);
+} finally {
+  // Runs always
+  console.log("Finally block executed");
+}
+
+
+✅ Notes:
+
+try → attempt code
+
+catch → handle errors
+
+finally → clean up, runs always
+
+B) Throwing Custom Errors
+
+You can throw your own errors with a message.
+
+function divide(a, b) {
+  if (b === 0) throw new Error("Division by zero not allowed");
+  return a / b;
+}
+
+try {
+  console.log(divide(5,0));
+} catch(err) {
+  console.log("Caught error:", err.message);
+}
+
+C) Built-in Error Types
+1. SyntaxError
+
+Occurs during parsing (wrong syntax).
+
+// console.log("Hello // missing closing quote) -> SyntaxError
+
+2. ReferenceError
+
+Accessing undeclared variable.
+
+console.log(x); // ReferenceError: x is not defined
+
+3. TypeError
+
+Wrong type usage.
+
+let num = 5;
+num.toUpperCase(); // TypeError: num.toUpperCase is not a function
+
+4. RangeError
+
+Value outside allowable range.
+
+let arr = new Array(-1); // RangeError: Invalid array length
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Always use try/catch/finally for error-prone code
+✔ Know custom errors with throw
+✔ Remember common built-in error types: SyntaxError, ReferenceError, TypeError, RangeError
+✔ Be ready to explain difference between runtime & syntax errors
+
+Send 12 or type the next topic to continue with OOP IN JAVASCRIPT.
+
+You said:
+1️⃣2️⃣ OOP IN JAVASCRIPT
+
+✔ Four pillars of OOP
+
+Encapsulation
+
+Inheritance
+
+Polymorphism
+
+Abstraction
+
+✔ Classes
+✔ Constructors
+✔ Instance properties
+✔ Getter/Setter
+✔ Static methods
+✔ Prototypal inheritance
+✔ this binding
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 1️⃣2️⃣ OOP IN JAVASCRIPT — object-oriented programming concepts and implementation in JS.
+
+⭐ 12️⃣ OOP IN JAVASCRIPT
+
+OOP (Object-Oriented Programming) is about structuring code using objects. JS supports OOP via prototypes and ES6 classes.
+
+A) Four Pillars of OOP
+
+Encapsulation – Keep data & methods together, hide implementation.
+
+class BankAccount {
+  #balance = 0; // private field
+  deposit(amount) { this.#balance += amount; }
+  getBalance() { return this.#balance; }
+}
+
+let acc = new BankAccount();
+acc.deposit(100);
+console.log(acc.getBalance()); // 100
+// console.log(acc.#balance); ❌ private
+
+
+Inheritance – Child class can reuse parent properties/methods.
+
+class Person {
+  constructor(name){ this.name = name; }
+  greet(){ console.log(`Hi, I'm ${this.name}`); }
+}
+
+class Student extends Person {
+  constructor(name, grade){ super(name); this.grade = grade; }
+}
+
+let s = new Student("Milan", "A");
+s.greet(); // Hi, I'm Milan
+
+
+Polymorphism – Same method behaves differently in child classes.
+
+class Animal {
+  speak(){ console.log("Some sound"); }
+}
+
+class Dog extends Animal {
+  speak(){ console.log("Woof!"); }
+}
+
+let d = new Dog();
+d.speak(); // Woof!
+
+
+Abstraction – Hide complexity, expose only necessary parts.
+
+class Vehicle {
+  startEngine(){ throw new Error("Must implement startEngine"); }
+}
+
+class Car extends Vehicle {
+  startEngine(){ console.log("Car engine started"); }
+}
+
+let myCar = new Car();
+myCar.startEngine();
+
+B) Classes
+class Person {
+  constructor(name, age) {
+    this.name = name;      // instance property
+    this.age = age;
+  }
+  greet() { console.log(`Hello ${this.name}`); }
+}
+
+let p = new Person("Milan", 20);
+p.greet(); // Hello Milan
+
+C) Constructors
+
+Special method in classes to initialize objects.
+
+constructor(name, age){ this.name = name; this.age = age; }
+
+D) Instance Properties
+
+Properties specific to an instance.
+
+let p1 = new Person("A", 20);
+let p2 = new Person("B", 25);
+
+E) Getter / Setter
+
+Controlled access to properties.
+
+class Person {
+  constructor(name){ this._name = name; }
+  get name(){ return this._name; }
+  set name(value){ this._name = value.toUpperCase(); }
+}
+
+let p = new Person("Milan");
+p.name = "milan";
+console.log(p.name); // MILAN
+
+F) Static Methods
+
+Belongs to class, not instance.
+
+class MathUtil {
+  static add(a,b){ return a+b; }
+}
+
+console.log(MathUtil.add(5,10)); // 15
+
+G) Prototypal Inheritance
+
+Older JS method using prototype chain.
+
+function Person(name){ this.name = name; }
+Person.prototype.greet = function(){ console.log("Hi " + this.name); }
+
+let p = new Person("Milan");
+p.greet(); // Hi Milan
+
+H) this Binding
+
+Refers to object calling the method.
+
+const obj = {
+  name: "Milan",
+  greet: function(){ console.log(this.name); }
+};
+obj.greet(); // Milan
+
+
+Arrow functions do NOT have their own this.
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Understand four pillars: encapsulation, inheritance, polymorphism, abstraction
+✔ Classes + constructor + instance properties
+✔ Getter / Setter + Static methods
+✔ this keyword behavior
+✔ Prototypal inheritance (classic JS)
+
+Send 13 or type the next topic to continue with FETCH & APIs.
+
+You said:
+1️⃣3️⃣ FETCH & APIs
+
+✔ Fetch API
+✔ HTTP methods (GET, POST, PUT, DELETE)
+✔ JSON parsing
+✔ CORS basics
+✔ Axios (optional)
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 1️⃣3️⃣ FETCH & APIs — very important for frontend interviews, especially for working with backend data.
+
+⭐ 13️⃣ FETCH & APIs
+
+APIs allow communication between client and server. JS can interact with APIs using Fetch API or libraries like Axios.
+
+A) Fetch API
+
+Native JS method to make HTTP requests. Returns a Promise.
+
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => response.json())  // parse JSON
+  .then(data => console.log(data))
+  .catch(err => console.error("Error:", err));
+
+B) HTTP Methods
+1. GET → Retrieve data
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+2. POST → Send data
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ title: "New Post", body: "Content" })
+})
+.then(res => res.json())
+.then(data => console.log(data));
+
+3. PUT → Update data
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+  method: "PUT",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ title: "Updated Post" })
+});
+
+4. DELETE → Remove data
+fetch("https://jsonplaceholder.typicode.com/posts/1", { method: "DELETE" });
+
+C) JSON Parsing
+
+Response from API is often JSON → needs .json() to parse.
+
+fetch("https://api.example.com/data")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+D) CORS (Cross-Origin Resource Sharing)
+
+Browser security → blocks requests from different origin unless allowed by server.
+
+Server must send CORS headers (Access-Control-Allow-Origin).
+
+E) Axios (optional)
+
+Library that simplifies HTTP requests.
+
+// GET
+axios.get("https://jsonplaceholder.typicode.com/posts")
+  .then(res => console.log(res.data));
+
+// POST
+axios.post("https://jsonplaceholder.typicode.com/posts", { title: "Hello" })
+  .then(res => console.log(res.data));
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Fetch API returns Promises
+✔ Know GET, POST, PUT, DELETE methods
+✔ .json() parses response
+✔ CORS → important for frontend security
+✔ Axios → optional but widely used in projects
+
+Send 14 or type the next topic to continue with STORAGE.
+
+You said:
+1️⃣4️⃣ STORAGE
+
+✔ Cookies
+✔ localStorage
+✔ sessionStorage
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 1️⃣4️⃣ STORAGE — very important for managing client-side data.
+
+⭐ 14️⃣ STORAGE in JavaScript
+
+JavaScript provides ways to store data on the client: Cookies, localStorage, and sessionStorage.
+
+A) Cookies
+
+Small pieces of data stored by the browser.
+
+Sent with every HTTP request.
+
+Can have expiration dates.
+
+// Set cookie
+document.cookie = "username=Milan; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+
+// Read cookies
+console.log(document.cookie); // "username=Milan"
+
+// Delete cookie
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+
+Notes:
+
+Max size ~4KB
+
+Use for small data or server-side communication
+
+B) localStorage
+
+Stores data permanently (until cleared by user).
+
+Key-value storage.
+
+// Set item
+localStorage.setItem("name", "Milan");
+
+// Get item
+console.log(localStorage.getItem("name")); // Milan
+
+// Remove item
+localStorage.removeItem("name");
+
+// Clear all
+localStorage.clear();
+
+
+Notes:
+
+Max size ~5MB
+
+Data persists after browser close
+
+C) sessionStorage
+
+Stores data only for the current session (cleared when browser/tab closes).
+
+// Set item
+sessionStorage.setItem("sessionName", "Test");
+
+// Get item
+console.log(sessionStorage.getItem("sessionName")); // Test
+
+// Remove item
+sessionStorage.removeItem("sessionName");
+
+// Clear all
+sessionStorage.clear();
+
+
+Notes:
+
+Max size similar to localStorage (~5MB)
+
+Good for temporary session data
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Cookies → small, sent with HTTP requests, can expire
+✔ localStorage → permanent, key-value, client-side only
+✔ sessionStorage → temporary, per-tab session
+✔ Know methods: setItem, getItem, removeItem, clear
+
+Send 15 or type the next topic to continue with MODULES.
+
+You said:
+1️⃣5️⃣ MODULES
+
+✔ ES Modules (import/export)
+✔ CommonJS (require/module.exports)
+✔ Bundlers (Webpack, Vite, Parcel)
+✔ Tree-shaking
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 1️⃣5️⃣ MODULES — important for structuring JS code in modern projects.
+
+⭐ 15️⃣ MODULES in JavaScript
+
+Modules allow you to split code into reusable files instead of one huge script.
+
+A) ES Modules (ESM)
+
+✔ Native in modern JS (browser & Node.js).
+✔ Use export and import.
+
+export.js
+
+export const pi = 3.14;
+export function sum(a,b){ return a+b; }
+
+
+import.js
+
+import { pi, sum } from './export.js';
+
+console.log(pi); // 3.14
+console.log(sum(2,3)); // 5
+
+
+Notes:
+
+Use export default for a single export
+
+export default function greet(){ console.log("Hi"); }
+
+B) CommonJS (Node.js)
+
+✔ Used in Node.js (older standard).
+
+module.js
+
+const pi = 3.14;
+function sum(a,b){ return a+b; }
+
+module.exports = { pi, sum };
+
+
+app.js
+
+const { pi, sum } = require('./module.js');
+console.log(sum(2,3)); // 5
+
+C) Bundlers (Webpack, Vite, Parcel)
+
+Combine multiple modules into a single JS file for browsers.
+
+Handle module imports, CSS, images, ES6+ syntax.
+
+Use cases:
+
+Webpack → mature & widely used
+
+Vite → fast, modern
+
+Parcel → zero-config
+
+D) Tree-shaking
+
+Removes unused exports during bundling.
+
+Reduces bundle size.
+
+// utils.js
+export function used(){ return 1; }
+export function unused(){ return 2; }
+
+// Only import the used function
+import { used } from './utils.js';
+
+
+Bundler can remove unused() → smaller final file.
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Know ES Modules vs CommonJS
+✔ import/export vs require/module.exports
+✔ Bundlers → Webpack / Vite / Parcel
+✔ Tree-shaking → removes unused code
+
+Send 16 or type the next topic to continue with PERFORMANCE OPTIMIZATION.
+
+You said:
+1️⃣6️⃣ PERFORMANCE OPTIMIZATION
+
+✔ Debounce / Throttle
+✔ Lazy loading
+✔ Code splitting
+✔ Memory leaks
+✔ Event delegation
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 1️⃣6️⃣ PERFORMANCE OPTIMIZATION — very important for writing fast, efficient JS code.
+
+⭐ 16️⃣ PERFORMANCE OPTIMIZATION
+
+Performance optimization ensures faster load times, smoother UI, and better resource management.
+
+A) Debounce / Throttle
+
+✔ Already covered in Advanced Functions (8️⃣)
+
+Debounce: execute function after user stops triggering event
+
+Throttle: execute function at most once in a time interval
+
+Use cases: scrolling, typing, resizing.
+
+B) Lazy Loading
+
+✔ Load resources only when needed.
+
+Reduces initial load time.
+
+Example: Image Lazy Loading
+
+<img src="image.jpg" loading="lazy" alt="Lazy Image">
+
+
+JS Lazy Loading Example (Dynamic import):
+
+button.addEventListener("click", async () => {
+  const module = await import('./module.js');
+  module.doSomething();
+});
+
+C) Code Splitting
+
+✔ Split JS into smaller chunks to load only what’s needed.
+
+Often handled by Webpack, Vite.
+
+// Dynamic import
+import("./module.js").then(module => module.init());
+
+
+Benefit: Faster initial load, reduced bundle size.
+
+D) Memory Leaks
+
+✔ Occurs when JS keeps references to unused objects.
+
+Common causes:
+
+Global variables
+
+Closures holding references
+
+DOM nodes not removed
+
+Example:
+
+let element = document.getElementById("myDiv");
+element.addEventListener("click", () => console.log("Clicked"));
+// If element removed from DOM but listener not removed → memory leak
+
+
+Fix: removeEventListener or nullify references.
+
+E) Event Delegation
+
+✔ Attach one listener to parent instead of multiple children.
+
+document.getElementById("parent").addEventListener("click", (e) => {
+  if(e.target && e.target.matches("button.child")) {
+    console.log("Child button clicked:", e.target.textContent);
+  }
+});
+
+
+Benefit:
+
+Less memory consumption
+
+Works for dynamic elements
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Debounce / Throttle → optimize event-heavy actions
+✔ Lazy loading → images / modules / components
+✔ Code splitting → reduce bundle size
+✔ Detect & prevent memory leaks
+✔ Event delegation → efficient event handling
+
+Send 17 or type the next topic to continue with INTERVIEW-FOCUSED TOPICS.
+
+You said:
+1️⃣7️⃣ INTERVIEW-FOCUSED TOPICS
+
+✔ Hoisting
+✔ Closures
+✔ Event loop
+✔ Promise chaining
+✔ Prototype chain
+✔ this keyword
+✔ Difference between
+
+== vs ===
+
+var vs let vs const
+
+call vs apply vs bind
+
+shallow copy vs deep copy
+✔ JS engine (V8) basics
+✔ Garbage collection
+✔ Shadowing
+✔ Pure vs impure functions
+ChatGPT said:
+
+Perfect Milan!
+Now let’s cover 1️⃣7️⃣ INTERVIEW-FOCUSED TOPICS — these are the must-know concepts that interviewers often ask. I’ll explain each one with examples.
+
+⭐ 17️⃣ INTERVIEW-FOCUSED TOPICS
+A) Hoisting
+
+Variable and function declarations are moved to the top of their scope during compilation.
+
+var → undefined, let/const → TDZ (Temporal Dead Zone)
+
+console.log(a); // undefined
+var a = 5;
+
+// console.log(b); // ReferenceError
+let b = 10;
+
+// Function hoisting
+console.log(sum(2,3)); // 5
+function sum(x,y){ return x+y; }
+
+B) Closures
+
+✔ Already covered in Advanced Functions (8️⃣)
+
+Function remembers variables from outer scope.
+
+C) Event Loop
+
+✔ Already covered in Async JS (9️⃣)
+
+Handles call stack, macrotask, microtask queues.
+
+D) Promise Chaining
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    return fetch("https://jsonplaceholder.typicode.com/users/1");
+  })
+  .then(res => res.json())
+  .then(user => console.log(user))
+  .catch(err => console.error(err));
+
+E) Prototype Chain
+
+Objects inherit from prototype objects.
+
+function Person(name){ this.name = name; }
+Person.prototype.greet = function(){ console.log("Hi " + this.name); }
+
+let p = new Person("Milan");
+p.greet(); // Hi Milan
+
+console.log(p.__proto__ === Person.prototype); // true
+
+F) this Keyword
+
+Refers to calling object.
+
+Arrow functions inherit this from lexical scope.
+
+const obj = { name:"Milan", greet(){ console.log(this.name); } };
+obj.greet(); // Milan
+
+const arrow = () => console.log(this); // window/global
+arrow();
+
+G) == vs ===
+
+== → type coercion
+
+=== → strict equality, no coercion
+
+5 == "5";  // true
+5 === "5"; // false
+
+H) var vs let vs const
+Feature	var	let	const
+Scope	Function	Block	Block
+Hoisting	Yes	Yes (TDZ)	Yes (TDZ)
+Reassignable	Yes	Yes	No
+Redeclarable	Yes	No	No
+I) call vs apply vs bind
+const person = { name:"Milan" };
+function greet(greeting, age){ console.log(`${greeting} ${this.name}, ${age}`); }
+
+greet.call(person, "Hi", 20);    // Hi Milan, 20
+greet.apply(person, ["Hey", 25]); // Hey Milan, 25
+const bound = greet.bind(person, "Hello");
+bound(30); // Hello Milan, 30
+
+J) Shallow Copy vs Deep Copy
+let obj = { a:1, b:{ c:2 } };
+
+// Shallow copy
+let copy1 = {...obj};
+copy1.b.c = 20;
+console.log(obj.b.c); // 20 → affected
+
+// Deep copy
+let copy2 = JSON.parse(JSON.stringify(obj));
+copy2.b.c = 30;
+console.log(obj.b.c); // 20 → original not affected
+
+K) JS Engine (V8) Basics
+
+JS is interpreted & JIT-compiled.
+
+Executes in execution context, optimized by V8 in Chrome/Node.js.
+
+L) Garbage Collection
+
+JS automatically frees memory from unreachable objects.
+
+Helps prevent memory leaks.
+
+let obj = {name:"Milan"};
+obj = null; // eligible for garbage collection
+
+M) Shadowing
+
+Inner scope variable overrides outer scope variable.
+
+let x = 10;
+function test(){
+  let x = 5; // shadows outer x
+  console.log(x); // 5
+}
+test();
+console.log(x); // 10
+
+N) Pure vs Impure Functions
+
+✔ Already covered in Advanced Functions (8️⃣)
+
+Pure: no side effects, same output for same input
+
+Impure: may depend on or change external state
+
+🎯 INTERVIEW QUICK TIPS
+
+✔ Be ready to explain with examples: hoisting, closures, event loop
+✔ Know == vs ===, var/let/const differences
+✔ Understand call/apply/bind, shallow vs deep copy
+✔ JS engine basics, garbage collection, shadowing
+✔ Pure functions → functional programming
+
+This completes all 17 topics of your full JS syllabus! ✅
+
+If you want, I can now make a single “JS Interview Ready Sheet” with all topics + examples in one place so you can read fast before the interview.
+
+Do you want me to do that?
+
+You said:
+yes create 
+ChatGPT said:
+
+Perfect Milan! I’ll make a complete JavaScript Interview Ready Sheet with all topics, concise explanations, and examples, so you can quickly revise before your interview. I’ll structure it clearly topic by topic.
+
+📝 JavaScript Interview Ready Sheet (Beginner → Advanced → ES6+)
+1️⃣ BASICS (Core Foundation)
+What is JavaScript
+
+JS is a lightweight, interpreted, high-level language.
+
+Used for frontend and backend (Node.js).
+
+Features
+
+Interpreted, dynamic typing, object-oriented, event-driven.
+
+How JS Runs
+
+Browser: via JS engine (V8 in Chrome)
+
+Node.js: runtime outside browser, server-side JS.
+
+Variables: var, let, const
+var x = 5; // function scoped
+let y = 10; // block scoped
+const z = 15; // block scoped, constant
+
+Data Types
+
+Primitive: string, number, boolean, null, undefined, symbol, bigint
+Non-primitive: objects, arrays, functions
+
+let name = "Milan"; // string
+let age = 20;       // number
+let user = {name, age}; // object
+let arr = [1,2,3];     // array
+
+Operators
+
+Arithmetic: +, -, *, /, %
+
+Assignment: =, +=, -=
+
+Comparison: ==, ===, !=, !==, >, <
+
+Logical: &&, ||, !
+
+Ternary: condition ? true : false
+
+Bitwise: &, |, ^
+
+Nullish Coalescing: x ?? default
+
+Optional chaining: obj?.prop
+
+Template Literals
+let msg = `Hello, ${name}!`;
+
+Type Conversion
+
+Implicit: "5" - 2 → 3
+
+Explicit: Number("5") → 5
+
+2️⃣ CONTROL FLOW
+Conditional Statements
+if(x>0){} else if(x<0){} else {}
+switch(day){ case 1: break; default: }
+
+Loops
+for(let i=0;i<5;i++){}
+while(condition){}
+do{}while(condition){}
+for(let x of arr){}  // values
+for(let key in obj){} // keys
+
+Loop Control
+
+break, continue
+
+Labels (rare)
+
+3️⃣ FUNCTIONS
+// Declaration
+function sum(a,b){ return a+b; }
+
+// Expression
+const sum2 = function(a,b){ return a+b; }
+
+// Arrow
+const sum3 = (a,b) => a+b;
+
+// Default + Rest
+function greet(name="Guest", ...others){}
+
+// IIFE
+(function(){ console.log("IIFE"); })();
+
+
+Higher-order function: takes/returns function
+
+Callback function: passed as argument
+
+Spread operator: ...array
+
+4️⃣ JAVASCRIPT EXECUTION MODEL
+
+Execution Context: Global, Functional, Eval
+
+Call Stack: keeps track of function calls
+
+Hoisting: declarations moved up
+
+Lexical Scope & Scope Chain
+
+Block scope vs Function scope
+
+Variable environment & TDZ (Temporal Dead Zone)
+
+5️⃣ DOM & BOM
+DOM
+document.getElementById("id");
+document.querySelector(".class");
+document.querySelectorAll("li");
+
+element.textContent = "Hello";
+element.style.color = "red";
+
+let newEl = document.createElement("div");
+parent.appendChild(newEl);
+parent.removeChild(child);
+
+element.addEventListener("click", ()=>{});
+
+
+Event Delegation → parent handles child events
+
+Bubbling & Capturing
+
+Keyboard/mouse events, form handling
+
+BOM
+window.alert("Hi");
+window.prompt("Name?");
+window.confirm("OK?");
+window.location.href
+window.history.back()
+navigator.userAgent
+
+6️⃣ OBJECTS
+let obj = {name:"Milan", age:20};
+obj.city = "India";
+delete obj.age;
+
+Object.freeze(obj);
+Object.seal(obj);
+
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
+console.log(Object.entries(obj));
+
+const {name, city} = obj; // destructuring
+
+
+Constructor function
+
+function Person(name){ this.name=name; }
+Person.prototype.greet = function(){ console.log(this.name); }
+
+
+Prototypal inheritance
+
+7️⃣ ARRAYS
+let arr = [1,2,3];
+arr.push(4); arr.pop(); arr.shift(); arr.unshift(0);
+arr.splice(1,1); arr.sort(); arr.reverse();
+
+arr.map(n=>n*2);
+arr.filter(n=>n>1);
+arr.reduce((acc,n)=>acc+n,0);
+arr.find(n=>n>1);
+arr.includes(2);
+arr.flat();
+arr.flatMap(n=>[n,n*2]);
+
+let [a,b] = arr;
+let arr2 = [...arr];
+
+8️⃣ ADVANCED FUNCTIONS
+
+Closures: remember outer scope variables
+
+Currying: f(a)(b)
+
+Debouncing / Throttling: optimize events
+
+Memoization: cache results
+
+Recursion: function calls itself
+
+Pure vs Impure functions
+
+Functional programming basics: map/filter/reduce, immutability
+
+9️⃣ ASYNC JAVASCRIPT
+
+Synchronous vs Asynchronous
+
+Callback Hell → use promises / async-await
+
+fetch(url).then(res=>res.json()).then(data=>console.log(data));
+
+
+Promises: pending, fulfilled, rejected
+
+.then(), .catch(), .finally()
+
+Methods: Promise.all, race, any, allSettled
+
+async / await → cleaner syntax
+
+Event loop: microtasks (promises) vs macrotasks (setTimeout)
+
+10️⃣ ES6+ FEATURES
+
+let, const, arrow functions, template literals
+
+Classes + inheritance (extends, super)
+
+Modules: import/export
+
+Enhanced object literals, destructuring, spread/rest
+
+Symbols, iterators, generators
+
+Sets, Maps, WeakSet, WeakMap
+
+Default parameters, optional chaining, nullish coalescing
+
+BigInt, dynamic import, ES Modules
+
+11️⃣ ERROR HANDLING
+try{ risky(); } 
+catch(err){ console.log(err.message); } 
+finally{ console.log("Done"); }
+
+throw new Error("Custom error");
+
+// Built-in Errors
+// SyntaxError, ReferenceError, TypeError, RangeError
+
+12️⃣ OOP IN JAVASCRIPT
+
+Four pillars: Encapsulation, Inheritance, Polymorphism, Abstraction
+
+class Person {
+  constructor(name){ this.name=name; }
+  greet(){ console.log(this.name); }
+}
+class Student extends Person{
+  constructor(name, grade){ super(name); this.grade=grade; }
+}
+
+
+Getter/Setter, Static Methods
+
+Prototypal inheritance
+
+this binding
+
+13️⃣ FETCH & APIs
+
+Fetch API → fetch(url).then(res=>res.json())
+
+HTTP methods: GET, POST, PUT, DELETE
+
+JSON parsing, CORS basics
+
+Axios → simplified HTTP requests
+
+14️⃣ STORAGE
+
+Cookies: small, sent with HTTP, can expire
+
+localStorage: permanent key-value storage
+
+sessionStorage: per-session key-value storage
+
+localStorage.setItem("name","Milan");
+sessionStorage.setItem("session","test");
+
+15️⃣ MODULES
+
+ES Modules: export / import
+
+CommonJS: require / module.exports
+
+Bundlers: Webpack, Vite, Parcel
+
+Tree-shaking → remove unused exports
+
+16️⃣ PERFORMANCE OPTIMIZATION
+
+Debounce / Throttle → optimize event-heavy functions
+
+Lazy loading → images / modules
+
+Code splitting → smaller bundles
+
+Memory leaks → remove unused references, listeners
+
+Event delegation → single listener on parent
+
+17️⃣ INTERVIEW-FOCUSED TOPICS
+
+Hoisting: var hoisted, let/const TDZ
+
+Closures: inner function remembers outer variables
+
+Event loop: call stack + microtask/macrotask
+
+Promise chaining
+
+Prototype chain
+
+this keyword
+
+== vs ===, var vs let vs const
+
+call vs apply vs bind
+
+Shallow copy vs deep copy
+
+JS engine (V8), garbage collection, shadowing
+
+Pure vs impure functions
+
+✅ TIP FOR INTERVIEW REVISION
+
+Understand concept + example.
+
+Be ready to write small code snippets.
+
+Revise async JS, closures, promises, OOP, ES6+ features carefully.
+
+Practice array & object methods.
+
+Think about performance & memory optimizations.

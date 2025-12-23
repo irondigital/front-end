@@ -1,0 +1,43 @@
+Question 2: Explain the core principles of React such as the virtual DOM and
+component-based architecture
+
+React is built on a few core principles that make it fast, scalable, and easy to maintain. The two most important ones are Virtual DOM and Component-Based Architecture.
+
+What is the Virtual DOM?
+
+The Virtual DOM is a lightweight copy of the real DOM stored in memory.
+
+ React does not update the real DOM directly
+ Instead, it updates the Virtual DOM first
+
+How Virtual DOM Works
+
+UI is rendered and Virtual DOM is created
+
+State or data changes
+
+A new Virtual DOM is created
+
+React compares the new Virtual DOM with the previous one (this is called diffing)
+
+React updates only the changed parts in the real DOM (called reconciliation)
+
+What is a Component?
+
+A component is a small, reusable, independent piece of UI.
+
+Examples:
+
+Navbar
+
+Footer
+
+Card
+
+Button
+
+Why Component-Based Architecture?
+
+ Breaks UI into small parts
+ Each component manages its own logic and UI
+ Easy to reuse and maintain

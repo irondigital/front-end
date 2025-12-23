@@ -1,0 +1,369 @@
+
+
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MILAN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--bg:#07070a;--neon-blue:#00f3ff;
+      --neon-purple:#a020f0;--muted:#9beeff}
+    html,body{height:100%;
+      background:var(--bg);color:#dff9ff;
+      font-family:'Space Grotesk',system-ui,Arial,sans-serif;
+      font-size:1.1rem}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes fadeRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+    .anim{opacity:0;transform:none}
+    .anim.in{opacity:1}
+    .from-up{animation:fadeUp .7s cubic-bezier(.2,.9,.2,1) both}
+    .from-left{animation:fadeLeft .7s cubic-bezier(.2,.9,.2,1) both}
+    .from-right{animation:fadeRight .7s cubic-bezier(.2,.9,.2,1) both}
+    .floaty{animation:floaty 4s ease-in-out infinite}
+
+    .stagger>*{opacity:0;transform:none}
+
+    .glass{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid rgba(0,243,255,.04)}
+    .neon-line{height:3px;background:linear-gradient(90deg,var(--neon-blue),var(--neon-purple));border-radius:6px}
+
+    @media(max-width:640px){.hero-title{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+
+  <canvas id="particles" style="position:fixed;inset:0;z-index:-10;pointer-events:none"></canvas>
+
+  <!-- ======================================================
+       UPDATED HEADER WITH MOBILE DROPDOWN
+  ======================================================= -->
+  <header class="sticky top-0 z-30 bg-black/5 backdrop-blur-sm py-4 border-b border-white/5">
+    <div class="max-w-7xl w-full mx-auto px-6 flex items-center justify-between">
+
+      <div class="font-orbitron text-[#00f3ff] font-extrabold text-lg tracking-wide">
+        BALAS MILAN
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden sm:flex">
+        <ul class="flex gap-6 text-base text-[#9beeff] font-semibold">
+          <li><a href="#home" class="block hover:underline">Home</a></li>
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#videos" class="hover:underline">My Work</a></li>
+          <li><a href="./resume/index.html" class="hover:underline">Resume</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="menuBtn"
+        class="sm:hidden text-[#9beeff] text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu"
+      class="sm:hidden hidden flex-col bg-black/40 backdrop-blur-lg border-t border-white/10 px-6 pb-4 transition-all duration-300 overflow-hidden ">
+
+      <a href="#home" class="py-2 text-[#9beeff] block">Home</a>
+      <a href="#projects" class="py-2 text-[#9beeff] block">Projects</a>
+      <a href="#videos" class="py-2 text-[#9beeff] block">My Work</a>
+      <a href="./resume/index.html" class="py-2 text-[#9beeff] block">Resume</a>
+      <a href="#contact" class="py-2 text-[#9beeff] block">Contact</a>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       REST OF YOUR ORIGINAL CODE (UNCHANGED)
+  ======================================================= -->
+
+
+  <main class="max-w-7xl w-full mx-auto px-6">
+
+    <!-- PROFILE (center, float) -->
+    <section id="profile" class="py-12" data-anim-type="up">
+      <div class="flex justify-center">
+        <div class="w-72 h-72 rounded-full overflow-hidden ring-4 ring-cyan-400/40 shadow-2xl floaty anim" data-stagger-index="0">
+          <img src="./images/1.jpg" alt="Balas Milan" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- HERO (center) -->
+    <section id="home" class="text-center py-8" data-anim-type="up">
+      <h1 class="hero-title text-4xl sm:text-6xl font-orbitron font-extrabold text-[#00f3ff] anim" data-stagger-index="0">Hii, I'm <span class="text-[#00f3ff]">BALAS MILAN</span></h1>
+      <p class="mt-3 text-[#9beeff] anim" data-stagger-index="1">MERN Stack Developer</p>
+      <p class="lead mt-4 text-[#bff7ff] max-w-3xl mx-auto anim" data-stagger-index="2">I build futuristic digital experiences — fast, accessible and beautiful.</p>
+      <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 anim" data-stagger-index="3">
+        <button id="viewProjects" class="px-6 py-3 rounded-lg text-sm font-bold border border-cyan-600/20 glass">View Projects</button>
+        <a href="../resume/index.html" class="px-6 py-3 rounded-lg text-sm font-bold border border-purple-600/18 glass">See Resume</a>
+      </div>
+    </section>
+
+    <!-- PROJECTS (heading left, line right, grid items staggered up) -->
+    <section id="projects" class="py-12" data-anim-type="split">
+      <div class=" flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <h2 class="text-2xl font-orbitron text-[#00f3ff] anim" data-stagger-index="0">Projects</h2>
+        <div class="w-24 neon-line anim" data-stagger-index="1"></div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger" aria-label="Projects list">
+
+        <!-- Project cards with data-index for stagger -->
+        <article class="glass p-4 rounded-xl anim" data-stagger-index="0">
+          <div class="relative rounded-md overflow-hidden h-40 bg-black/40 border">
+            <img src="images/Screenshot 2025-11-05 110953.png" alt="Airlines" class="w-full h-full object-cover">
+            <span class="absolute right-3 top-3 text-xs bg-black/40 px-3 py-1 rounded">Featured</span>
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-[#bff7ff]">Airlines Website</h3>
+          <p class="text-sm text-[#9beeff] mt-1">HTML • CSS • Bootstrap • Tailwind</p>
+        </article>
+
+        <article class="glass p-4 rounded-xl anim" data-stagger-index="1">
+          <div class="relative rounded-md overflow-hidden h-40 bg-black/40 border">
+            <img src="images/Screenshot 2025-11-20 185204.png" alt="E-commerce" class="w-full h-full object-cover">
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-[#bff7ff]">E-commerce Platform</h3>
+          <p class="text-sm text-[#9beeff] mt-1">HTML • CSS • JS</p>
+        </article>
+
+        <article class="glass p-4 rounded-xl anim" data-stagger-index="2">
+          <div class="relative rounded-md overflow-hidden h-40 bg-black/40 border">
+            <img src="images/Screenshot 2025-11-20 182505.png" alt="Blinkit" class="w-full h-full object-cover">
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-[#bff7ff]">Blinkit App</h3>
+          <p class="text-sm text-[#9beeff] mt-1">Tailwind • JS</p>
+        </article>
+
+        <article class="glass p-4 rounded-xl anim" data-stagger-index="3">
+          <div class="relative rounded-md overflow-hidden h-40 bg-black/40 border">
+            <img src="images/Screenshot 2025-11-20 182621.png" alt="UI Design" class="w-full h-full object-cover">
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-[#bff7ff]">Basic UI Design</h3>
+          <p class="text-sm text-[#9beeff] mt-1">Design • Prototyping</p>
+        </article>
+
+        <article class="glass p-4 rounded-xl anim" data-stagger-index="4">
+          <div class="relative rounded-md overflow-hidden h-40 bg-black/40 border">
+            <img src="images/Screenshot 2025-11-20 182717.png" alt="Calculator" class="w-full h-full object-cover">
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-[#bff7ff]">Calculator App</h3>
+          <p class="text-sm text-[#9beeff] mt-1">HTML • JS</p>
+        </article>
+
+        <article class="glass p-4 rounded-xl anim" data-stagger-index="5">
+          <div class="relative rounded-md overflow-hidden h-40 bg-black/40 border">
+            <img src="images/Screenshot 2025-11-20 183939.png" alt="Items Tracking" class="w-full h-full object-cover">
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-[#bff7ff]">Items Tracking Page</h3>
+          <p class="text-sm text-[#9beeff] mt-1">Tailwind • JS</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="py-12" data-anim-type="up">
+      <div class=" items-center justify-between gap-4">
+        <h2 class="text-2xl font-orbitron text-[#00f3ff] anim" data-stagger-index="0">My Work — Videos</h2> 
+        <div class="w-52 neon-line anim" data-stagger-index="1"></div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
+        <div class="glass p-3 rounded-lg anim" data-stagger-index="0">
+          <div class="relative rounded-md overflow-hidden bg-black/40 h-44 flex items-center justify-center">
+            <video controls class="w-full h-full object-cover"><source src="images/aircraft.mp4" type="video/mp4"></video>
+          </div>
+          <div class="mt-2 font-medium text-[#bff7ff]">Airlines Websites</div>
+        </div>
+
+        <div class="glass p-3 rounded-lg anim" data-stagger-index="1">
+          <div class="relative rounded-md overflow-hidden bg-black/40 h-44 flex items-center justify-center">
+            <video controls class="w-full h-full object-cover"><source src="images/flipcart.mp4" type="video/mp4"></video>
+          </div>
+          <div class="mt-2 font-medium text-[#bff7ff]">Flipcart Clone</div>
+        </div>
+
+        <div class="glass p-3 rounded-lg anim" data-stagger-index="2">
+          <div class="relative rounded-md overflow-hidden bg-black/40 h-44 flex items-center justify-center">
+            <video controls class="w-full h-full object-cover"><source src="images/Education-Website.mp4" type="video/mp4"></video>
+          </div>
+          <div class="mt-2 font-medium text-[#bff7ff]">Education Website</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-12" data-anim-type="split">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2 anim" data-stagger-index="0">
+          <h2 class="text-2xl font-orbitron text-[#00f3ff]">About Me</h2>
+          <div class="neon-line mt-3 w-28"></div>
+          <p class="mt-4 text-[#bff7ff] leading-relaxed">I’m a MERN-stack developer building modern, performant and animated user experiences. I enjoy solving UX problems and bringing interfaces to life with subtle motion.</p>
+
+          <h3 class="mt-6 text-[#9beeff]">Highlights</h3>
+          <ul class="mt-2 text-[#9beeff] list-disc list-inside leading-loose">
+            <li>Fresher</li>
+            <li>Built 6+ projects</li>
+            <li>Good JS & visual design instincts</li>
+          </ul>
+
+          <h3 class="mt-6 text-[#9beeff]">Contact</h3>
+          <p class="text-[#80d7e8] mt-1">Email: <a href="mailto:milanbalas123@gmail.com" class="underline">milanbalas123@gmail.com</a></p>
+        </div>
+
+        <aside class="glass p-4 rounded-xl anim" data-stagger-index="1">
+          <h3 class="font-orbitron text-[#a020f0]">Skills</h3>
+          <div class="mt-4 space-y-4">
+            <div>
+              <div class="flex justify-between text-sm text-[#bff7ff]"><span>HTML / CSS</span><span>95%</span></div>
+              <div class="h-2 bg-white/5 rounded mt-2 overflow-hidden"><div class="h-full bg-gradient-to-r from-cyan-400 to-purple-600" style="width:95%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm text-[#bff7ff]"><span>JavaScript</span><span>88%</span></div>
+              <div class="h-2 bg-white/5 rounded mt-2 overflow-hidden"><div class="h-full bg-gradient-to-r from-cyan-400 to-purple-600" style="width:88%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm text-[#bff7ff]"><span>React / Node</span><span>50%</span></div>
+              <div class="h-2 bg-white/5 rounded mt-2 overflow-hidden"><div class="h-full bg-gradient-to-r from-cyan-400 to-purple-600" style="width:50%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm text-[#bff7ff]"><span>Bootstrap / Tailwind</span><span>90%</span></div>
+              <div class="h-2 bg-white/5 rounded mt-2 overflow-hidden"><div class="h-full bg-gradient-to-r from-cyan-400 to-purple-600" style="width:90%"></div></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-12" data-anim-type="up">
+      <h2 class="text-2xl font-orbitron text-[#00f3ff] anim" data-stagger-index="0">Services</h2>
+      <div class="neon-line mt-3 w-24 anim" data-stagger-index="1"></div>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass p-4 rounded-lg anim" data-stagger-index="0"><h4 class="text-[#bff7ff] font-semibold">Web Development</h4><p class="text-[#80d7e8] mt-2">Responsive websites, SPAs with performance and accessibility in mind.</p></div>
+        <div class="glass p-4 rounded-lg anim" data-stagger-index="1"><h4 class="text-[#bff7ff] font-semibold">UI Design</h4><p class="text-[#80d7e8] mt-2">Design systems, prototypes and micro interactions.</p></div>
+        <div class="glass p-4 rounded-lg anim" data-stagger-index="2"><h4 class="text-[#bff7ff] font-semibold">Frontend Design</h4><p class="text-[#80d7e8] mt-2">Interactive scenes and visualizations with React.</p></div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="py-12" data-anim-type="up">
+      <h2 class="text-2xl font-orbitron text-[#00f3ff]">Resume</h2>
+      <div class="neon-line mt-3 w-24"></div>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass p-4 rounded-lg anim" data-stagger-index="0"><h4 class="text-[#bff7ff]">Work Experience</h4><p class="text-[#80d7e8]">Fresher — MERN Stack Developer</p></div>
+        <div class="glass p-4 rounded-lg anim" data-stagger-index="1"><h4 class="text-[#bff7ff]">Education</h4><p class="text-[#80d7e8]">BE (Electronics & Communication) — Government Engineering College, Rajkot</p></div>
+        <div class="glass p-4 rounded-lg anim" data-stagger-index="2"><h4 class="text-[#bff7ff]">Certifications</h4><p class="text-[#80d7e8]">7.63 CGPA in Engineering</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12" data-anim-type="up">
+      <h2 class="text-2xl font-orbitron text-[#00f3ff]">Contact</h2>
+      <div class="neon-line mt-3 w-24"></div>
+
+      <form id="contactForm" class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl" aria-label="Contact form" action="" method="POST">
+        <input name="name" type="text" placeholder="Your name" required class="p-3 rounded-md bg-black/20 border border-white/6 text-[#dff9ff]" />
+        <input name="email" type="email" placeholder="Email" required class="p-3 rounded-md bg-black/20 border border-white/6 text-[#dff9ff]" />
+        <textarea name="message" placeholder="Message..." required class="p-3 rounded-md bg-black/20 border border-white/6 col-span-full h-36"></textarea>
+        <button type="submit" class="col-span-full sm:col-auto inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold border border-cyan-600/20 glass">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="py-8 text-center text-[#74dff6] border-t border-white/3 mt-12">© <span id="year">2025</span> BALAS MILAN — Built with Care ✨</footer>
+
+  <script>
+   
+  // MOBILE TOGGLE MENU
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  let menuOpen = false;
+
+  menuBtn.addEventListener("click", () => {
+    menuOpen = !menuOpen;
+
+    if (menuOpen) {
+      mobileMenu.classList.remove("hidden");
+      mobileMenu.style.maxHeight = "300px";
+      menuBtn.textContent = "✕";
+    } else {
+      mobileMenu.style.maxHeight = "0px";
+      setTimeout(() => mobileMenu.classList.add("hidden"), 250);
+      menuBtn.textContent = "☰";
+    }
+  });
+
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"], #viewProjects').forEach(el=>{
+      el.addEventListener('click', e=>{
+        let href = el.getAttribute('href'); if(!href && el.id==='viewProjects') href='#projects'; if(!href) return; const tgt=document.querySelector(href); if(tgt){e.preventDefault(); tgt.scrollIntoView({behavior:'smooth', block:'start'})}
+      })
+    })
+
+    // IntersectionObserver + stagger logic
+    const sections = document.querySelectorAll('main section');
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const sec = entry.target;
+          // if section has .stagger child, animate children in sequence
+          const stagger = sec.querySelector('.stagger');
+          if(stagger){
+            const children = Array.from(stagger.children);
+            children.forEach((ch, i)=>{
+              setTimeout(()=> applyAnim(ch, i), i*100);
+            })
+          }
+
+          // Animate direct anim elements inside section with their data-stagger-index
+          const animEls = Array.from(sec.querySelectorAll('.anim')).sort((a,b)=> (+(a.dataset.staggerIndex||0)) - (+(b.dataset.staggerIndex||0)));
+          animEls.forEach((el,i)=> setTimeout(()=> applyAnim(el,i), i*90));
+
+          // finally, mark section as observed and unobserve
+          obs.unobserve(sec);
+        }
+      })
+    },{threshold:0.18});
+
+    sections.forEach(s=> io.observe(s));
+
+    function applyAnim(el, idx){
+      const type = el.closest('section')?.dataset.animType || el.closest('section')?.dataset['animType'] || el.dataset.animType;
+      // choose animation type priority: element's data-anim OR section's data-anim-type
+      const a = el.dataset.anim || el.closest('section')?.dataset.animType || 'up';
+      el.classList.add('in');
+      if(a === 'left') el.classList.add('from-left');
+      else if(a === 'right') el.classList.add('from-right');
+      else el.classList.add('from-up');
+    }
+
+    // small particle background
+    (function(){ const canvas=document.getElementById('particles'); if(!canvas) return; const ctx=canvas.getContext('2d'); let w=canvas.width=innerWidth,h=canvas.height=innerHeight; const parts=Array.from({length: Math.max(28, Math.round((w*h)/120000))}).map(()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+0.3,vx:(Math.random()-0.5)/2,vy:(Math.random()-0.5)/2})); addEventListener('resize', ()=>{w=canvas.width=innerWidth;h=canvas.height=innerHeight}); function draw(){ctx.clearRect(0,0,w,h);ctx.fillStyle='rgba(0,243,255,0.05)';for(const p of parts){p.x+=p.vx;p.y+=p.vy;if(p.x<-10)p.x=w+10;if(p.x>w+10)p.x=-10;if(p.y<-10)p.y=h+10;if(p.y>h+10)p.y=-10;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(draw)} draw(); })();
+
+    // contact form feedback
+    document.getElementById('contactForm').addEventListener('submit', (ev)=>{ ev.preventDefault(); 
+    const btn = ev.target.querySelector('button[type="submit"]'); 
+    btn.textContent='Sending...'; 
+    btn.disabled=true; setTimeout(()=>{ btn.textContent='Sent!'; 
+    btn.disabled=false; 
+    ev.target.reset(); },200); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class car{
+            constructor(name,year){
+                this.name = name;
+                this.year = year;
+            }
+        }
+        class garage extends car{
+            constructor(name,year,garagename,address){
+                super(name,year);
+                this.garagename = garagename;
+                this.address = address;
+            }
+        }
+
+        let obj = new garage("tata",2023,"automobile","rajkot");
+        console.log(obj)
+    </script>
+</body>
+</html> -->
+
+<!-- encapsulaton -->
+ <script>
+
+   class user{
+    constructor(name,age){
+        name = this.name;
+        age = this.age;
+    }
+
+      getuser(){
+        console.log(`my name is ${name} and my age is ${age}`)
+        
+     }
+   }
+
+   console.log(user.getuser("milan",22))
+
+ </script>

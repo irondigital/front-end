@@ -1,0 +1,42 @@
+Question 2: How do you pass data to a component using props?
+
+Pass data from the Parent Component:
+
+function App() {
+  return <Greeting name="Milan" age={22} />;
+}
+
+
+Receive data in the Child Component:
+
+function Greeting(props) {
+  return (
+    <h2>
+      Hello {props.name}, Age: {props.age}
+    </h2>
+  );
+}
+
+
+Passing Different Types of Props:
+
+
+String:
+
+<User username="devdas" />
+
+Number:
+
+<User age={25} />
+
+Boolean:
+
+<User isAdmin={true} />
+
+Array
+
+<User skills={["React", "Node", "SQL"]} />
+
+Object
+
+<User info={{ city: "Mumbai", role: "Developer" }} />

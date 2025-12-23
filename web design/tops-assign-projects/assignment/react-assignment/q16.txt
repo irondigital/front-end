@@ -1,0 +1,97 @@
+ Question 1: What is conditional rendering in React? How can you conditionally
+renderelements in a React component?
+
+Conditional rendering means displaying different UI elements based on a condition, such as:
+
+state
+
+props
+
+user actions
+
+authentication status
+
+Why Conditional Rendering is Used
+
+Show / hide components
+
+Display loading states
+
+Show login vs logout UI
+
+Handle permissions
+
+Display error messages
+ 
+
+ Using if / else
+
+
+function UserStatus({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h2>Welcome User</h2>;
+  } else {
+    return <h2>Please Login</h2>;
+  }
+}
+
+Using Ternary Operator:
+
+function LoginStatus({ isLoggedIn }) {
+  return (
+    <h2>{isLoggedIn ? "Logged In" : "Logged Out"}</h2>
+  );
+}
+
+Using Logical AND:
+
+function Notification({ hasMessage }) {
+  return (
+    <>
+      {hasMessage && <p>You have new messages</p>}
+    </>
+  );
+}
+
+Using Switch Statement:
+
+function Status({ status }) {
+  switch (status) {
+    case "loading":
+      return <p>Loading...</p>;
+    case "success":
+      return <p>Data Loaded</p>;
+    case "error":
+      return <p>Error occurred</p>;
+    default:
+      return null;
+  }
+}
+
+Conditional Rendering Using State
+
+    import { useState } from "react";
+
+function Toggle() {
+  const [show, setShow] = useState(true);
+
+  return (
+    <>
+      <button onClick={() => setShow(!show)}>
+        Toggle
+      </button>
+
+      {show && <p>This text is visible</p>}
+    </>
+  );
+}
+
+Conditional Rendering with Components
+
+function Dashboard({ isAdmin }) {
+  return (
+    <>
+      {isAdmin ? <AdminPanel /> : <UserPanel />}
+    </>
+  );
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - SkyFly Airlines</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f9fc;
+      color: #333;
+    }
+
+    /* Header */
+    #head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to right, #0a2740, #1b65a6);
+      padding: 20px 40px;
+      position: relative;
+    }
+
+    #head a h1 {
+      text-decoration: none;
+      color: white;
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+    #head a h1 span {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    /* Menu */
+    .btn .list {
+      display: flex;
+      gap: 25px;
+    }
+    .btn .list li {
+      list-style: none;
+    }
+    .btn .list a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* Hamburger */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* About section */
+    .about {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #1e3c72;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .mission {
+      background-color: #e8f1f8;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .mission h3 {
+      color: #1e3c72;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 60px;
+    }
+
+    /* -------------------- */
+    /* RESPONSIVE */
+    /* -------------------- */
+    @media (max-width: 768px) {
+      #head {
+        padding: 20px;
+      }
+
+      /* Hamburger visible */
+      .menu-toggle {
+        display: block;
+      }
+
+      /* Hide menu initially */
+      .btn .list {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0,0,0,0.9);
+        padding: 20px;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 8px;
+        gap: 15px;
+      }
+
+      /* Show menu when active */
+      .btn .list.active {
+        display: flex;
+      }
+
+      .btn .list li {
+        text-align: right;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="head">
+    <a href="index.html"><h1>AIR LINES<br><span>international travel</span></h1></a>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <div class="btn">
+      <ul class="list" id="navList">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="our.html">OUR AIRCRAFT</a></li>
+        <li><a href="safety.html">SAFETY</a></li>
+        <li><a href="charters.html">CHARTERS</a></li>
+        <li><a href="contact.html">CONTACTS</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      This is a mega company in the airline field. It was created in 2006 and has become a very successful company. We are proud to be considered among the top airlines globally, offering excellent services.
+    </p>
+
+    <div class="mission">
+      <h3>Our Mission</h3>
+      <p>To provide safe, efficient, and customer-focused air travel while continuously innovating and improving our services.</p>
+
+      <h3>Our Vision</h3>
+      <p>To be the leading choice for air travelers globally, known for excellence in customer service, sustainability, and innovation.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Airlines India. All rights reserved.
+  </footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navList = document.getElementById("navList");
+
+  menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

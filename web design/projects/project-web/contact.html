@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <header class="w-full bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-blue-700"><a href="login.html">Flipkart </a></h1>
+
+      <!-- Desktop Search -->
+      <div class="hidden md:flex w-1/2">
+        <form class="flex items-center bg-gray-100 border border-gray-300 rounded-full px-4 py-2 w-full">
+          <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+          <input type="search" placeholder="Search for products, brands and more" class="ml-2 w-full bg-transparent outline-none text-gray-700">
+        </form>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <h2 class="flex items-center gap-2 text-lg md:text-xl cursor-pointer hover:text-blue-700"><a href="login.html"><i class="fa-solid fa-user-circle"></i> Account</a></h2>
+        <h2 class="flex items-center gap-2 text-lg md:text-xl cursor-pointer hover:text-blue-700"><a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i> Cart</a></h2>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-3xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 bg-gray-100 p-4">
+      <form class="flex items-center bg-white border border-gray-300 rounded-full px-4 py-2">
+        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+        <input type="search" placeholder="Search products..." class="ml-2 w-full bg-transparent outline-none">
+      </form>
+      <h2 class="flex items-center gap-2 text-lg"><a href="login.html"><i class="fa-solid fa-user-circle"></i> Account</a></h2>
+      <h2 class="flex items-center gap-2 text-lg"><a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i> Cart</a></h2>
+    </div>
+  </header>
+
+  <!-- Top Images Section -->
+  <!-- <section class="bg-gray-100 py-4">
+    <div class="max-w-7xl mx-auto px-4 overflow-x-auto">
+      <div class="flex gap-4 min-w-max">
+        <img src="images/1.webp" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/2.webp" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/3.webp" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/4.webp" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/5.webp" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/chair.png" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/teddy.png" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/ele.png" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+        <img src="images/tv.jpg" class="h-40 w-auto flex-shrink-0 rounded-lg" alt="">
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Help Center Section -->
+  <section class="max-w-7xl mx-auto px-4 mt-10">
+    <h2 class="text-3xl font-semibold mb-4">Flipkart Help Center | 24x7 Customer Care Support</h2>
+    <p class="text-sm mb-10">
+      The Flipkart Help Centre page lists out various types of issues... 
+    </p>
+
+    <div class="flex flex-col lg:flex-row gap-6">
+
+      <!-- Left Sidebar -->
+      <aside class="lg:w-1/3 bg-gray-100 p-4 rounded-lg">
+        <h3 class="font-semibold mb-3">TYPES OF ISSUES</h3>
+        <ul class="space-y-2">
+          <li>Help with your issues</li>
+          <li>Help with your order</li>
+          <li>Help with other issues</li>
+        </ul>
+
+        <h3 class="font-semibold mt-6 mb-3">HELP TOPICS</h3>
+        <ul class="space-y-2 text-sm">
+          <li>Payments</li>
+          <li>Shipping</li>
+          <li>Cancellation & Returns</li>
+          <li>FAQ</li>
+          <li>Login and my account</li>
+          <li>Refunds related</li>
+          <li>Flipkart EMI</li>
+          <li>IDFC</li>
+          <li>DMI</li>
+          <li>Fibe</li>
+          <li>Chola</li>
+          <li>TVS</li>
+          <li>Aditya Birla Finance Limited</li>
+          <li>Grocery</li>
+          <li>2 Wheelers</li>
+          <li>Hero MotoCorp</li>
+          <li>Personal Loan</li>
+          <li>Recharges</li>
+        </ul>
+      </aside>
+
+      <!-- Right Content -->
+      <div class="lg:w-2/3 flex flex-col gap-6">
+
+        <!-- Help Center Login -->
+        <div class="bg-white p-6 rounded-lg border border-gray-300 text-center">
+          <img src="images/171.png" class="mx-auto mb-4" alt="">
+          <h3 class="text-2xl font-semibold mb-4">Login to get help with your recent orders and issues</h3>
+         <a href="login.html"> <button class="bg-blue-500 hover:bg-yellow-700 text-white px-6 py-3 rounded">Login</button></a>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-green-100 p-6 rounded-lg">
+          <h3 class="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h3>
+          <div class="space-y-4">
+            <div class="border rounded p-4">
+              <button class="w-full text-left font-medium text-lg">❓ What is your return policy?</button>
+              <p class="mt-2 text-gray-700">You can return any product within 30 days of purchase. Please keep the receipt.</p>
+            </div>
+            <div class="border rounded p-4">
+              <button class="w-full text-left font-medium text-lg">❓ How do I track my order?</button>
+              <p class="mt-2 text-gray-700">Once your order is shipped, you will receive an email with a tracking number.</p>
+            </div>
+            <div class="border rounded p-4">
+              <button class="w-full text-left font-medium text-lg">❓ Do you offer customer support?</button>
+              <p class="mt-2 text-gray-700">Yes, our customer support is available 24/7 via chat and email.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-8">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div>
+        <h3 class="font-semibold mb-3">ABOUT</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="contact.html" class="hover:text-green-500">Contact Us</a></li>
+          <li><a href="about.html" class="hover:text-green-500">About Us</a></li>
+          <li><a href="carrier.html" class="hover:text-green-500">Carrier</a></li>
+          <li><a href="story.html" class="hover:text-green-500">Flipkart Story</a></li>
+          <li><a href="press.html" class="hover:text-green-500">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">GROUP COMPANIES</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="https://www.myntra.com/" target="_blank" class="hover:text-green-500">Myntra</a></li>
+          <li><a href="https://www.shopsy.in/" target="_blank" class="hover:text-green-500">Shopsy</a></li>
+          <li><a href="https://www.cleartrip.com/" target="_blank" class="hover:text-green-500">Cleartrip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">HELP</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="payment.html" class="hover:text-green-500">Payments</a></li>
+          <li><a href="shipping.html" class="hover:text-green-500">Shipping</a></li>
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="faq.html" class="hover:text-green-500">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">CONSUMER POLICY</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="security.html" class="hover:text-green-500">Security</a></li>
+          <li><a href="privecy.html" class="hover:text-green-500">Privacy</a></li>
+          <li><a href="sitemap.html" class="hover:text-green-500">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">MAIL US</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">REGISTERED OFFICE</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India<br>
+          CIN: U51109KA2012PTC066107<br>
+          Telephone: 044-45614700
+        </p>
+      </div>
+    </div>
+    <hr class="border-gray-700 mt-6">
+    <div class="flex flex-col md:flex-row justify-between items-center px-4 py-4 text-yellow-400 text-sm gap-3 md:gap-0">
+      <p><i class="fa fa-shop"></i> Become a seller</p>
+      <p><i class="fa fa-chart-line"></i> Advertise</p>
+      <p><i class="fa fa-gift"></i> Gift cards</p>
+      <p><i class="fa fa-question"></i> Help center</p>
+      <p>&copy; 2007-2025 Flipkart.com</p>
+      <img src="images/165.svg" alt="">
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Toggle -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

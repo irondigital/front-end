@@ -1,0 +1,533 @@
+a=10;
+b=10;
+a+b
+a>b
+a<b
+a=b
+a==b
+let data = [1,2,3];
+console.log(data)
+console.log(typeof(data))
+let date = ("milan","1");
+
+let dat = "milan";
+console.log(typeof(dat))
+var all= {}
+var all= {name:"milan",age:23,degree:"BE"}
+console.log(typeof(all))
+console.log(all)
+console.log(all.name)
+let age =23;
+let ag = age>=18 ? "adult" :"minor";
+console.log(ag)
+let nam ="milan";
+console.log(`hello i am a ${nam}`)
+let a = 20;
+if(a<10){console.log("hello")}
+if(a>10){console.log("hello")}
+let b=20;
+if(b<21){
+if(b<21){
+if(b<21){
+if(b<21){
+if(b<21){
+return "hello";}
+
+let c = 20;
+if(c>10){
+if(c>10){
+if(c>10){
+if(c>10){
+if(c>10){
+console.log("good")
+}
+
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+switch(day){
+case 1:
+console.log("monday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+console.log(i)
+switch(day){
+case 1:
+console.log("monday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+console.log(i)
+while(i<=5){
+switch(day){
+case 1:
+console.log("monday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+console.log(i)
+while(i<=5){
+console.log(i)
+switch(day){
+case 1:
+console.log("monday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+console.log(i)
+while(i<=5){
+console.log(i)
+i++}
+switch(day){
+case 1:
+console.log("monday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+console.log(i)
+while(i<=5){
+console.log(i)
+i++}
+switch(day){
+case 1:
+console.log("monday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+console.log(i)
+while(i<=5){
+console.log(i)
+i++}
+
+
+
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+let i=1;
+while(i<=5){
+while(i<=5){
+console.log(i)
+while(i<=5){
+console.log(i)
+i++}
+
+
+let day=1;
+switch(day){
+case 1:
+console.log("monday");
+break;
+case 2:
+console.log("tuesday");
+break;
+default:
+console.log("invalid day");
+}
+for(i=0;i<=3;i++){
+for(i=0;i<=3;i++){
+console.log(i)}
+
+let i = 1;
+while (i <= 5) {
+while (i <= 5) {
+  console.log(i);
+while (i <= 5) {
+  console.log(i);
+  i++;
+while (i <= 5) {
+  console.log(i);
+  i++;
+}
+let k = 1;
+do{
+do{
+console.log(k);
+do{
+console.log(k);
+k++;
+do{
+console.log(k);
+k++;
+while(k<=5);
+do{
+console.log(k);
+k++;
+while(k<=5);
+}
+do{
+console.log(k);
+k++;}
+while(k<=5);
+let user = [1,2,3];
+for(let key in user){
+for(let key in user){
+for(let key in user){
+console.log(key,user[key]);
+for(let key in user){
+console.log(key,user[key])
+};
+for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) break;
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) break;
+  console.log(i);
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) break;
+  console.log(i);
+}
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) continue;
+  console.log(i);
+}
+function add(){
+function add(a,b){
+return a+b;
+function add(a,b){
+return a+b;
+}
+console.log(add(2,4))
+const data = () =>{
+const data = (a,b) =>{
+return a-b;
+console.log(add(2,4))
+const ata = (a,b) =>{
+return a-b;
+}
+console.log(ata(4-1));
+console.log(ata(4,1));
+let arr = [1,2,3];
+let array=[4,5];
+let array1 =[...arr,...array,6,7]; 
+console.log(array1)
+console.log(array1.push(8))
+let arr3=[1,2,3]
+let arr4 = arr3.push(4)
+let arr5 = arr3.push(4);
+console.log(arr5)

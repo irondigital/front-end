@@ -1,0 +1,12 @@
+Question 3: What are the advantages of using React.js in web development?
+
+Component Reusability
+High Performance (Virtual DOM)
+Easy to Learn & Use
+One-Way Data Flow
+Declarative UI
+Strong Community & Ecosystem
+SEO-Friendly (with SSR)
+Cross-Platform Development
+Easy Integration
+Strong Job Market

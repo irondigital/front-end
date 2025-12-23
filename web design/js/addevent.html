@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="welcome.html" id="form">
+        <label for="">name</label>
+        <input type="text" id="name"   placeholder="enter name.."> <br>
+        <label for="">email</label>
+        <input type="text" id="email" placeholder="enter email.."> <br>
+        <button type="submit" id="btn"> sumbit</button>
+    </form>
+    <script>
+   const nm = document.getElementById("name")
+   const em = document.getElementById("email")
+   const form = document.getElementById("form")
+//    const nm = document.getElementById("name")
+   form.addEventListener("submit",function(e){
+    if(document.form.name.value ==""){
+        e.preventDefault()
+        alert("enter your name")
+        document.form.name.focus()
+        return false;
+    }
+    if(document.form.email.value ==""){
+        e.preventDefault()
+        alert("enter your email")
+        document.form.email.focus()
+        return false;
+    }
+   })
+
+
+
+    </script>
+    
+</body>
+</html>

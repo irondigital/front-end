@@ -1,0 +1,23 @@
+Question 3: Why is this.setState()used in class components, and how does it work?
+
+In React class components, this.setState() is used to update the component’s state.
+
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <>
+        <p>Count: {this.state.count}</p>
+        <button onClick={this.increment}>+</button>
+      </>
+    );
+  }
+}

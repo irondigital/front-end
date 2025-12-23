@@ -1,0 +1,56 @@
+Question 1: How do you handle forms in React? Explain the concept of
+controlledcomponents.
+
+What Are Controlled Components?
+
+A controlled component is a form element (input, textarea, select) whose value is controlled by React state.
+
+The value comes from state
+
+The onChange handler updates the state
+
+React is the single source of truth for the input
+
+ex:
+import { useState } from "react";
+
+function NameForm() {
+  const [name, setName] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Submitted Name: ${name}`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={name}               // Controlled by state
+        onChange={(e) => setName(e.target.value)} // Updates state
+        placeholder="Enter name"
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+
+Advantages of Controlled Components
+
+Single source of truth: React state
+
+Easier to validate inputs
+
+Easy to implement dynamic forms
+
+Integrates with other React features (conditional rendering, API calls)
+
+
+Uncontrolled Components 
+
+Value is stored in the DOM instead of state
+
+Accessed via 
+
+In React, forms are usually handled as controlled components, where form element values are tied to component state. This allows React to have a single source of truth, making form handling, validation, and dynamic UI updates easier.

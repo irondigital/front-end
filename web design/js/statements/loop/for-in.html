@@ -1,0 +1,21 @@
+<!-- this loop is specifically used for iterative over objects.not for array -->
+
+on each iteration, the loop assigns the next property name of the object to a variable and executes the code block inside the loop.
+
+<!-- syntax
+for(variable in object){
+    // code to be executed
+}
+-->
+<script>
+const person = {
+                 fname:"john", 
+                 lname:"doe", 
+                 age:25 
+                } ;
+
+    for (let w in person){
+        console.log(w + ": " + person[w])  ;
+    }
+</script>
+

@@ -1,0 +1,33 @@
+Question 1: What are props in React.js? How are props different from state?
+
+Props (short for properties) are used to pass data from a parent component to a child component.
+
+They make components dynamic, reusable, and configurable.
+
+ex:
+
+function Greeting({ name }) {
+  return <h2>Hello, {name}</h2>;
+}
+
+function App() {
+  return <Greeting name="Milan" />;
+}
+
+State is used to store data that belongs to a component and can change over time.
+
+When state changes, React re-renders the component.
+
+
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+    </>
+  );
+}

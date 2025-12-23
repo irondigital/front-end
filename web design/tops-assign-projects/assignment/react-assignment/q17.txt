@@ -1,0 +1,31 @@
+Question 2: Explain how if-else, ternary operators, and &&(logical AND) are used in JSX
+for conditional rendering.
+
+Using if-else:
+
+function Status({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h2>Welcome User</h2>;
+  } else {
+    return <h2>Please Login</h2>;
+  }
+}
+
+Using Ternary Operator:
+
+function LoginStatus({ isLoggedIn }) {
+  return (
+    <h2>{isLoggedIn ? "Logged In" : "Logged Out"}</h2>
+  );
+}
+
+Using Logical AND:
+
+
+function Notification({ hasMessage }) {
+  return (
+    <>
+      {hasMessage && <p>You have new messages</p>}
+    </>
+  );
+}

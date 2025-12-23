@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flipcart Clone</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); } /* adjust based on total width */
+}
+.animate-scroll {
+animation: scroll 12s linear infinite;
+}
+</style>
+</head>
+<body>
+<header class="w-full bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    
+    <!-- Logo -->
+    <h1 class="text-3xl md:text-4xl font-bold text-blue-700 animate__animated animate__fadeInLeft">
+      Flipcart
+    </h1>
+
+    <!-- Search Bar (Desktop) -->
+    <div class="hidden md:flex w-1/2 animate__animated animate__fadeInDown">
+      <form class="flex items-center bg-gray-100 border border-gray-300 rounded-full px-4 py-2 w-full">
+        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+        <input 
+          type="search"
+          placeholder="Search for products, brands and more"
+          class="ml-2 w-full bg-transparent outline-none text-gray-700"
+        />
+      </form>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-10 animate__animated animate__fadeInRight">
+      <h2 class="flex items-center gap-2 text-xl cursor-pointer hover:text-blue-700 transition">
+      <a href="login.html">  <i class="fa-solid fa-user-circle"></i>  Account </a>
+      </h2>
+
+      <h2 class="flex items-center gap-2 text-xl cursor-pointer hover:text-blue-700 transition">
+       <a href="cart.html"> <i class="fa-solid fa-cart-arrow-down text-2xl"></i>  Cart </a>
+      </h2>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-3xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 bg-gray-100 p-4 shadow-inner">
+    
+    <!-- Mobile Search -->
+    <form class="flex items-center bg-white border border-gray-300 rounded-full px-4 py-2">
+      <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+      <input 
+        type="search"
+        placeholder="Search products..."
+        class="ml-2 w-full bg-transparent outline-none"
+      />
+    </form>
+
+    <h2 class="flex items-center gap-2 text-lg">
+    <a href="login.html"> <i class="fa-solid fa-user-circle"></i> Account </a> 
+    </h2>
+
+    <h2 class="flex items-center gap-2 text-lg">
+      <a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i> Cart </a>
+    </h2>
+  </div>
+</header>
+
+<section 
+  class="container mx-auto bg-white mt-6 shadow-md md:border-2 border-gray-200 rounded-lg"
+  data-aos="fade-up"
+>
+
+  <div class="flex flex-wrap items-center justify-center gap-6 p-4">
+
+    <img src="images/1.webp" alt="Sample Image"
+      data-aos="zoom-in" data-aos-delay="100"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/2.webp" alt="image"
+      data-aos="zoom-in" data-aos-delay="150"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/3.webp" alt="image"
+      data-aos="zoom-in" data-aos-delay="200"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/4.webp" alt="image"
+      data-aos="zoom-in" data-aos-delay="250"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/5.webp" alt="image"
+      data-aos="zoom-in" data-aos-delay="300"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/chair.png" alt="image"
+      data-aos="zoom-in" data-aos-delay="350"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/teddy.png" alt="image"
+      data-aos="zoom-in" data-aos-delay="400"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/ele.png" alt="image"
+      data-aos="zoom-in" data-aos-delay="450"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+    <img src="images/tv.jpg" alt="image"
+      data-aos="zoom-in" data-aos-delay="500"
+      class="w-20 md:w-28 transition-transform duration-300 hover:scale-110 cursor-pointer" />
+
+  </div>
+
+</section>
+
+<section data-aos="fade-up" class="w-full mt-10">
+
+  <div class="relative w-full overflow-hidden shadow-xl">
+
+    <!-- Slides container -->
+    <div id="carousel" class="flex transition-transform duration-700">
+
+      <img src="images/11.webp"
+        data-aos="zoom-in"
+        class="w-full flex-shrink-0 transition-transform duration-500 hover:scale-105 cursor-pointer" />
+
+      <img src="images/12.webp"
+        data-aos="zoom-in" data-aos-delay="150"
+        class="w-full flex-shrink-0 transition-transform duration-500 hover:scale-105 cursor-pointer" />
+
+      <img src="images/13.webp"
+        data-aos="zoom-in" data-aos-delay="300"
+        class="w-full flex-shrink-0 transition-transform duration-500 hover:scale-105 cursor-pointer" />
+
+      <img src="images/14.webp"
+        data-aos="zoom-in" data-aos-delay="450"
+        class="w-full flex-shrink-0 transition-transform duration-500 hover:scale-105 cursor-pointer" />
+
+    </div>
+
+    <!-- Navigation buttons -->
+    <button onclick="prevSlide()"
+      class="absolute top-1/2 left-3 md:left-6 -translate-y-1/2 
+             bg-black/40 backdrop-blur-sm text-white px-3 py-2 
+             md:px-4 md:py-3 rounded-full shadow-lg 
+             hover:bg-black/60 transition">
+      ❮
+    </button>
+
+    <button onclick="nextSlide()"
+      class="absolute top-1/2 right-3 md:right-6 -translate-y-1/2 
+             bg-black/40 backdrop-blur-sm text-white px-3 py-2 
+             md:px-4 md:py-3 rounded-full shadow-lg 
+             hover:bg-black/60 transition">
+      ❯
+    </button>
+
+  </div>
+
+</section>
+
+<section class="mt-6 px-3">
+  <div class="rounded-xl bg-white shadow-sm p-4">
+    
+    <h2 class="text-2xl md:text-3xl font-semibold ms-2">Best of Electronics</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 
+                gap-4 mt-6">
+
+      <!-- Card 1 -->
+      <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-xl transition duration-300 text-center">
+        <img src="images/21.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Best True Wireless</p>
+        <strong class="text-green-600 text-lg">Grab now</strong>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-xl transition duration-300 text-center">
+        <img src="images/22.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Cameras</p>
+        <strong class="text-green-600 text-lg">Shop now!</strong>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-xl transition duration-300 text-center">
+        <img src="images/23.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Smart TVs</p>
+        <strong class="text-green-600 text-lg">Visit now</strong>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-xl transition duration-300 text-center">
+        <img src="images/24.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Speakers</p>
+        <strong class="text-green-600 text-lg">50% off</strong>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-xl transition duration-300 text-center">
+        <img src="images/25.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Latest TVs</p>
+        <strong class="text-green-600 text-lg">20% off</strong>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-xl transition duration-300 text-center">
+        <img src="images/26.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Projector</p>
+        <strong class="text-green-600 text-lg">New items</strong>
+      </div>
+
+      <!-- Card 7 (fixed and improved) -->
+      <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-xl transition duration-300 text-center">
+        <img src="images/27.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Gadgets</p>
+        <strong class="text-green-600 text-lg">Check now</strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="mt-6 px-3">
+  <div class="rounded-xl bg-white shadow-sm p-4">
+
+    <h2 class="text-2xl md:text-3xl font-semibold ms-2">Beauty, Food, Toys & More</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 
+                gap-4 mt-6">
+
+      <!-- Card 1 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/31.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Cycles</p>
+        <strong class="text-green-600 text-lg">33% off</strong>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/32.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Toys</p>
+        <strong class="text-green-600 text-lg">50% off</strong>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/33.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Toy Cars</p>
+        <strong class="text-green-600 text-lg">Shop now</strong>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/34.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Teddy</p>
+        <strong class="text-green-600 text-lg">Visit now</strong>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/35.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Pens</p>
+        <strong class="text-green-600 text-lg">23% off</strong>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/36.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Almonds</p>
+        <strong class="text-green-600 text-lg">Upto 5% off</strong>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/39.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Peanut Butter</p>
+        <strong class="text-green-600 text-lg">Upto 23% off</strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="mt-6 px-3">
+  <div class="rounded-xl bg-white shadow-sm p-4">
+
+    <h2 class="text-2xl md:text-3xl font-semibold ms-2">
+      Sports, Healthcare & More
+    </h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 
+                gap-4 mt-6">
+
+      <!-- Card 1 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/41.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Coffee Powder</p>
+        <strong class="text-green-600 text-lg">Upto 80% off</strong>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/42.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Oats</p>
+        <strong class="text-green-600 text-lg">20% off</strong>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/43.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Musical Toys</p>
+        <strong class="text-green-600 text-lg">Under ₹199</strong>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/44.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Premium Tea</p>
+        <strong class="text-green-600 text-lg">33% off</strong>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/45.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Toys</p>
+        <strong class="text-green-600 text-lg">Under ₹150</strong>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white border rounded-xl p-4 text-center shadow-sm hover:shadow-xl transition duration-300">
+        <img src="images/48.webp" class="w-full h-36 object-contain mx-auto transition-transform duration-300 hover:scale-110" />
+        <p class="mt-3 text-lg font-medium">Saffola Honey</p>
+        <strong class="text-green-600 text-lg">Grab now</strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="mt-6 px-3">
+
+  <!-- Responsive 3 sections -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- SECTION 1 -->
+    <div class="rounded-xl bg-white shadow-sm p-4">
+      <h2 class="text-2xl font-semibold ms-2">Discount for You</h2>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+
+        <!-- Card -->
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/51.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">USB Gadgets</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/52.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Shoes</p>
+          <p class="text-center text-green-600 text-lg">Widest Range</p>
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/53.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Shoes</p>
+          <p class="text-center text-green-600 text-lg">Don't Miss</p>
+        </div>
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/54.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Television</p>
+          <p class="text-center text-green-600 text-lg">Top Deals</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- SECTION 2 -->
+    <div class="rounded-xl bg-white shadow-sm p-4">
+      <h2 class="text-2xl font-semibold ms-2">Best Quality</h2>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/55.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Mens Cargos</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/56.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Mens Track Pants</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/57.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Mens T-Shirts</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/58.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Mobiles</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- SECTION 3 -->
+    <div class="rounded-xl bg-white shadow-sm p-4">
+      <h2 class="text-2xl font-semibold ms-2">Men's Sports & Shoes</h2>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/59.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Blue Sneakers</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/60.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Top Rated</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/61.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Best Discount</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+        <div class="bg-white border rounded-lg p-4 shadow-sm hover:shadow-xl transition">
+          <img src="images/62.webp" class="w-full h-36 object-contain mx-auto hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg font-medium">Best Brands</p>
+          <p class="text-center text-green-600 text-lg">Min. 50% off</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<section class="mt-5">
+  <!-- Responsive grid: 3-col → 2-col → 1-col -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Section 1 -->
+    <div class="border m-2 rounded-lg shadow-md bg-white" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold ms-6 p-3">Make your home stylish</h2>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/71.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-6 text-center text-xl">Kitchen trolly</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/72.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-4 text-center text-xl">Wardrobes</p>
+          <p class="text-center text-green-500 text-xl">Widest Range</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/73.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-5 text-center text-xl">Home temples</p>
+          <p class="text-center text-green-500 text-xl">Don't Miss</p>
+        </div>
+
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/74.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-5 text-center text-xl">Beds</p>
+          <p class="text-center text-green-500 text-xl">Top deals</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="border m-2 rounded-lg shadow-md bg-white" data-aos="fade-up" data-aos-delay="150">
+      <h2 class="text-2xl font-semibold ms-6 p-3">Navratri Specials</h2>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/75.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-6 text-center text-xl">Dry fruits</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/76.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-5 text-center text-xl">Mens kurtas</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/77.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-5 text-center text-xl">Jewellery</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/88.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-5 text-center text-xl">Mats</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="border m-2 rounded-lg shadow-md bg-white" data-aos="fade-up" data-aos-delay="300">
+      <h2 class="text-2xl font-semibold ms-6 p-3">Trending gadgets</h2>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/79.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-5 text-center text-xl">Shavers</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/80.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-4 text-center text-xl">Trimmers</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/81.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-4 text-center text-xl">Cameras</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+
+        <div class="border p-4 rounded-lg hover:shadow-lg transition">
+          <img src="images/82.webp"
+               class="w-full h-40 object-contain transition hover:scale-110" />
+          <p class="mt-4 text-center text-xl">Hair Dryers</p>
+          <p class="text-center text-green-500 text-xl">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Updated Section: Shop for TVs, Home Decor, Travel Essentials -->
+<section class="mt-5">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<!-- Section 1 -->
+<div class="rounded-xl bg-white shadow-md p-4">
+  <h2 class="text-2xl font-semibold ms-2 mb-2">Shop for TVs</h2>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/83.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">LG</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/84.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Top Rated</p>
+      <p class="text-center text-green-600 font-semibold">Widest Range</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4 mt-4">
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/85.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Best Discount</p>
+      <p class="text-center text-green-600 font-semibold">Don't Miss</p>
+    </div>
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/86.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Best Brands</p>
+      <p class="text-center text-green-600 font-semibold">Top Deals</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2 -->
+<div class="rounded-xl bg-white shadow-md p-4">
+  <h2 class="text-2xl font-semibold ms-2 mb-2">Home Decor</h2>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/87.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Wall Clocks</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/88.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Mats</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4 mt-4">
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/89.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Bedsheets</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/90.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Torches</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3 -->
+<div class="rounded-xl bg-white shadow-md p-4">
+  <h2 class="text-2xl font-semibold ms-2 mb-2">Travel Essentials</h2>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/91.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">DSLR</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/92.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Men's Shorts</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4 mt-4">
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/93.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Men's Caps</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+    <div class="border p-4 rounded-lg hover:shadow-lg transition">
+      <img src="images/94.webp" class="w-full h-40 object-contain hover:scale-105 duration-300 mx-auto" />
+      <p class="text-center mt-4 text-lg">Sports & Action</p>
+      <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- Optimized & Fully Responsive Tailwind Section (7 items per row on Desktop) -->
+<section class="mt-5 w-full">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+
+    <!-- SECTION 1 -->
+    <div class="rounded-xl shadow-md bg-white p-4">
+      <h2 class="text-2xl font-semibold mb-4">Make your home stylish</h2>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="border p-4 rounded-lg">
+          <img src="images/71.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Kitchen Trolly</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+        <div class="border p-4 rounded-lg">
+          <img src="images/72.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Wardrobes</p>
+          <p class="text-center text-green-600 font-semibold">Widest Range</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border p-4 rounded-lg">
+          <img src="images/73.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Home Temples</p>
+          <p class="text-center text-green-600 font-semibold">Don't Miss</p>
+        </div>
+        <div class="border p-4 rounded-lg">
+          <img src="images/74.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Beds</p>
+          <p class="text-center text-green-600 font-semibold">Top Deals</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="rounded-xl shadow-md bg-white p-4">
+      <h2 class="text-2xl font-semibold mb-4">Navratri Specials</h2>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="border p-4 rounded-lg">
+          <img src="images/75.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Dry Fruits</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+        <div class="border p-4 rounded-lg">
+          <img src="images/76.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Men's Kurtas</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border p-4 rounded-lg">
+          <img src="images/77.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Jewellery</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+        <div class="border p-4 rounded-lg">
+          <img src="images/88.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Mats</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="rounded-xl shadow-md bg-white p-4">
+      <h2 class="text-2xl font-semibold mb-4">Trending Gadgets</h2>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="border p-4 rounded-lg">
+          <img src="images/79.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Shavers</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+        <div class="border p-4 rounded-lg">
+          <img src="images/80.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Trimmers</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border p-4 rounded-lg">
+          <img src="images/81.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Cameras</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+        <div class="border p-4 rounded-lg">
+          <img src="images/82.webp" class="w-full h-40 object-contain hover:scale-110 transition" />
+          <p class="text-center mt-4 text-lg">Hair Dryers</p>
+          <p class="text-center text-green-600 font-semibold">Min. 50% off</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Updated Section: Shop for TVs, Home Decor, Travel Essentials -->
+
+
+
+<!-- Updated Pick your style Section -->
+
+<!-- Section 1: Pick your style -->
+<section class="mt-4 m-2">
+  <div class="rounded-lg border border-gray-300 p-4 bg-white shadow-md">
+    <h2 class="text-3xl font-semibold mb-4 ms-2 text-gray-900">Pick your style</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/111.webp" alt="Water Bottle" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Water Bottle</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">40% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/112.webp" alt="Home Decor" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Home Decor</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Shop now!</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/113.webp" alt="Plants" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Plants</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">33% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/114.webp" alt="Tools" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Tools</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">50% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/115.webp" alt="Gas Stoves" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Gas Stoves</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">20% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/116.webp" alt="Inventer Trolly" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Inventer Trolly</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">New items</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/117.webp" alt="Outdoor Lamp" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Outdoor Lamp</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Only 799</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Tops Deals -->
+<section class="mt-4 m-2">
+  <div class="rounded-lg border border-gray-300 p-4 bg-white shadow-md">
+    <h2 class="text-3xl font-semibold mb-4 ms-2 text-gray-900">Tops Deals</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/121.webp" alt="Puma, Adidas" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Puma, Adidas...</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Min. 50% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/122.webp" alt="Apple iPads" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Apple iPads</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Shop now!</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/123.webp" alt="Perfume & More" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Perfume & More</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">40% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/124.webp" alt="Car Accessories" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Car Accessories</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">20% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/125.webp" alt="Personal Care" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Personal Care</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">20% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/126.webp" alt="Toys and Games" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Toys and Games</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">New items</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/127.webp" alt="Apple Pencil" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Apple Pencil</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Shop now</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Some Extra -->
+<section class="mt-4 m-2">
+  <div class="rounded-lg border border-gray-300 p-4 bg-white shadow-md">
+    <h2 class="text-3xl font-semibold mb-4 ms-2 text-gray-900">Some Extra</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/131.webp" alt="Helmet" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Helmet</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">20% now</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/132.webp" alt="Bike Bulb" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Bike Bulb</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Shop now!</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/133.webp" alt="Car Air Freshener" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Car Air Freshener</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">50% off now</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/134.webp" alt="Watching Clothes" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Watching Clothes</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">50% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/135.webp" alt="Stickers" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Stickers</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">20% off</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/136.webp" alt="Bike Cover" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Bike Cover</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Only 299</span>
+      </div>
+
+      <div class="flex flex-col items-center border border-gray-300 p-4 rounded-lg hover:shadow-lg transition">
+        <img src="images/137.webp" alt="Car Bulb" class="h-36 w-full object-contain mx-auto">
+        <p class="text-lg mt-3 text-center">Car Bulb</p>
+        <span class="text-green-500 font-semibold text-lg mt-1">Only 249</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="mt-4">
+  <div class="container mx-auto px-4">
+
+    <!-- Row 1 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+      <img src="images/141.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+      <img src="images/142.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+      <img src="images/143.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+    </div>
+
+    <!-- Row 2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+      <img src="images/144.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+      <img src="images/145.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+      <img src="images/146.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+    </div>
+
+    <!-- Single Image Full Width -->
+    <div class="mb-4">
+      <img src="images/147.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+    </div>
+
+    <!-- Row 3 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <img src="images/148.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+      <img src="images/149.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+      <img src="images/150.webp" alt="" class="w-full rounded-xl object-contain transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+    </div>
+
+  </div>
+</section>
+<section class="mt-4 m-2">
+  <div class="border rounded-lg border-gray-300 p-4">
+    <h2 class="text-3xl font-semibold mb-4 ms-2 text-black">Recently Viewed</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+
+      <!-- Item 1 -->
+      <div class="border p-4 rounded-xl shadow-sm hover:shadow-md transition">
+        <img src="images/151.webp" alt="" class="w-full h-40 object-contain rounded-lg transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+        <p class="text-lg text-center mt-3">Iphone 13</p>
+        <span class="text-green-500 font-semibold text-lg block text-center">44999 <del class="text-red-700 font-normal">49999</del></span>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="border p-4 rounded-xl shadow-sm hover:shadow-md transition">
+        <img src="images/152.webp" alt="" class="w-full h-40 object-contain rounded-lg transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+        <p class="text-lg text-center mt-3">Frameless 80 cm TV</p>
+        <span class="text-green-500 font-semibold text-lg block text-center">10499 <del class="text-red-700 font-normal">14499</del></span>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="border p-4 rounded-xl shadow-sm hover:shadow-md transition">
+        <img src="images/153.webp" alt="" class="w-full h-40 object-contain rounded-lg transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+        <p class="text-lg text-center mt-3">HD 80 cm</p>
+        <span class="text-green-500 font-semibold text-lg block text-center">10499 <del class="text-red-700 font-normal">14499</del></span>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="border p-4 rounded-xl shadow-sm hover:shadow-md transition">
+        <img src="images/154.webp" alt="" class="w-full h-40 object-contain rounded-lg transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+        <p class="text-lg text-center mt-3">V50e 5G</p>
+        <span class="text-green-500 font-semibold text-lg block text-center">28999 <del class="text-red-700 font-normal">34499</del></span>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="border p-4 rounded-xl shadow-sm hover:shadow-md transition">
+        <img src="images/155.webp" alt="" class="w-full h-40 object-contain rounded-lg transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+        <p class="text-lg text-center mt-3">Cargos</p>
+        <span class="text-green-500 font-semibold text-lg block text-center">599 <del class="text-red-700 font-normal">799</del></span>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="border p-4 rounded-xl shadow-sm hover:shadow-md transition">
+        <img src="images/156.webp" alt="" class="w-full h-40 object-contain rounded-lg transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+        <p class="text-lg text-center mt-3">T-shirts</p>
+        <span class="text-green-500 font-semibold text-lg block text-center">Only 299 <del class="text-red-700 font-normal">499</del></span>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="border p-4 rounded-xl shadow-sm hover:shadow-md transition">
+        <img src="images/157.webp" alt="" class="w-full h-40 object-contain rounded-lg transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+        <p class="text-lg text-center mt-3">Printed T-shirts</p>
+        <span class="text-green-500 font-semibold text-lg block text-center">Only 549 <del class="text-red-700 font-normal">799</del></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="bg-gray-900 text-white mt-8">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Top Sections -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      
+      <!-- About -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">ABOUT</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="contact.html" class="hover:text-green-500">Contact Us</a></li>
+          <li><a href="about.html" class="hover:text-green-500">About Us</a></li>
+          <li><a href="carrier.html" class="hover:text-green-500">Carrier</a></li>
+          <li><a href="story.html" class="hover:text-green-500">Flipkart Story</a></li>
+          <li><a href="press.html" class="hover:text-green-500">Press</a></li>
+        </ul>
+      </div>
+
+      <!-- Group Companies -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">GROUP COMPANIES</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="https://www.myntra.com/" target="_blank" class="hover:text-green-500">Myntra</a></li>
+          <li><a href="https://www.shopsy.in/" target="_blank" class="hover:text-green-500">Shopsy</a></li>
+          <li><a href="https://www.cleartrip.com/" target="_blank" class="hover:text-green-500">Cleartrip</a></li>
+        </ul>
+      </div>
+
+      <!-- Help -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">HELP</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="payment.html" class="hover:text-green-500">Payments</a></li>
+          <li><a href="shipping.html" class="hover:text-green-500">Shipping</a></li>
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="faq.html" class="hover:text-green-500">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Consumer Policy -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">CONSUMER POLICY</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="security.html" class="hover:text-green-500">Security</a></li>
+          <li><a href="privecy.html" class="hover:text-green-500">Privacy</a></li>
+          <li><a href="sitemap.html" class="hover:text-green-500">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- Mail Us -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">MAIL US</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India
+        </p>
+        <h3 class="text-lg font-semibold mt-4">Social</h3>
+        <div class="flex mt-2 space-x-3 text-xl">
+          <a href="https://www.facebook.com/flipkart/"><i class="fa-brands fa-facebook hover:text-green-500"></i></a>
+          <a href="https://x.com/flipkart?lang=gu"><i class="fa-brands fa-twitter hover:text-green-500"></i></a>
+          <a href="https://www.instagram.com/flipkart/"><i class="fa-brands fa-instagram hover:text-green-500"></i></a>
+          <a href="https://www.youtube.com/flipkart"><i class="fa-brands fa-youtube hover:text-green-500"></i></a>
+        </div>
+      </div>
+
+      <!-- Registered Office -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">REGISTERED OFFICE ADDRESS</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India<br>
+          CIN: U51109KA2012PTC066107<br>
+          Telephone: 044-45614700
+        </p>
+      </div>
+
+    </div>
+
+    <hr class="border-gray-700 my-6">
+
+    <!-- Bottom Links -->
+    <div class="flex flex-wrap justify-between items-center text-sm space-y-2 sm:space-y-0">
+      <p class="flex items-center"><i class="fa fa-shop text-yellow-400 mr-2"></i>Become a seller</p>
+      <p class="flex items-center"><i class="fa fa-chart-line text-yellow-400 mr-2"></i>Advertise</p>
+      <p class="flex items-center"><i class="fa fa-gift text-yellow-400 mr-2"></i>Gift cards</p>
+      <p class="flex items-center"><i class="fa fa-question text-yellow-400 mr-2"></i>Help center</p>
+      <p>&copy; 2007-2025 Flipkart.com</p>
+      <img src="images/165.svg" alt="" class="h-6 transition duration-500 hover:opacity-80 hover:scale-105 cursor-pointer">
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+  
+let index = 0;
+function showSlide(i) {
+  const slides = document.querySelectorAll("#carousel img");
+  index = (i + slides.length) % slides.length;
+  document.getElementById("carousel").style.transform = 
+    `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() { showSlide(index + 1); }
+function prevSlide() { showSlide(index - 1); }
+
+setInterval(nextSlide, 4000); 
+
+
+</script>
+
+
+</body>
+</html>
+

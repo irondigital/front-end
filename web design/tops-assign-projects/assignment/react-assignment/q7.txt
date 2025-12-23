@@ -1,0 +1,33 @@
+Question 1: What are components in React? Explain the difference between
+functionalcomponents and class components.
+
+Types of Components in React
+
+React mainly has two types of components:
+
+Functional Components
+
+Class Components
+
+Functional Components
+
+Functional components are simple JavaScript functions that return JSX.
+
+function Greeting() {
+  return <h2>Hello from Functional Component</h2>;
+}
+
+
+
+Class Components
+
+Class components are ES6 classes that extend React.Component.
+
+
+import React from "react";
+
+class Greeting extends React.Component {
+  render() {
+    return <h2>Hello from Class Component</h2>;
+  }
+}

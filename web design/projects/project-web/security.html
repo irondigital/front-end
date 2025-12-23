@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart Security Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="w-full bg-white shadow-md sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+
+      <!-- Logo -->
+      <h1 class="text-3xl md:text-4xl font-bold text-blue-700"> <a href="index.html">Flipkart</a></h1>
+
+      <!-- Desktop Search -->
+      <div class="hidden md:flex w-1/2">
+        <form class="flex items-center bg-gray-100 border border-gray-300 rounded-full px-4 py-2 w-full">
+          <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+          <input type="search" placeholder="Search for products, brands and more"
+            class="ml-2 w-full bg-transparent outline-none text-gray-700">
+        </form>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <h2 class="flex items-center gap-2 text-lg md:text-xl cursor-pointer hover:text-blue-700">
+          <a href="login.html"><i class="fa-solid fa-user-circle"></i> Account</a>
+        </h2>
+        <h2 class="flex items-center gap-2 text-lg md:text-xl cursor-pointer hover:text-blue-700">
+          <a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i> Cart</a>
+        </h2>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-3xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenuOpen" x-transition class="md:hidden flex flex-col gap-4 bg-gray-100 p-4">
+      <form class="flex items-center bg-white border border-gray-300 rounded-full px-4 py-2">
+        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+        <input type="search" placeholder="Search products..." class="ml-2 w-full bg-transparent outline-none">
+      </form>
+      <h2 class="flex items-center gap-2 text-lg"><a href="login.html"><i class="fa-solid fa-user-circle"></i> Account</a></h2>
+      <h2 class="flex items-center gap-2 text-lg"><a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i> Cart</a></h2>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-4xl mx-auto p-6 space-y-10">
+
+    <!-- Security Tabs -->
+    <nav x-data="{ tab: 'overview' }" class="space-y-6">
+
+      <!-- Tab Buttons -->
+      <div class="flex space-x-4 border-b">
+        <button class="py-2 px-4 focus:outline-none"
+          :class="tab === 'overview' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'overview'">Security Overview</button>
+
+        <button class="py-2 px-4 focus:outline-none"
+          :class="tab === 'data-protection' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'data-protection'">Data Protection Practices</button>
+
+        <button class="py-2 px-4 focus:outline-none"
+          :class="tab === 'safe-tips' ? 'border-b-2 border-blue-600 font-semibold' : ''"
+          @click="tab = 'safe-tips'">Tips for Safe Shopping</button>
+      </div>
+
+      <!-- Security Overview -->
+      <div x-show="tab === 'overview'" x-transition class="space-y-8">
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🔐 Security Overview</h2>
+          <p class="text-gray-700 mb-4">
+            At Flipkart, we prioritize your security by implementing industry-standard technologies and protocols to ensure a safe shopping experience.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>✅ Secure SSL encryption for all transactions</li>
+            <li>✅ Regular security audits by certified agencies</li>
+            <li>✅ Proactive monitoring of suspicious activities</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Data Protection Practices -->
+      <div x-show="tab === 'data-protection'" x-transition class="space-y-8">
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🛡️ Data Protection Practices</h2>
+          <p class="text-gray-700 mb-4">
+            Your data is handled with the highest level of security and transparency.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>✔️ Personal data stored securely with encrypted databases</li>
+            <li>✔️ Limited access based on role-based policies</li>
+            <li>✔️ Data retention strictly in line with legal requirements</li>
+            <li>✔️ Regular updates to security policies as per global standards</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Tips for Safe Shopping -->
+      <div x-show="tab === 'safe-tips'" x-transition class="space-y-8">
+        <section class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-semibold mb-4">🛍️ Tips for Safe Online Shopping</h2>
+          <ul class="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong>🔹 Use strong and unique passwords</strong> for your Flipkart account.</li>
+            <li><strong>🔹 Enable Two-Factor Authentication (2FA)</strong> for extra account protection.</li>
+            <li><strong>🔹 Avoid using public Wi-Fi</strong> when making purchases.</li>
+            <li><strong>🔹 Verify product sellers</strong> and read reviews carefully.</li>
+            <li><strong>🔹 Be cautious of phishing emails</strong> asking for personal info.</li>
+            <li><strong>🔹 Regularly review your orders</strong> and account activity.</li>
+          </ul>
+        </section>
+      </div>
+
+    </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-8">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <!-- Footer Sections -->
+      <div>
+        <h3 class="font-semibold mb-3">ABOUT</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="contact.html" class="hover:text-green-500">Contact Us</a></li>
+          <li><a href="about.html" class="hover:text-green-500">About Us</a></li>
+          <li><a href="carrier.html" class="hover:text-green-500">Carrier</a></li>
+          <li><a href="story.html" class="hover:text-green-500">Flipkart Story</a></li>
+          <li><a href="press.html" class="hover:text-green-500">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">GROUP COMPANIES</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="https://www.myntra.com/" target="_blank" class="hover:text-green-500">Myntra</a></li>
+          <li><a href="https://www.shopsy.in/" target="_blank" class="hover:text-green-500">Shopsy</a></li>
+          <li><a href="https://www.cleartrip.com/" target="_blank" class="hover:text-green-500">Cleartrip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">HELP</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="payment.html" class="hover:text-green-500">Payments</a></li>
+          <li><a href="shipping.html" class="hover:text-green-500">Shipping</a></li>
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="faq.html" class="hover:text-green-500">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">CONSUMER POLICY</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="security.html" class="hover:text-green-500">Security</a></li>
+          <li><a href="privecy.html" class="hover:text-green-500">Privacy</a></li>
+          <li><a href="sitemap.html" class="hover:text-green-500">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">MAIL US</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">REGISTERED OFFICE</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India<br>
+          CIN: U51109KA2012PTC066107<br>
+          Telephone: 044-45614700
+        </p>
+      </div>
+    </div>
+    <hr class="border-gray-700 mt-6">
+    <div class="flex flex-col md:flex-row justify-between items-center px-4 py-4 text-yellow-400 text-sm gap-3 md:gap-0">
+      <p><i class="fa fa-shop"></i> Become a seller</p>
+      <p><i class="fa fa-chart-line"></i> Advertise</p>
+      <p><i class="fa fa-gift"></i> Gift cards</p>
+      <p><i class="fa fa-question"></i> Help center</p>
+      <p>&copy; 2007-2025 Flipkart.com</p>
+      <img src="images/165.svg" alt="">
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;
+
+}
+#loader
+{
+ position: absolute;
+ top: 25%;
+ left: 45%;
+ /* align-items: center; */
+
+}
+#main-app 
+{
+ display: none;   
+}
+#main-app
+{
+width: 90%;
+height: auto;    
+}
+@media only  screen and (max-width:767px)
+{
+ #main-app
+{
+width: 100%;
+height: auto;    
+}
+#main input,select 
+{
+ width: 100% !important;
+ height: auto;
+ padding: 8px !important;   
+}   
+#loader
+{
+ position: absolute;
+ top: 25%;
+ left: 35% !important;
+
+}
+}

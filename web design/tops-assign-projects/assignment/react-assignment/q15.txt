@@ -1,0 +1,19 @@
+ Question 3: Why do you need to bind event handlers in class components?
+
+ Event handlers in class components must be bound to ensure this refers to the component instance. Without binding, this becomes undefined. Binding can be done in the constructor or by using arrow functions.
+
+ ex:
+ class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  handleClick() {
+    console.log(this.state.count); 
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Click</button>;
+  }
+}

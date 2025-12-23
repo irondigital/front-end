@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart Payment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.0/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="w-full bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-blue-700"> <a href="index.html">Flipkart </a></h1>
+
+      <!-- Search (Desktop) -->
+      <div class="hidden md:flex flex-1 mx-4">
+        <form class="flex items-center bg-gray-100 border border-gray-300 rounded-full w-full px-4 py-2">
+          <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+          <input type="search" placeholder="Search for products, brands and more"
+            class="ml-2 w-full bg-transparent outline-none text-gray-700" />
+        </form>
+      </div>
+
+      <!-- Menu (Desktop) -->
+      <div class="hidden md:flex items-center space-x-8">
+        <div class="flex items-center gap-2 text-xl cursor-pointer hover:text-blue-700 transition">
+          <a href="login.html"><i class="fa-solid fa-user-circle"></i> Account</a>
+        </div>
+        <div class="flex items-center gap-2 text-xl cursor-pointer hover:text-blue-700 transition">
+          <a href="cart.html"><i class="fa-solid fa-cart-arrow-down text-2xl"></i> Cart</a>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden text-3xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 bg-gray-100 p-4">
+      <form class="flex items-center bg-white border border-gray-300 rounded-full px-4 py-2">
+        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+        <input type="search" placeholder="Search products..." class="ml-2 w-full bg-transparent outline-none">
+      </form>
+      <h2 class="flex items-center gap-2 text-lg"><a href="login.html"><i class="fa-solid fa-user-circle"></i> Account</a></h2>
+      <h2 class="flex items-center gap-2 text-lg"><a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i> Cart</a></h2>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-1 max-w-4xl mx-auto p-4 sm:p-6 space-y-8">
+
+    <!-- Order Summary -->
+    <section class="bg-white rounded-lg shadow-md p-6 sm:p-8">
+      <h2 class="text-2xl font-semibold mb-4">🛒 Order Summary</h2>
+      <div class="space-y-2 text-gray-700">
+        <p><strong>Items:</strong> 2 Products</p>
+        <p><strong>Total Price:</strong> ₹1298</p>
+        <p><strong>Shipping:</strong> Free Delivery</p>
+        <p><strong>Grand Total:</strong> ₹1298</p>
+      </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="bg-blue-50 rounded-lg shadow-md p-6 sm:p-8">
+      <h2 class="text-2xl font-semibold mb-6">💳 Select Payment Method</h2>
+
+      <form class="space-y-6">
+
+        <!-- Card Payment -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="card" class="form-radio" checked>
+            <span class="text-lg font-medium">Credit / Debit Card</span>
+          </label>
+
+          <div class="mt-4 space-y-4">
+            <input type="text" placeholder="Card Number" class="w-full p-3 border rounded" />
+            <div class="flex flex-col sm:flex-row gap-4">
+              <input type="text" placeholder="MM/YY" class="flex-1 p-3 border rounded" />
+              <input type="text" placeholder="CVV" class="flex-1 p-3 border rounded" />
+            </div>
+            <input type="text" placeholder="Cardholder Name" class="w-full p-3 border rounded" />
+          </div>
+        </div>
+
+        <!-- UPI Payment -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="upi" class="form-radio">
+            <span class="text-lg font-medium">UPI Payment</span>
+          </label>
+          <div class="mt-4">
+            <input type="text" placeholder="Enter UPI ID" class="w-full p-3 border rounded" />
+          </div>
+        </div>
+
+        <!-- Net Banking -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="netbanking" class="form-radio">
+            <span class="text-lg font-medium">Net Banking</span>
+          </label>
+          <div class="mt-4">
+            <select class="w-full p-3 border rounded">
+              <option selected disabled>Select Your Bank</option>
+              <option>SBI</option>
+              <option>HDFC</option>
+              <option>ICICI</option>
+              <option>Axis Bank</option>
+              <option>Other Banks</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Pay Later -->
+        <div class="border rounded-lg p-4 bg-white shadow-sm">
+          <label class="flex items-center space-x-3">
+            <input type="radio" name="payment" value="paylater" class="form-radio">
+            <span class="text-lg font-medium">Flipkart Pay Later</span>
+          </label>
+          <div class="mt-4 text-gray-700">
+            Pay after 15 days with no extra charge. Eligibility based on account status.
+          </div>
+        </div>
+
+        <button type="submit" id="btn"
+          class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full text-lg font-medium">
+          Proceed to Pay ₹1298
+        </button>
+      </form>
+    </section>
+
+    <!-- Important Info -->
+    <section class="bg-white rounded-lg shadow-md p-6 sm:p-8">
+      <h2 class="text-2xl font-semibold mb-4">🔔 Important Information</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>✔️ All payments are secured and encrypted.</li>
+        <li>✔️ Card details are never stored on Flipkart servers.</li>
+        <li>✔️ UPI transactions are processed instantly.</li>
+        <li>✔️ Support available 24/7 for payment issues.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-8">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div>
+        <h3 class="font-semibold mb-3">ABOUT</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="contact.html" class="hover:text-green-500">Contact Us</a></li>
+          <li><a href="about.html" class="hover:text-green-500">About Us</a></li>
+          <li><a href="carrier.html" class="hover:text-green-500">Carrier</a></li>
+          <li><a href="story.html" class="hover:text-green-500">Flipkart Story</a></li>
+          <li><a href="press.html" class="hover:text-green-500">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">GROUP COMPANIES</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="https://www.myntra.com/" target="_blank" class="hover:text-green-500">Myntra</a></li>
+          <li><a href="https://www.shopsy.in/" target="_blank" class="hover:text-green-500">Shopsy</a></li>
+          <li><a href="https://www.cleartrip.com/" target="_blank" class="hover:text-green-500">Cleartrip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">HELP</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="payment.html" class="hover:text-green-500">Payments</a></li>
+          <li><a href="shipping.html" class="hover:text-green-500">Shipping</a></li>
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="faq.html" class="hover:text-green-500">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">CONSUMER POLICY</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="return.html" class="hover:text-green-500">Cancellation & Returns</a></li>
+          <li><a href="security.html" class="hover:text-green-500">Security</a></li>
+          <li><a href="privecy.html" class="hover:text-green-500">Privacy</a></li>
+          <li><a href="sitemap.html" class="hover:text-green-500">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">MAIL US</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">REGISTERED OFFICE</h3>
+        <p class="text-sm leading-relaxed">
+          Flipkart Internet Private Limited,<br>
+          Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br>
+          Outer Ring Road, Devarabeesanahalli Village,<br>
+          Bengaluru, 560103,<br>
+          Karnataka, India<br>
+          CIN: U51109KA2012PTC066107<br>
+          Telephone: 044-45614700
+        </p>
+      </div>
+    </div>
+    <hr class="border-gray-700 mt-6">
+    <div class="flex flex-col md:flex-row justify-between items-center px-4 py-4 text-yellow-400 text-sm gap-3 md:gap-0">
+      <p><i class="fa fa-shop"></i> Become a seller</p>
+      <p><i class="fa fa-chart-line"></i> Advertise</p>
+      <p><i class="fa fa-gift"></i> Gift cards</p>
+      <p><i class="fa fa-question"></i> Help center</p>
+      <p>&copy; 2007-2025 Flipkart.com</p>
+      <img src="images/165.svg" alt="">
+    </div>
+  </footer>
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+
+    let btn1 = document.getElementById("btn");
+    btn1.addEventListener("click",(e)=>{
+        e.preventDefault();
+        // prompt("Give your pin");
+        // alert("Payment Successful nhi hua phir se try karo");
+        // window.location.href = "test.html";
+
+        if(prompt("Give me your pin") !== ""){
+            alert("Payment Successful");
+            window.location.href = "sucess.html";
+    }else{
+      alert("paise de k jaa ye ");
+      window.location.href = "cart.html";
+    }});
+  </script>
+</body>
+
+</html>

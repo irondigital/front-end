@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ex-1
+        // let promise = new Promise((resolve,reject)=>{
+        //     let sucess=false;
+
+        //     if(sucess){
+        //         resolve("ok");
+        //     }else{
+        //         reject("not ok")
+        //     }
+        // }).then(message => console.log(message)).catch(error =>console.log(error))
+
+        //   ex-2
+
+        // let pro = new Promise((resolve)=>{
+        //     setTimeout(()=>{
+        //         resolve("after 2 sec")
+        //     },2000)
+        // })
+        // pro.then(result=>console.log(result))
+
+
+        // ex-3
+
+//  let pro = new Promise((resolve,reject)=>{
+            
+//                 reject("after 2 sec")
+           
+//         })
+//         pro.catch(er=>console.log(er))
+
+
+
+
+// ex-4
+
+new Promise((resolve,reject)=>{
+    resolve(10);
+
+})
+.then(num =>{
+    console.log(num);
+    return num*2;
+})
+.then(num =>{
+    console.log(num);
+    return num*3;
+})
+.then(num =>{
+    console.log(nu);
+    return num*4;
+})
+.then(num =>{
+    console.log(num);
+    return num*5;
+}).catch(error => console.log("not fetch data"))
+    </script>
+</body>
+</html>

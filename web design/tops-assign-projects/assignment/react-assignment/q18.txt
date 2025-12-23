@@ -1,0 +1,38 @@
+Question 1: How do you render a list of items in React? Why is it important to use
+keyswhen rendering lists?
+
+Lists in React are rendered using the map() function. Keys are used to uniquely identify list items so React can efficiently update the UI and avoid rendering issues.
+
+Basic Example Using map():
+
+function FruitsList() {
+  const fruits = ["Apple", "Banana", "Mango"];
+
+  return (
+    <ul>
+      {fruits.map((fruit, index) => (
+        <li key={index}>{fruit}</li>
+      ))}
+    </ul>
+  );
+}
+
+Rendering List of Objects:
+
+function UsersList() {
+  const users = [
+    { id: 1, name: "Milan" },
+    { id: 2, name: "Devdas" },
+    { id: 3, name: "Rahul" }
+  ];
+
+  return (
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+}
+
+
