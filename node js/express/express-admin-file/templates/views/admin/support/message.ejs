@@ -1,0 +1,125 @@
+<%- include("../../../partials/admin/navbar") %>
+
+<div class="flex min-h-screen">
+  <%- include("../../../partials/admin/sidebar") %>
+
+  <main class="flex-1 bg-gray-100 p-6">
+
+    <!-- PAGE HEADER -->
+    <div class="mb-8">
+      <h1 class="text-2xl font-bold text-gray-800">Support & Messages</h1>
+      <p class="text-sm text-gray-500">
+        Manage contact messages, support requests & FAQs
+      </p>
+    </div>
+
+    <!-- ================= CONTACT MESSAGES ================= -->
+
+    <div class="mb-12">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold">Contact Messages</h2>
+
+        <select class="border p-2 rounded-lg text-sm">
+          <option>All Messages</option>
+          <option>Unread</option>
+          <option>Replied</option>
+          <option>Resolved</option>
+        </select>
+      </div>
+
+      <div class="bg-white rounded-xl shadow overflow-hidden">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50 text-gray-600">
+            <tr>
+              <th class="p-4 text-left">User</th>
+              <th class="p-4">Subject</th>
+              <th class="p-4">Status</th>
+              <th class="p-4">Received</th>
+              <th class="p-4 text-right">Actions</th>
+            </tr>
+          </thead>
+
+          <tbody class="text-gray-700">
+
+            <!-- Message Row -->
+            <tr class="border-t hover:bg-gray-50">
+              <td class="p-4">
+                <p class="font-semibold">Rohit Mehta</p>
+                <p class="text-xs text-gray-500">rohit@gmail.com</p>
+              </td>
+
+              <td class="p-4 text-center">
+                Unable to access course
+              </td>
+
+              <td class="p-4 text-center">
+                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs">
+                  Unread
+                </span>
+              </td>
+
+              <td class="p-4 text-center text-xs">
+                07 Jan 2026
+              </td>
+
+              <td class="p-4 text-right space-x-3">
+                <a href="/admin/support/1"
+                   class="text-blue-600 hover:underline">
+                  View
+                </a>
+                <button class="text-green-600 hover:underline">
+                  Mark Read
+                </button>
+                <button class="text-red-600 hover:underline">
+                  Delete
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ================= FAQ MANAGEMENT ================= -->
+
+    <div>
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold">FAQs Management</h2>
+        <a href="/admin/faqs/add"
+           class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+          + Add FAQ
+        </a>
+      </div>
+
+      <div class="bg-white rounded-xl shadow divide-y">
+
+        <!-- FAQ ITEM -->
+        <div class="p-5 hover:bg-gray-50">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-semibold text-gray-800">
+                How to reset password?
+              </h3>
+              <p class="text-sm text-gray-500 mt-1">
+                Go to login page and click on "Forgot Password" to reset.
+              </p>
+            </div>
+
+            <div class="space-x-3 text-sm">
+              <a href="/admin/faqs/1/edit"
+                 class="text-yellow-600 hover:underline">
+                Edit
+              </a>
+              <button class="text-red-600 hover:underline">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>

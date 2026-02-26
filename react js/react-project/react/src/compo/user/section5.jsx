@@ -1,0 +1,45 @@
+import React from "react";
+
+const Section5 = () => {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          How StudiPRO Works
+        </h2>
+
+        <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div>
+            <h3 className="text-xl font-semibold">1. Choose Course</h3>
+            <p className="mt-2 text-gray-600">
+              Browse from hundreds of courses
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold">2. Learn Online</h3>
+            <p className="mt-2 text-gray-600">
+              Watch videos & attend live classes
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold">3. Practice</h3>
+            <p className="mt-2 text-gray-600">
+              Assignments & real projects
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold">4. Get Certified</h3>
+            <p className="mt-2 text-gray-600">
+              Earn certificates & jobs
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section5;

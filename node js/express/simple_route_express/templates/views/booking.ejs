@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Service | Greenary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-green-50">
+
+  <section class="min-h-screen flex items-center justify-center px-6 py-16">
+    <div class="max-w-4xl w-full bg-white rounded-3xl shadow-lg p-10">
+
+      <!-- Header -->
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-green-700 mb-3">
+          Book a Service 🌿
+        </h1>
+        <p class="text-gray-600 text-lg">
+          Schedule your plant service, consultation, or delivery with ease.
+        </p>
+      </div>
+      <% if(success.length) { %>
+<div class="bg-green-100 border border-green-300 text-green-700 px-4 py-2 rounded mb-3">
+  <%= success %>
+</div>
+<% } %>
+
+<% if(error.length) { %>
+<div class="bg-red-100 border border-red-300 text-red-700 px-4 py-2 rounded mb-3">
+  <%= error %>
+</div>
+<% } %>
+
+
+      <!-- Booking Form -->
+      <form class="grid md:grid-cols-2 gap-6" method="post" action="/addtasks">
+
+        <!-- Full Name -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" >
+            Full Name
+          </label>
+          <input type="text" placeholder="Enter your name" name="name"
+            class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" required />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">
+            Email Address
+          </label>
+          <input type="email" placeholder="Enter your email" name="email"
+            class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" required />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">
+            Phone Number
+          </label>
+          <input type="tel" placeholder="Enter phone number" name="phone"
+            class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" required />
+        </div>
+
+        <!-- Service Type -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">
+            Select Service
+          </label>
+          <select class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" name="service"
+            required>
+            <option value="">Choose a service</option>
+            <option>Indoor Plant Consultation</option>
+            <option>Outdoor Garden Setup</option>
+            <option>Plant Maintenance</option>
+            <option>Office Green Solutions</option>
+            <option>Plant Delivery</option>
+          </select>
+        </div>
+
+        <!-- Date -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">
+            Preferred Date
+          </label>
+          <input type="date" name="date"
+            class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" required />
+        </div>
+
+        <!-- Time -->
+        <div>
+          <label class="block text-gray-700 font-medium mb-2">
+            Preferred Time
+          </label>
+          <input type="time" name="time"
+            class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" required />
+        </div>
+
+        <!-- Address -->
+        <div class="md:col-span-2">
+          <label class="block text-gray-700 font-medium mb-2">
+            Address / Location
+          </label>
+          <textarea rows="3" placeholder="Enter service location" name="address"
+            class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+        </div>
+
+        <!-- Notes -->
+        <div class="md:col-span-2">
+          <label class="block text-gray-700 font-medium mb-2">
+            Additional Notes (Optional)
+          </label>
+          <textarea rows="4" placeholder="Any special instructions or plant details" name="description"
+            class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="md:col-span-2 text-center mt-6">
+          <button type="submit"
+            class="bg-green-600 text-white px-10 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition">
+            Confirm Booking
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+</body>
+
+</html>

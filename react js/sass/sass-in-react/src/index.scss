@@ -1,0 +1,106 @@
+/* Global */
+.index-container {
+  min-height: 100vh;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Light Theme */
+.index-container.light {
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+/* Dark Theme */
+.index-container.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Header */
+.index-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.index-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Card */
+.index-card {
+  background: white;
+  color: black;
+  padding: 25px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark .index-card {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+/* Counter */
+.count {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-group button:nth-child(1) {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-group button:nth-child(2) {
+  background: #f44336;
+  color: white;
+}
+
+.btn-group button:nth-child(3) {
+  background: #607d8b;
+  color: white;
+}
+
+/* Theme */
+.index-theme {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.theme-btn {
+  background: #673ab7;
+  color: white;
+  padding: 12px 20px;
+}
+
+/* Footer */
+.index-footer {
+  margin-top: 60px;
+  text-align: center;
+  opacity: 0.7;
+}

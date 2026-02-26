@@ -1,0 +1,134 @@
+<%- include("../../../partials/admin/navbar") %>
+
+<div class="flex min-h-screen">
+  <%- include("../../../partials/admin/sidebar") %>
+
+  <main class="flex-1 bg-gray-100 p-6">
+
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-6 gap-4">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-800">Admin Activity Logs</h1>
+        <p class="text-sm text-gray-500">
+          Track every critical action performed by admins
+        </p>
+      </div>
+
+      <button class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-black">
+        Export Logs
+      </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white p-4 rounded-xl shadow mb-6 grid grid-cols-1 md:grid-cols-5 gap-4">
+      <input
+        type="text"
+        placeholder="Search admin..."
+        class="border p-2 rounded-lg text-sm"
+      />
+
+      <select class="border p-2 rounded-lg text-sm">
+        <option>All Modules</option>
+        <option>Course Management</option>
+        <option>Payments</option>
+        <option>Users</option>
+        <option>Admins</option>
+      </select>
+
+      <select class="border p-2 rounded-lg text-sm">
+        <option>All Actions</option>
+        <option>Create</option>
+        <option>Update</option>
+        <option>Delete</option>
+        <option>Login</option>
+      </select>
+
+      <select class="border p-2 rounded-lg text-sm">
+        <option>All Severity</option>
+        <option>Info</option>
+        <option>Warning</option>
+        <option>Critical</option>
+      </select>
+
+      <button class="bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">
+        Apply
+      </button>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white rounded-xl shadow overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-gray-600">
+          <tr>
+            <th class="p-4 text-left">Admin</th>
+            <th class="p-4">Action</th>
+            <th class="p-4">Module</th>
+            <th class="p-4">Severity</th>
+            <th class="p-4">IP</th>
+            <th class="p-4">Date</th>
+          </tr>
+        </thead>
+
+        <tbody class="text-gray-700">
+
+          <!-- Row -->
+          <tr class="border-t hover:bg-gray-50">
+            <td class="p-4">
+              <p class="font-semibold">Super Admin</p>
+              <p class="text-xs text-gray-500">admin@studipro.com</p>
+            </td>
+
+            <td class="p-4 text-center">Created Course</td>
+            <td class="p-4 text-center">Course Management</td>
+
+            <td class="p-4 text-center">
+              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs">
+                Info
+              </span>
+            </td>
+
+            <td class="p-4 text-center text-xs">192.168.1.1</td>
+            <td class="p-4 text-center text-xs">
+              07 Jan 2026, 10:30 AM
+            </td>
+          </tr>
+
+          <tr class="border-t hover:bg-gray-50">
+            <td class="p-4">
+              <p class="font-semibold">Content Manager</p>
+              <p class="text-xs text-gray-500">content@studipro.com</p>
+            </td>
+
+            <td class="p-4 text-center">Updated Pricing</td>
+            <td class="p-4 text-center">Payments</td>
+
+            <td class="p-4 text-center">
+              <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs">
+                Warning
+              </span>
+            </td>
+
+            <td class="p-4 text-center text-xs">192.168.1.8</td>
+            <td class="p-4 text-center text-xs">
+              07 Jan 2026, 09:15 AM
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-between items-center mt-6 text-sm">
+      <p class="text-gray-500">Showing 1–10 of 214 logs</p>
+
+      <div class="flex gap-2">
+        <button class="px-3 py-1 border rounded-lg">Prev</button>
+        <button class="px-3 py-1 border rounded-lg bg-blue-600 text-white">1</button>
+        <button class="px-3 py-1 border rounded-lg">2</button>
+        <button class="px-3 py-1 border rounded-lg">Next</button>
+      </div>
+    </div>
+
+  </main>
+</div>

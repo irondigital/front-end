@@ -1,0 +1,86 @@
+<%- include("../../../partials/admin/navbar") %>
+
+<div class="flex">
+  <%- include("../../../partials/admin/sidebar") %>
+
+  <main class="flex-1 p-6 bg-gray-100 min-h-screen">
+
+    <h1 class="text-2xl font-bold mb-6 text-gray-800">Add New Admin</h1>
+
+    <form
+      action="/admin/admin-data/add-admin"
+      method="POST"
+      class="bg-white p-6 rounded-2xl shadow max-w-xl"
+    >
+
+      <!-- Name -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Name</label>
+        <input
+          type="text"
+          name="name"
+          required
+          class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Email</label>
+        <input
+          type="email"
+          name="email"
+          required
+          class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Password</label>
+        <input
+          type="password"
+          name="password"
+          required
+          class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring"
+        />
+      </div>
+
+         <div class="mb-6">
+        <label class="block text-sm font-medium mb-1">Status</label>
+        <select
+          name="status"
+          class="w-full border rounded-lg px-4 py-2"
+        >
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+
+      <!-- Role -->
+      <div class="mb-6">
+        <label class="block text-sm font-medium mb-1">Role</label>
+        <select
+          name="role"
+          class="w-full border rounded-lg px-4 py-2"
+        >
+          <option value="admin" name="admin">Admin</option>
+          <option value="superadmin" name="superadmin">Super Admin</option>
+        </select>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-3">
+        <button
+          type="submit"
+          class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700"
+        >
+          Add Admin
+        </button>
+
+       
+      </div>
+
+    </form>
+  </main>
+</div>

@@ -1,0 +1,66 @@
+<!-- load head -->
+<%- include('partials/head.ejs') %>
+<!--load navigation  -->
+<%- include('partials/navigation.ejs') %>
+<div class="app-wrapper">
+<!-- Header -->
+<div class="d-flex align-items-center mb-4">
+<button class="btn p-0 me-3" data-bs-toggle="offcanvas" data-bs-target="#menu">
+<i class="bi bi-list fs-3"></i>
+</button>
+<div>
+<h5 class="mb-0 fw-bold">Good Evening</h5>
+<small class="text-muted">Sharanya!</small>
+</div>
+</div>
+
+<% if(success.length) { %> 
+<div class="alert alert-success w-100 mx-auto" role="alert">
+ <span class="text-dark"><%= success %></span>   
+</div>
+<% } %> 
+
+<!-- pass error flash messages -->
+<% if(error.length) { %> 
+<div class="alert alert-danger w-100 mx-auto" role="alert">
+ <span class="text-dark"><%= error %></span>   
+</div>
+<% } %> 
+<!-- Important -->
+<div class="section-title">IMPORTANT</div>
+
+<div class="task-card task-important">
+<div>
+<strong>Client Work</strong><br>
+<small>10am - 2pm</small>
+</div>
+<div class="circle-check"></div>
+</div>
+
+<div class="task-card task-normal">
+<div>
+<strong>Evening Walk</strong><br>
+<small>6pm</small>
+</div>
+<div class="circle-check border-secondary"></div>
+</div>
+
+<!-- Todo -->
+<div class="section-title">TO DO</div>
+
+<div class="task-card task-normal">
+<div>
+<strong>Buy Groceries</strong><br>
+<small>7pm - 7:40pm</small>
+</div>
+<div class="circle-check border-secondary"></div>
+</div>
+
+<!-- Floating Button -->
+<button class="fab" data-bs-toggle="modal" data-bs-target="#addTaskModal">+</button>
+<!-- create a modal of add task -->
+
+<!-- Add Task Modal -->
+<%- include('addtask') %>
+
+</div>

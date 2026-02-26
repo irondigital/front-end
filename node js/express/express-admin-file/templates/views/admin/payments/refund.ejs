@@ -1,0 +1,110 @@
+<%- include("../../../partials/admin/navbar") %>
+<div class="flex min-h-screen">
+  <%- include("../../../partials/admin/sidebar") %>
+
+  <main class="flex-1 p-6 bg-gray-100">
+
+    <!-- HEADER -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold text-gray-800">Refund Requests</h1>
+      <p class="text-sm text-gray-500">Manage all refund requests from students</p>
+    </div>
+
+    <!-- TABLE -->
+    <div class="bg-white rounded-xl shadow overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-gray-600">
+          <tr>
+            <th class="p-4 text-left">Student</th>
+            <th class="p-4">Course</th>
+            <th class="p-4">Plan</th>
+            <th class="p-4">Amount</th>
+            <th class="p-4">Reason</th>
+            <th class="p-4">Status</th>
+            <th class="p-4 text-right">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody class="text-gray-700">
+
+          <!-- ROW -->
+          <tr class="border-t hover:bg-gray-50">
+            <td class="p-4">
+              <p class="font-semibold">Rahul Verma</p>
+              <p class="text-xs text-gray-500">rahul@gmail.com</p>
+            </td>
+            <td class="p-4 text-center">Node.js Mastery</td>
+            <td class="p-4 text-center">Pro</td>
+            <td class="p-4 text-center font-semibold">₹1,499</td>
+            <td class="p-4 text-center">Course not helpful</td>
+            <td class="p-4 text-center">
+              <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs">
+                Pending
+              </span>
+            </td>
+            <td class="p-4 text-right space-x-2">
+              <button class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">
+                Approve
+              </button>
+              <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                Reject
+              </button>
+            </td>
+          </tr>
+
+          <tr class="border-t hover:bg-gray-50">
+            <td class="p-4">
+              <p class="font-semibold">Neha Patel</p>
+              <p class="text-xs text-gray-500">neha@gmail.com</p>
+            </td>
+            <td class="p-4 text-center">React Advanced</td>
+            <td class="p-4 text-center">Premium</td>
+            <td class="p-4 text-center font-semibold">₹2,999</td>
+            <td class="p-4 text-center">Payment issue</td>
+            <td class="p-4 text-center">
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs">
+                Approved
+              </span>
+            </td>
+            <td class="p-4 text-right space-x-2 text-gray-500">
+              <span class="text-sm">No actions</span>
+            </td>
+          </tr>
+
+          <tr class="border-t hover:bg-gray-50">
+            <td class="p-4">
+              <p class="font-semibold">Amit Sharma</p>
+              <p class="text-xs text-gray-500">amit@gmail.com</p>
+            </td>
+            <td class="p-4 text-center">Angular Basics</td>
+            <td class="p-4 text-center">Basic</td>
+            <td class="p-4 text-center font-semibold">₹499</td>
+            <td class="p-4 text-center">Not satisfied</td>
+            <td class="p-4 text-center">
+              <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs">
+                Rejected
+              </span>
+            </td>
+            <td class="p-4 text-right space-x-2 text-gray-500">
+              <span class="text-sm">No actions</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="flex justify-between items-center mt-6 text-sm">
+      <p class="text-gray-500">Showing 1–10 of 32 requests</p>
+
+      <div class="flex gap-2">
+        <button class="px-3 py-1 border rounded-lg">Prev</button>
+        <button class="px-3 py-1 border rounded-lg bg-blue-600 text-white">1</button>
+        <button class="px-3 py-1 border rounded-lg">2</button>
+        <button class="px-3 py-1 border rounded-lg">Next</button>
+      </div>
+    </div>
+
+  </main>
+</div>

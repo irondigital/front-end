@@ -1,0 +1,185 @@
+<%- include("../../partials/admin/navbar") %>
+
+<div class="flex min-h-screen">
+  <%- include("../../partials/admin/sidebar") %>
+
+  <!-- Main Content -->
+  <main class="flex-1 bg-gray-100 p-6 space-y-6">
+
+    <!-- Page Header -->
+    <div class="flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-800">Course Management</h1>
+        <p class="text-gray-600 mt-1">Manage all StudiPRO courses</p>
+      </div>
+
+      <!-- Add Course Button -->
+      <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium shadow">
+        + Add New Course
+      </button>
+    </div>
+
+    <!-- Courses Table -->
+    <div class="bg-white shadow-md rounded-xl overflow-hidden">
+
+      <table class="min-w-full text-sm text-left">
+        <thead class="bg-gray-50 text-gray-600 uppercase text-xs">
+          <tr>
+            <th class="px-6 py-4">Course Title</th>
+            <th class="px-6 py-4">Category</th>
+            <th class="px-6 py-4">Price</th>
+            <th class="px-6 py-4">Status</th>
+            <th class="px-6 py-4 text-center">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody class="divide-y">
+
+          <!-- Course Row -->
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 font-medium text-gray-800">
+              Full Stack Web Development
+            </td>
+
+            <td class="px-6 py-4 text-gray-600">
+              Development
+            </td>
+
+            <td class="px-6 py-4 text-gray-600">
+              ₹ 4,999
+            </td>
+
+            <td class="px-6 py-4">
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                Active
+              </span>
+            </td>
+
+            <td class="px-6 py-4 text-center space-x-2">
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-xs">
+                Edit
+              </button>
+              <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-xs">
+                Delete
+              </button>
+            </td>
+          </tr>
+
+          <!-- Another Course -->
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 font-medium text-gray-800">
+              UI/UX Design Masterclass
+            </td>
+
+            <td class="px-6 py-4 text-gray-600">
+              Design
+            </td>
+
+            <td class="px-6 py-4 text-gray-600">
+              ₹ 2,999
+            </td>
+
+            <td class="px-6 py-4">
+              <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-semibold">
+                Inactive
+              </span>
+            </td>
+
+            <td class="px-6 py-4 text-center space-x-2">
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-xs">
+                Edit
+              </button>
+              <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-xs">
+                Delete
+              </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add / Edit Course UI (Form Section) -->
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Add / Edit Course</h2>
+
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Course Title -->
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Course Title
+          </label>
+          <input type="text" placeholder="Enter course title"
+            class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+
+        <!-- Category -->
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Category
+          </label>
+          <select class="w-full border rounded-lg px-4 py-2">
+            <option>Development</option>
+            <option>Design</option>
+            <option>Marketing</option>
+            <option>Business</option>
+          </select>
+        </div>
+
+        <!-- Price -->
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Price (₹)
+          </label>
+          <input type="number" placeholder="Enter price"
+            class="w-full border rounded-lg px-4 py-2">
+        </div>
+
+        <!-- Status -->
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Status
+          </label>
+          <select class="w-full border rounded-lg px-4 py-2">
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+
+        <!-- Upload Video -->
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Upload Course Video
+          </label>
+          <input type="file"
+            class="w-full border rounded-lg px-4 py-2">
+        </div>
+
+        <!-- Upload PDF -->
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Upload PDF Material
+          </label>
+          <input type="file"
+            class="w-full border rounded-lg px-4 py-2">
+        </div>
+
+        <!-- Submit -->
+        <div class="md:col-span-2 text-right">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium">
+            Save Course
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+</div>
+
+<!-- Footer -->
+<div class="text-gray-600 text-center text-sm py-4">
+  © 2026 StudiPRO. All rights reserved.
+</div>

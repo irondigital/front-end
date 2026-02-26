@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Record</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 bg-gray-100">
+
+  <h2 class="text-xl font-bold mb-4">Update Record</h2>
+
+  <form method="POST" class="flex flex-col gap-3 max-w-md" action="/update/<%= data.id %>">
+
+    <input name="name" value="<%= data.name %>" class="border p-2" />
+    <input name="email" value="<%= data.email %>" class="border p-2" />
+    <input name="phone" value="<%= data.phone %>" class="border p-2" />
+    <input name="subject" value="<%= data.subject %>" class="border p-2" />
+    <input name="company" value="<%= data.company %>" class="border p-2" />
+    <textarea name="message" class="border p-2"><%= data.message %></textarea>
+
+    <button class="px-4 py-2 bg-blue-600 text-white rounded">Save Changes</button>
+  </form>
+
+</body>
+</html>

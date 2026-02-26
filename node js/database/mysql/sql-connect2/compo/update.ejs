@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Update Data</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen py-10">
+
+  <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
+    
+    <h2 class="text-2xl font-semibold mb-5 text-gray-800">Update Data</h2>
+
+    <form action="/update/<%= forms.id %>" method="POST" class="space-y-4">
+
+      <div>
+        <label class="font-semibold">Name:</label>
+        <input type="text" name="name" value="<%= forms.name %>"
+               class="w-full border p-2 rounded bg-gray-50">
+      </div>
+
+      <div>
+        <label class="font-semibold">Email:</label>
+        <input type="email" name="email" value="<%= forms.email %>"
+               class="w-full border p-2 rounded bg-gray-50">
+      </div>
+
+      <button type="submit"
+              class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+        Submit
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

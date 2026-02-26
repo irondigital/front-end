@@ -1,0 +1,59 @@
+<%- include("../../../partials/admin/navbar") %>
+
+<div class="flex min-h-screen bg-gray-100">
+  <%- include("../../../partials/admin/sidebar") %>
+
+  <div class="flex-1 p-6">
+    <div class="bg-white shadow-xl rounded-2xl p-6">
+
+      <h2 class="text-2xl font-bold text-blue-600 mb-6">
+        Contact Messages
+      </h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border border-gray-200 rounded-lg">
+          <thead class="bg-blue-600 text-white">
+            <tr>
+              <th class="p-3 text-left">id</th>
+              <th class="p-3 text-left">Name</th>
+              <th class="p-3 text-left">Email</th>
+              <th class="p-3 text-left">Subject</th>
+              <th class="p-3 text-left">Message</th>
+              <th class="p-3 text-left">Date</th>
+              <th class="p-3 text-left">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+           
+             
+          
+             <% if (contacts && contacts.length > 0) { %>
+              <% contacts.forEach(contact => { %>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-3"><%= contact.id %></td>
+                <td class="p-3"><%= contact.name %></td>
+                <td class="p-3"><%= contact.email %></td>
+                <td class="p-3"><%= contact.subject %></td>
+               
+                <td class="p-3 truncate max-w-xs">
+                  <%= contact.message %>
+                </td>
+                <td class="p-3 text-sm text-gray-600">
+                  <%= contact.created_at %>                           
+                </td>
+                 <td class="p-3">
+                  <form action="/admin/contact-message/delete/<%= contact.id %>" method="POST">
+                 <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">delete</button>
+                </form>
+                 </td>
+              </tr>
+              <% }) %>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

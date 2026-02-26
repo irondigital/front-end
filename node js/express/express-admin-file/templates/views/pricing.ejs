@@ -1,0 +1,95 @@
+
+  <%- include("../partials/navbar") %>
+<section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Simple & Affordable Pricing
+      </h2>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Choose a plan that fits your learning goals and get full access
+        to expert-led courses.
+      </p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Basic Plan -->
+      <div class="border rounded-2xl p-8 text-center shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">Basic</h3>
+        <p class="text-gray-500 mt-2">For beginners</p>
+
+        <p class="text-4xl font-bold text-gray-800 mt-6">
+          ₹999<span class="text-lg font-normal">/month</span>
+        </p>
+
+        <ul class="mt-6 space-y-3 text-gray-600 text-sm">
+          <li>✔ Access to 5 courses</li>
+          <li>✔ Recorded video lessons</li>
+          <li>✔ Community support</li>
+          <li>✖ Certificates</li>
+        </ul>
+
+        <button
+          class="mt-8 w-full border border-blue-600 text-blue-600 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
+          Get Started
+        </button>
+      </div>
+
+      <!-- Pro Plan (Highlighted) -->
+      <div class="border-2 border-blue-600 rounded-2xl p-8 text-center shadow-lg scale-105">
+        <span class="text-sm bg-blue-600 text-white px-3 py-1 rounded-full">
+          Most Popular
+        </span>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-4">Pro</h3>
+        <p class="text-gray-500 mt-2">Best for career growth</p>
+
+        <p class="text-4xl font-bold text-blue-600 mt-6">
+          ₹2,499<span class="text-lg font-normal text-gray-600">/month</span>
+        </p>
+
+        <ul class="mt-6 space-y-3 text-gray-600 text-sm">
+          <li>✔ Access to all courses</li>
+          <li>✔ Live classes & recordings</li>
+          <li>✔ Certificates</li>
+          <li>✔ Project reviews</li>
+        </ul>
+
+        <button
+          class="mt-8 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+          Start Learning
+        </button>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="border rounded-2xl p-8 text-center shadow-sm">
+        <h3 class="text-xl font-semibold text-gray-800">Premium</h3>
+        <p class="text-gray-500 mt-2">For professionals</p>
+
+        <p class="text-4xl font-bold text-gray-800 mt-6">
+          ₹4,999<span class="text-lg font-normal">/month</span>
+        </p>
+
+        <ul class="mt-6 space-y-3 text-gray-600 text-sm">
+          <li>✔ 1-on-1 mentor support</li>
+          <li>✔ Career guidance</li>
+          <li>✔ Resume & interview prep</li>
+          <li>✔ Job assistance</li>
+        </ul>
+
+        <button
+          class="mt-8 w-full border border-blue-600 text-blue-600 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
+          Go Premium
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<%- include("../partials/footer") %>
+
