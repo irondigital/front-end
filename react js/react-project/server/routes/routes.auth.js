@@ -7,6 +7,9 @@ const admindata = require('../model/admin-data')
 const Students = require("../model/endroll")
 const jobsre = require("../model/jobs");
 
+// const authMiddleware  = require("../middleware/authMiddleware")
+// const { login } = require("../controller/authController");
+
 // example route
 
 router.post("/addcourses",(req,res)=>{
@@ -268,6 +271,10 @@ router.delete("/carrier/:id", async(req,res)=>{
         res.status(500).json({message:"server error"})
     }
 })
+const { register, login } = require("../controller/authController");
 
+
+router.post("/register", register);
+router.post("/login", login);
 
 module.exports = router;   // 🔥 VERY IMPORTANT

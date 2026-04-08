@@ -190,15 +190,39 @@
 // console.log("its not a pallindrome")
 // }
 
+// let data = "nayan"
+// let data1 =  data.split("")
+// console.log(data1);
+// let data2 = data1.reverse("");
+// console.log(data2)
+// let data3 = data2.join("")
+// console.log(data3)
+//  if(data == data3){
+//  console.log("its palindrome")
+// }else{
+//     console.log("not palindrome")
+// }
+
+// let str = "hello i am a from gujarat";
+
+// let str1 = str.match(/["aeiou"]/gi)
+// console.log(str1)
+// const data = str1.join("");
+// console.log(data)
+
+
+
+
+
 // let str = "hello i am a from gujarat";
 
 // let data = str.match(/["aeiou"]/gi);
 // console.log(data)
 // console.log(data.length)
 
-// // const data1 = data.filter(vowel => vowel.toLowerCase() === "a");
-// // console.log(data1)
-// // console.log(data1.length)
+// const data1 = data.filter(vowel => vowel.toLowerCase() === "e");
+// console.log(data1)
+// console.log(data1.length)
 // const data1 = data.reverse();
 //   const data2 = data1.join("");
 // if(data2 === data1){
@@ -217,17 +241,84 @@
 
 // let data = Math.max(...arr);
 // console.log(data)
-
+// let arr = [10, 5, 20, 8]
+// let max = Math.min(...arr)
+// console.log(max)
 // let arr = [1,2,2,3,4,4]
 
 // let unique= [...new Set(arr)]
 // console.log(unique)
+//   let arr = [1,2,2,3,4,4]
+//   let un = [...new Set(arr)]
+//   console.log(un)
+
 
 // let arr = [10, 5, 20, 8];
 // let data = arr.sort((a,b)=>a-b)[1]
+// console.log(data)
+
+//  let arr = [10, 5, 20, 8];
+//  let data = arr.sort((a,b)=>b-a)[3]
+
 // console.log(data)
 
 // let arr = [1, [2, [3, 4]], 5]
 // const data = arr.flat(Infinity);
 // console.log(data)
 
+// let arr = [1, [2, [3, 4]], 5];
+// const data  = arr.flat(Infinity);
+// console.log(data)
+
+// let val = 10;
+// if(val % 2 ==0){
+//     console.log("this is a prime number")
+// }else{
+//     console.log("this")
+// }
+
+
+// 1 
+// 2 3
+// 4 5 6 
+// 7 8 9 10
+
+// let num=1;
+// let col = 1;
+
+// for(i=1;i<=4;i++){
+//     let row = ""
+//     for(j=1;j<=i;j++){
+//         row += num + " ";
+//         num++;
+        
+// } 
+      
+//     console.log(row);
+// }
+
+// 1
+// 2 7
+// 3 6 8
+// 4 5 9 10
+
+let first = 1;
+let second = 7;
+let third = 8;
+let fourth = 10;
+
+for(i=1;i<=4;i++){
+    let row = " "
+    for(j=1;j<=i;j++){
+      if(j===1){
+        row += first++ + " "
+      }else if(j===2){
+        row += second-- + " "
+      }else if(j===3){
+        row += third++ + " "
+      }else if(j===4){
+        row += fourth++ + " "
+      }
+    }
+    console.log(row)
+}

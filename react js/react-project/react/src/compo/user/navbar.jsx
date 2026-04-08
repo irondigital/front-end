@@ -7,7 +7,7 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold text-blue-600">StudiPRO</h1>
 
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <li><a href="/index" className="hover:text-blue-600">Home</a></li>
+          <li><a href="/" className="hover:text-blue-600">Home</a></li>
           {/* <li><a href="/courses" className="hover:text-blue-600">Courses</a></li> */}
           <li><a href="/pricing" className="hover:text-blue-600">Pricing</a></li>
           <li><a href="/about" className="hover:text-blue-600">About</a></li>

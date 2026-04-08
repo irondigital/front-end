@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Courses from "./compo/user/courses";
 import Pricing from "./compo/user/pricing";
@@ -24,11 +24,13 @@ import ManageJobs from "./compo/admin/jobs/manage-jobs";
 import EditJob from "./compo/admin/jobs/update-jobs";
 
 
-
+import AuthProvider from "./compo/admin/AuthContext";
+import AuthGuard from "./compo/admin/AuthGuard";
 const App = () => {
   return (
 
    <Router>
+   <AuthProvider>
    <Routes>
      <Route path="/" element={<Home />} />
      <Route path="/courses" element = {<Courses />} />
@@ -41,9 +43,16 @@ const App = () => {
      {/* admin routes */}
 
       <Route path="/admin/login" element = {<AdminLogin />} />
-      <Route path="/admin/dashboard" element = {<Dashboard />} />
+        <Route path="/login" element = {<AdminLogin />} />
+      <Route path="/admin/dashboard" element = {
+         <AuthGuard>
+        <Dashboard />
+      </AuthGuard>
+        
+       } />
       <Route path="/admin/Endrolladmin" element = {<ManageEnrollments />} />
       <Route path="/admin/resister" element = {<Register />} />
+       <Route path="/resister" element = {<Register />} />
       <Route path="/admin/courses-data/add-course" element = {<AdminAddCourse />} />
      
       <Route path="/admin/courses-data/manage-courses" element = {<ManageCoursesTable />} />
@@ -68,7 +77,7 @@ const App = () => {
 
 
    </Routes>
-   
+   </AuthProvider>
    </Router>
    
 

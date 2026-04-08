@@ -1,0 +1,188 @@
+import Navbar from "./navbar";
+import Footer from "./footer";
+
+function About() {
+  return (
+    <>
+      <Navbar />
+
+      <section className="bg-gray-100 py-20">
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              About StudiPRO
+            </h2>
+            <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+              StudiPRO is a modern online learning platform built to empower
+              students and professionals with real-world, job-ready skills.
+            </p>
+          </div>
+
+          {/* Intro Section */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                alt="About StudiPRO"
+                className="rounded-2xl shadow-lg w-full h-80 object-cover"
+              />
+            </div>
+
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-gray-800">
+                Learn Skills That Matter
+              </h3>
+
+              <p className="text-gray-600">
+                At StudiPRO, we believe education should be practical,
+                accessible, and aligned with industry needs.
+                Our courses are created by experienced professionals
+                who understand real workplace challenges.
+              </p>
+
+              <p className="text-gray-600">
+                We focus on hands-on projects, mentorship, and step-by-step
+                learning so that our students gain confidence along with skills.
+              </p>
+
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                Explore Courses
+              </button>
+            </div>
+          </div>
+
+          {/* History Section */}
+          <div className="bg-white rounded-2xl shadow-md p-10 mb-20">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              Our Journey
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              StudiPRO was founded with a simple goal — to bridge the gap
+              between traditional education and real-world industry skills.
+              What started as a small initiative to help learners gain
+              practical knowledge has now grown into a trusted learning
+              platform with thousands of students.
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-4">
+              Over time, we expanded our offerings to include web development,
+              data science, UI/UX design, cloud computing, and more — all
+              designed to match current industry standards.
+            </p>
+          </div>
+
+          {/* Founder Section */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="space-y-5">
+              <h3 className="text-2xl font-bold text-gray-800">
+                Founded by Mr. Balas
+              </h3>
+
+              <p className="text-gray-600">
+                StudiPRO was started by <strong>Mr. Balas</strong>,
+                a passionate educator and technology enthusiast who
+                believes in skill-based learning.
+              </p>
+
+              <p className="text-gray-600">
+                With a vision to make quality education affordable and
+                accessible, Mr. Balas built StudiPRO to help learners
+                grow confidently in their careers through structured
+                learning and mentorship.
+              </p>
+
+              <p className="text-gray-600">
+                From the beginning, Mr. Balas focused on creating a learning
+                ecosystem that emphasizes practical knowledge over theory.
+                Each course is carefully structured to include real-world
+                projects, case studies, and hands-on assignments that prepare
+                learners for actual industry challenges.
+              </p>
+
+              <p className="text-gray-600">
+                Understanding the challenges faced by students and working
+                professionals, he designed StudiPRO to be flexible and
+                learner-friendly. With self-paced modules, expert guidance,
+                and continuous support, learners can upskill without
+                compromising their existing responsibilities.
+              </p>
+
+              <p className="text-gray-600">
+                Today, StudiPRO stands as a growing community of learners,
+                mentors, and industry experts. Under Mr. Balas’s leadership,
+                the platform continues to evolve, adopting modern technologies
+                and innovative teaching methods to ensure long-term career
+                success for every learner.
+              </p>
+            </div>
+
+            <div>
+              <img
+                src="https://png.pngtree.com/png-clipart/20241127/original/pngtree-creative-boys-avatar-png-image_17327785.png"
+                alt="Founder"
+                className="rounded-2xl shadow-lg w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Mission, Vision & Values */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+
+            <div className="bg-white p-8 rounded-2xl shadow">
+              <h4 className="text-xl font-semibold text-gray-800 mb-3">
+                Our Mission
+              </h4>
+              <p className="text-gray-600">
+                To provide practical, industry-ready education that
+                helps learners achieve career success.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow">
+              <h4 className="text-xl font-semibold text-gray-800 mb-3">
+                Our Vision
+              </h4>
+              <p className="text-gray-600">
+                To become a trusted global learning platform
+                for skill-based education.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow">
+              <h4 className="text-xl font-semibold text-gray-800 mb-3">
+                Our Values
+              </h4>
+              <p className="text-gray-600">
+                Quality learning, transparency, continuous improvement,
+                and student success.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Stats */}
+          <div className="grid sm:grid-cols-3 gap-8 text-center">
+            <div>
+              <h4 className="text-4xl font-bold text-blue-600">50K+</h4>
+              <p className="text-gray-600 mt-2">Students Enrolled</p>
+            </div>
+            <div>
+              <h4 className="text-4xl font-bold text-blue-600">120+</h4>
+              <p className="text-gray-600 mt-2">Expert Mentors</p>
+            </div>
+            <div>
+              <h4 className="text-4xl font-bold text-blue-600">300+</h4>
+              <p className="text-gray-600 mt-2">Quality Courses</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
+
+export default About;

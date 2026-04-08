@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+
+         <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+
+    <button type="submit">Submit</button>
+     <ul id="userlist"></ul>
+    </form>
+    
+
+    <script>
+        let form = document.getElementById("form");
+     let   editIndex = -1;
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+
+               let name = document.getElementById("name").value;
+               let email = document.getElementById("email").value;  
+
+               let user = {
+                name:name,
+                email:email
+               }
+                // get existing users
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // add new user
+    users.push(user);
+
+    // store again
+    localStorage.setItem("users", JSON.stringify(users));
+    userdis();
+               
+        })
+
+        function userdis(){
+            let users = JSON.parse(localStorage.getItem("users") || [])
+            userlist.innerHTML = "";
+            users.forEach(function(user,index){
+                let li = document.createElement("li")
+                li.innerHTML = `${user.name} - ${user.email}
+                <button onclick ="edits(${index})">edit</button>
+                <button onclick = "deletey(${index})">delete</button>
+                `
+                userlist.appendChild(li);
+            })
+        }
+       userdis();
+
+
+       function deletey(index){
+        let users = JSON.parse(localStorage.getItem("users") || [])
+        users.splice(index,1)
+         localStorage.setItem("users", JSON.stringify(users));
+
+    userdis();
+       }
+
+       function edits(index){
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let user = users[index];
+
+    document.getElementById("name").value = user.name;
+    document.getElementById("email").value = user.email;
+         editIndex = index;
+
+       }
+       userdis();
+    </script>
+</body>
+</html>

@@ -24,8 +24,18 @@
     // const person1 = new Person("Alice", 30);
     // person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
     
+//     class Person{
+//         constructor(name,age){
+//             this.name = name;
+//             this.age = age
+//         }
+//         greet(){
+//             console.log(`hello my name is ${this.name} and age is ${this.age}`)
+//         }
+//     }
 
-
+//    const data = new Person("milan",23)
+// data.greet()
 
 
 //   b) object 
@@ -49,7 +59,7 @@
     //    In inheritance, the child can access the parent’s properties, but the parent cannot access the child’s properties.
 
                 // ex:
-//                 class Animal {
+//   class Animal {
 //   speak() {
 //     console.log("Animal speaks");
 //   }
@@ -166,7 +176,8 @@
 //     getName() {
 //         return this._name; // public method to access private property
 //     }
-//     getAge() {
+//     getAge() {   
+
 //         return this._age; // public method to access private property
 //     }
 //     setName(name) {
