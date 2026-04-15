@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaSearch, FaCartPlus, FaBars, FaTimes, FaPlus, FaMinus, FaTrash, FaHeart, FaUser, FaMoon, FaSun } from "react-icons/fa";
+import { FaSearch, FaCartPlus, FaBars, FaTimes, FaPlus, FaMinus, FaTrash, FaHeart, FaUser, FaMoon, FaSun, FaCreditCard } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useCartStore } from "../store/useCartStore";
 import { useAuthStore } from "../store/useAuthStore";
@@ -22,6 +22,12 @@ export default function Header() {
 
   const checkout = () => {
     alert("Checkout initiated (frontend only)");
+    clearCart();
+    setCartOpen(false);
+  };
+
+  const handlePayment = () => {
+    alert("Mock Payment Gateway Initiated (Frontend Only).");
     clearCart();
     setCartOpen(false);
   };
@@ -129,6 +135,30 @@ export default function Header() {
       </AnimatePresence>
 
       <AnimatePresence>
+        {menuOpen && (
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="md:hidden absolute top-full left-4 right-4 mt-2 glass rounded-3xl border border-white/10 p-6 z-40 overflow-hidden flex flex-col gap-6 shadow-2xl">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/shop", label: "Shop" },
+              { to: "/recommend", label: "Recommend" },
+              { to: "/care-reminders", label: "Care" },
+              { to: "/disease", label: "Disease Detect" },
+              { to: isLoggedIn ? "/dashboard" : "/login", label: isLoggedIn ? "Dashboard" : "Login" }
+            ].map(({ to, label }) => (
+              <Link key={to} to={to} onClick={() => setMenuOpen(false)} className="text-white text-lg font-black uppercase tracking-widest hover:text-green-400 transition-colors">
+                {label}
+              </Link>
+            ))}
+            <div className="h-px w-full bg-white/10" />
+            <div className="flex gap-6 items-center">
+              <button onClick={() => { setSearchOpen(true); setMenuOpen(false); }} className="text-white hover:text-green-400 transition-all"><FaSearch size={20} /></button>
+              <button onClick={toggleTheme} className="text-white hover:text-green-400 transition-all">{isDark ? <FaSun size={20} /> : <FaMoon size={20} />}</button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
         {cartOpen && (
           <>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setCartOpen(false)} className="fixed inset-0 bg-black/80 backdrop-blur-md z-[100]" />
@@ -175,9 +205,14 @@ export default function Header() {
                     <span className="text-sm font-bold uppercase tracking-[0.3em] opacity-40">Total</span>
                     <span className="text-4xl font-black text-green-400 italic">₹{cartTotal}</span>
                   </div>
-                  <button onClick={checkout} className="w-full py-6 bg-white text-green-950 rounded-[2rem] font-black text-xl shadow-2xl transition-all active:scale-95 hover:bg-green-50 flex items-center justify-center gap-4 uppercase tracking-widest">
-                    Checkout <FaCartPlus />
-                  </button>
+                  <div className="flex flex-col gap-4">
+                    <button onClick={checkout} className="w-full py-5 glass border border-white/20 text-white rounded-3xl font-black text-lg shadow-xl transition-all active:scale-95 hover:bg-white/10 flex items-center justify-center gap-3 uppercase tracking-widest">
+                      Checkout <FaCartPlus />
+                    </button>
+                    <button onClick={handlePayment} className="w-full py-5 bg-gradient-to-r from-green-400 to-emerald-600 text-green-950 rounded-3xl font-black text-lg shadow-2xl transition-all active:scale-95 hover:shadow-[0_0_20px_rgba(7ade80,0.6)] flex items-center justify-center gap-3 uppercase tracking-widest border border-green-300/30">
+                      Pay Now <FaCreditCard />
+                    </button>
+                  </div>
                 </div>
               )}
             </motion.div>

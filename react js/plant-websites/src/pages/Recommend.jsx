@@ -97,14 +97,15 @@ export default function Recommend() {
             ))}
           </div>
 
-          <div className="relative min-h-[300px]">
+          <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
                 key={step}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="absolute inset-0"
+                transition={{ duration: 0.3 }}
+                className="w-full"
               >
                 <div className="text-center mb-10">
                   {React.createElement(QUESTIONS[step].icon, { size: 32, className: "mx-auto text-green-400 mb-6" })}
@@ -163,11 +164,11 @@ export default function Recommend() {
             ))}
           </div>
 
-          <div className="flex justify-center gap-4">
-            <button onClick={restart} className="px-8 py-4 glass text-white border border-white/10 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-white/30 transition-all flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <button onClick={restart} className="w-full sm:w-auto justify-center px-8 py-4 glass text-white border border-white/10 rounded-2xl font-black text-sm uppercase tracking-widest hover:border-white/30 transition-all flex items-center gap-3">
               <FaRedo /> Retake Quiz
             </button>
-            <Link to="/shop" className="px-8 py-4 bg-green-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-green-500 transition-all shadow-xl flex items-center gap-3">
+            <Link to="/shop" className="w-full sm:w-auto justify-center px-8 py-4 bg-green-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-green-500 transition-all shadow-xl flex items-center gap-3">
               Browse All <FaArrowRight />
             </Link>
           </div>

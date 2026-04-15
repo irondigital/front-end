@@ -30,7 +30,7 @@ export default function Home() {
             Elevate Your Space
           </motion.div>
           
-          <motion.h1 variants={itemVariants} className="font-black text-6xl md:text-8xl lg:text-9xl tracking-tighter leading-none text-white italic">
+          <motion.h1 variants={itemVariants} className="font-black text-5xl sm:text-6xl md:text-8xl lg:text-9xl tracking-tighter leading-none text-white italic">
             Nature's <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-green-400 to-emerald-600">
               Masterpiece
@@ -56,7 +56,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="flex-1 relative w-full max-w-lg aspect-square flex items-center justify-center"
+          className="flex-1 relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-md lg:max-w-lg aspect-square hidden lg:flex items-center justify-center"
         >
           <div className="absolute inset-0 bg-green-500/20 blur-[120px] rounded-full scale-125 -z-10" />
           <img src="/images/6.png" alt="Hero Plant" className="w-full h-full object-contain drop-shadow-[0_60px_60px_rgba(0,0,0,0.8)] z-10" />

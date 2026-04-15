@@ -711,23 +711,23 @@
 // 2 5 8
 // 3 4 9
 
-let s=1;
-let h=6;
-let k=7;
+// let s=1;
+// let h=6;
+// let k=7;
 
-for(i=1;i<=3;i++){
-    let row = " "
-    for(j=1;j<=3;j++){
-        if(j===1){
-          row += s++;
-        }
-        else if(j===2){
-          row += h--;
-        }
-         else if(j===3){
-          row += k++;
-        }
+// for(i=1;i<=3;i++){
+//     let row = " "
+//     for(j=1;j<=3;j++){
+//         if(j===1){
+//           row += s++;
+//         }
+//         else if(j===2){
+//           row += h--;
+//         }
+//          else if(j===3){
+//           row += k++;
+//         }
     
-    }
-    console.log(row)
-}
+//     }
+//     console.log(row)
+// }
