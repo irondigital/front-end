@@ -1,0 +1,188 @@
+
+
+n
+
+REST API stands for **Representational State Transfer Application Programming Interface**.
+
+It is a set of rules used for communication between the **client (frontend)** and the **server (backend)** over HTTP.
+
+REST APIs are widely used in web and mobile applications to **send, receive, update, and delete data**.
+
+For example, in an E-Commerce website:
+
+* frontend sends request for products
+* backend returns product data in JSON format
+
+REST APIs make applications scalable, fast, and easy to manage.
+
+---
+
+## Features of REST APIs
+
+The main features of REST APIs are:
+
+1. **Client-Server Architecture**
+   Client and server work independently.
+
+2. **Stateless**
+   Every request contains complete information.
+   Server does not store previous request state.
+
+3. **Cacheable**
+   Responses can be cached for better performance.
+
+4. **Uniform Interface**
+   Standard URL structure and HTTP methods are used.
+
+5. **JSON Format**
+   Data is usually exchanged in JSON format.
+
+Example:
+
+```json
+{
+  "name": "Laptop",
+  "price": 50000
+}
+```
+
+---
+
+## HTTP Methods in REST APIs
+
+REST APIs mainly use four HTTP methods:
+
+### 1. GET
+
+Used to fetch data from server.
+
+Example:
+
+```text
+GET /products
+```
+
+This fetches all products.
+
+---
+
+### 2. POST
+
+Used to create new data.
+
+Example:
+
+```text
+POST /products
+```
+
+This adds a new product.
+
+---
+
+### 3. PUT
+
+Used to update existing data.
+
+Example:
+
+```text
+PUT /products/1
+```
+
+This updates product with ID 1.
+
+---
+
+### 4. DELETE
+
+Used to remove data.
+
+Example:
+
+```text
+DELETE /products/1
+```
+
+This deletes product with ID 1.
+
+---
+
+## RESTful Routes Example
+
+### Product Routes
+
+```text
+GET /products
+GET /products/:id
+POST /products
+PUT /products/:id
+DELETE /products/:id
+```
+
+### Category Routes
+
+```text
+GET /categories
+POST /categories
+PUT /categories/:id
+DELETE /categories/:id
+```
+
+These routes follow REST standards.
+
+---
+
+## Advantages of REST APIs
+
+* easy to use
+* scalable
+* lightweight
+* platform independent
+* fast communication
+* easy frontend integration
+* widely used in MERN stack projects
+
+---
+
+## REST API in Express.js
+
+Express.js is commonly used to create REST APIs.
+
+Example:
+
+```js
+const express = require("express");
+const app = express();
+
+app.use(express.json());
+
+app.get("/products", (req, res) => {
+   res.json({ message: "All products" });
+});
+
+app.post("/products", (req, res) => {
+   res.json({ message: "Product added" });
+});
+
+app.listen(5000);
+```
+
+---
+
+## Real-Life Use Case
+
+REST APIs are used in:
+
+* E-Commerce websites
+* Social media apps
+* Banking applications
+* Food delivery apps
+* Admin dashboards
+
+Example:
+When user clicks **Add to Cart**, frontend sends request to backend API.
+
+---
+
+

@@ -30,7 +30,7 @@ router.get("/register",async(req,res)=>{
   }
 });
 
-router.put("/register",async(req,res)=>{
+router.put("/register/:id",async(req,res)=>{
     try{
         const data = await users.findByIdAndUpdate(req.params.id,req.body,{new:true});
         res.status(200).json({message:"success", data})
@@ -40,7 +40,7 @@ router.put("/register",async(req,res)=>{
     }
 });
 
-router.delete("/register",async(req,res)=>{
+router.delete("/register/:id",async(req,res)=>{
     try{
         const data = await users.findByIdAndDelete(req.params.id);
         res.status(200).json({message:"success", data})

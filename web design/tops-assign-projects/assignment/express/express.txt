@@ -1,0 +1,204 @@
+1) What is Express.js?
+
+Express.js is a fast, minimal, and flexible web framework for Node.js. It is mainly used for building REST APIs, backend servers, and web applications.
+
+It provides features like:
+
+routing
+middleware
+request handling
+response handling
+database integration
+
+Because of its simple syntax and scalability, it is widely used in modern web development.
+
+
+
+2) Why is Express preferred over plain Node.js HTTP server?
+
+Express is preferred because it makes backend development much easier than the built-in Node.js HTTP module.
+
+Reasons:
+
+Easy routing
+
+Express provides methods like app.get(), app.post(), app.put(), and app.delete().
+Middleware support
+It allows using middleware for authentication, validation, and error handling.
+Less code
+The same task requires much less code compared to plain Node.js.
+Better structure
+Routes, middleware, and controllers can be separated into different files.
+Fast API development
+It is specially designed for building REST APIs quickly.
+
+3) Explain RESTful routes for products and categories
+
+RESTful routes are API endpoints that use HTTP methods to perform CRUD operations.
+
+Product Routes
+
+GET /products          -> Get all products
+GET /products/:id      -> Get single product
+POST /products         -> Add new product
+PUT /products/:id      -> Update product
+DELETE /products/:id   -> Delete product
+
+Category Routes
+
+GET /categories
+POST /categories
+PUT /categories/:id
+DELETE /categories/:id
+
+
+4) Explain middleware usage for request validation
+
+Middleware is a function that runs before the route handler.
+
+It is used for:
+
+request validation
+authentication
+authorization
+logging
+error handling
+
+Example:
+
+const validateProduct = (req, res, next) => {
+   if (!req.body.name) {
+      return res.status(400).json({
+         message: "Product name required"
+      });
+   }
+   next();
+}
+
+
+5) Explain JWT authentication flow
+JWT stands for JSON Web Token.
+It is used to secure protected routes.
+
+Flow
+
+User logs in with email and password
+Server verifies credentials
+Server generates JWT token
+Token is sent to client
+Client sends token in header for protected requests
+Middleware verifies token
+If valid → access granted
+
+Example Header
+Authorization: Bearer TOKEN
+
+
+6) Why API contracts are critical before frontend integration?
+
+API contract means the predefined agreement between frontend and backend.
+
+It defines:
+
+endpoint URL
+request body
+response structure
+status codes
+authentication rules
+
+This helps frontend developers know:
+
+what data to send
+what response to expect
+
+It reduces integration issues and makes development faster.
+
+7) What is CRUD in Express.js?
+
+CRUD means:
+
+Create
+Read
+Update
+Delete
+
+These are the four main database operations.
+
+Example
+POST    -> Create
+GET     -> Read
+PUT     -> Update
+DELETE  -> Delete
+
+8) Explain Mongoose and MongoDB Integration
+
+Mongoose is an ODM (Object Data Modeling) library used with MongoDB.
+
+It helps to:
+
+connect database
+create schemas
+validate data
+perform CRUD operations
+
+Example:
+
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://127.0.0.1:27017/ecommerce");
+
+9) Explain ref and populate()
+
+These are used to create relationships between collections.
+
+Example:
+category: {
+   type: mongoose.Schema.Types.ObjectId,
+   ref: "Category"
+}
+
+populate():
+
+Product.find().populate("category")
+
+10) Explain Multer Image Upload
+
+Multer is middleware used to upload files in Express.
+
+It handles:
+
+images
+documents
+multipart form data
+
+Example:
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
+
+11) Why image validation is important?
+
+Image validation helps:
+
+allow only JPG / PNG
+prevent malicious files
+limit file size
+improve security
+optimize server storage
+
+Example:
+limits: { fileSize: 2 * 1024 * 1024 }
+
+12) Why Postman is used?
+
+Postman is used to test APIs.
+
+It helps test:
+
+GET requests
+POST requests
+PUT requests
+DELETE requests
+JWT protected routes
+image upload APIs
+
+It is very useful for backend development and debugging.

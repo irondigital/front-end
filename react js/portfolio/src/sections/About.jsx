@@ -21,7 +21,7 @@ const SERVICES = [
   {
     icon: Zap,
     title: 'Python developer',
-    description: 'working with Rest ap and fast Api'
+    description: 'working with Rest Api and fast Api'
 
   },
 ];

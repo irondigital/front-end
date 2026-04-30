@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-import { Mail, Download } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import SectionLayout from '../components/SectionLayout';
 
 const SOCIAL_LINKS = [
-  { icon: FaGithub, href: 'https://github.com' },
-  { icon: FaLinkedin, href: 'https://linkedin.com' },
-  { icon: FaTwitter, href: 'https://twitter.com' },
-  { icon: Mail, href: 'mailto:test@example.com' },
+  { icon: FaGithub, href: 'https://github.com/irondigital' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/balas-milan-591a55403' },
+  // { icon: FaTwitter, href: 'https://twitter.com' }
+  { icon: Mail, href: 'mailto:milanbalas123@gmail.com' },
 ];
 
 export default function Hero() {
@@ -28,16 +28,16 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-xl md:text-2xl font-semibold text-primary-500 mb-4 block">
-            Hello World, I'm
+            Hello, I'm
           </h2>
           <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
-            John Doe
+            Milan Balas
           </h1>
           <h3 className="text-2xl md:text-4xl font-medium text-slate-600 dark:text-slate-300 mb-6 h-12">
             I am a{' '}
             <span className="text-gradient font-bold">
               <Typewriter
-                words={['Full Stack Developer', 'UI/UX Enthusiast', 'Problem Solver', 'Tech Innovator']}
+                words={['Full Stack Developer', 'Python developer', 'Problem Solver']}
                 loop={0}
                 cursor
                 cursorStyle="_"
@@ -48,7 +48,7 @@ export default function Hero() {
             </span>
           </h3>
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-lg leading-relaxed">
-            I build exceptional and accessible digital experiences for the web. 
+            I build exceptional and accessible digital experiences for the web.
             Passionate about modern web technologies and creating premium user interfaces.
           </p>
 
@@ -57,10 +57,10 @@ export default function Hero() {
               <Mail size={20} />
               Hire Me
             </a>
-            <a href="#resume" className="px-8 py-3 rounded-full glass text-slate-900 dark:text-white font-medium hover:bg-slate-100 dark:hover:bg-white/10 transition-colors flex items-center gap-2">
+            {/* <a href="#resume" className="px-8 py-3 rounded-full glass text-slate-900 dark:text-white font-medium hover:bg-slate-100 dark:hover:bg-white/10 transition-colors flex items-center gap-2">
               <Download size={20} />
               Download CV
-            </a>
+            </a> */}
           </div>
 
           <div className="flex items-center gap-5">
@@ -92,12 +92,12 @@ export default function Hero() {
           <div className="relative w-72 h-72 md:w-96 md:h-96">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-blue-500 rounded-full animate-spin-slow opacity-20 blur-2xl"></div>
             <div className="relative w-full h-full rounded-full glass border-4 border-white/20 p-2 overflow-hidden shadow-2xl">
-              <img 
-                src="/cyber_profile.jpg" 
-                alt="Profile" 
-                className="w-full h-full object-cover object-top rounded-full shadow-[0_0_50px_rgba(20,184,166,0.5)] border-primary-400"
+              <img
+                src="/hacker_mask_profile.png"
+                alt="Hacker Profile"
+                className="w-full h-full object-cover object-center rounded-full shadow-[0_0_60px_rgba(20,184,166,0.6)] border-2 border-primary-500/50"
                 onError={(e) => {
-                  e.target.src = 'https://ui-avatars.com/api/?name=John+Doe&background=14b8a6&color=fff&size=512';
+                  e.target.src = 'https://ui-avatars.com/api/?name=Hacker&background=000&color=fff&size=512';
                 }}
               />
             </div>

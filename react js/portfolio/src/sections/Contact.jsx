@@ -16,17 +16,30 @@ export default function Contact() {
     setSuccess(false);
     setError(false);
 
-    // Using dummy IDs for layout, user would replace these
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_PUBLIC_KEY')
-    
-    // Simulate API call for demo since EmailJS needs real credentials
-    setTimeout(() => {
-      setLoading(false);
-      setSuccess(true);
-      formRef.current.reset();
-      
-      setTimeout(() => setSuccess(false), 5000);
-    }, 1500);
+    // Initializing with public key before sending
+    emailjs.sendForm(
+      'service_bh0s7gl', 
+      'template_r03dngb', 
+      formRef.current, 
+      {
+        publicKey: '0udxnkWUecSkP13ZG',
+      }
+    )
+      .then((result) => {
+        setLoading(false);
+        setSuccess(true);
+        formRef.current.reset();
+        setTimeout(() => setSuccess(false), 5000);
+      }, (error) => {
+        console.error('EmailJS Error Detail:', error);
+        setLoading(false);
+        setError(true);
+        // Providing specific error message for debugging
+        if (error.text) {
+          console.error('Error Text:', error.text);
+        }
+        setTimeout(() => setError(false), 5000);
+      });
   };
 
   return (
@@ -57,8 +70,9 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Email</h3>
               <p className="text-slate-600 dark:text-slate-400 mb-2">Drop me a line anytime</p>
-              <a href="mailto:hello@example.com" className="text-primary-500 hover:underline font-medium">
-                hello@example.com
+              <a href="mailto:milanbalas123@gmail.com" className="text-primary-500 hover:underline font-medium">
+                milanbalas123@gmail.com
+               
               </a>
             </div>
           </motion.div>
@@ -77,7 +91,7 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Phone</h3>
               <p className="text-slate-600 dark:text-slate-400 mb-2">Mon-Fri from 9am to 6pm.</p>
               <a href="tel:+1234567890" className="text-blue-500 hover:underline font-medium">
-                +1 (234) 567-890
+                +91 91730-34163
               </a>
             </div>
           </motion.div>
@@ -95,7 +109,7 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Location</h3>
               <p className="text-slate-600 dark:text-slate-400">
-                San Francisco, CA<br/>Open to remote work worldwide
+                Bagasara(ghed)-362620<br/> Junagadh,Gujrat,India
               </p>
             </div>
           </motion.div>
@@ -119,7 +133,7 @@ export default function Contact() {
                 id="name"
                 required
                 className="w-full px-4 py-3 bg-white/50 dark:bg-black/20 border border-slate-300 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all dark:text-white"
-                placeholder="John Doe"
+                placeholder="Enter your Full name"
               />
             </div>
             
@@ -133,7 +147,7 @@ export default function Contact() {
                 id="email"
                 required
                 className="w-full px-4 py-3 bg-white/50 dark:bg-black/20 border border-slate-300 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all dark:text-white"
-                placeholder="john@example.com"
+                placeholder="Enter a your valid E-mail"
               />
             </div>
             

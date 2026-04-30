@@ -11,27 +11,27 @@ export default function Footer() {
     <footer className="bg-slate-900 border-t border-white/10 pt-16 pb-8 text-slate-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
-          
+
           <div>
-            <h3 className="text-2xl font-bold text-white tracking-tight mb-2">DevPortfolio<span className="text-primary-500">.</span></h3>
+            <h3 className="text-2xl font-bold text-white tracking-tight mb-2">Milan<span className="text-primary-500">.</span></h3>
             <p className="text-slate-400 text-sm max-w-xs">
               Building premium digital experiences with modern web technologies.
             </p>
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="#" className="p-3 glass-dark hover:bg-white/10 rounded-full transition-colors hover:text-primary-400">
+            <a href="https://github.com/irondigital" className="p-3 glass-dark hover:bg-white/10 rounded-full transition-colors hover:text-primary-400">
               <FaGithub size={20} />
             </a>
-            <a href="#" className="p-3 glass-dark hover:bg-white/10 rounded-full transition-colors hover:text-blue-400">
+            <a href="https://www.linkedin.com/in/balas-milan-591a55403" className="p-3 glass-dark hover:bg-white/10 rounded-full transition-colors hover:text-blue-400">
               <FaLinkedin size={20} />
             </a>
-            <a href="#" className="p-3 glass-dark hover:bg-white/10 rounded-full transition-colors hover:text-sky-400">
+            {/* <a href="#" className="p-3 glass-dark hover:bg-white/10 rounded-full transition-colors hover:text-sky-400">
               <FaTwitter size={20} />
-            </a>
+            </a> */}
           </div>
 
-          <motion.button 
+          <motion.button
             whileHover={{ y: -5 }}
             onClick={scrollToTop}
             className="p-4 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors shadow-lg shadow-primary-500/20"
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} John Doe. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Milan Balas. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

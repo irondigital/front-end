@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Moon, Sun, Code2 } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 import { cn } from '../utils/cn';
+import logo from '../assets/logo.png';
 
 const NAV_LINKS = [
   { name: 'Home', href: '#home' },
@@ -45,24 +46,31 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={cn(
         'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
-        isScrolled 
-          ? 'py-4 glass dark:glass-dark' 
+        isScrolled
+          ? 'py-4 glass dark:glass-dark'
           : 'py-6 bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="flex items-center gap-2 group">
-          <motion.div 
-            whileHover={{ rotate: 180 }} 
-            transition={{ duration: 0.3 }}
-            className="p-2 bg-primary-500 text-white rounded-xl shadow-[0_0_15px_rgba(20,184,166,0.6)] group-hover:shadow-[0_0_25px_rgba(20,184,166,0.9)] transition-shadow"
+        <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="flex items-center gap-2 group relative">
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-primary-500/40 border border-primary-400/50"
           >
-            <Code2 size={24} />
+            M
           </motion.div>
-          <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white group-hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.8)] transition-all duration-300">
-            DevPortfolio
-          </span>
+          <div className="flex flex-col -gap-1">
+            <span className="text-xl font-black tracking-tighter text-slate-900 dark:text-white group-hover:text-primary-500 transition-colors">
+              MILAN
+            </span>
+            <span className="text-[10px] font-bold tracking-[0.2em] text-primary-500 opacity-80 uppercase leading-none">
+              Developer
+            </span>
+          </div>
+          {/* Subtle glow effect on hover */}
+          <div className="absolute -inset-2 bg-primary-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
         </a>
 
         {/* Desktop Nav */}
@@ -80,7 +88,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          
+
           {/* Theme Toggle Button */}
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -98,7 +106,7 @@ export default function Navbar() {
           <button onClick={toggleTheme} className="p-2 text-slate-700 dark:text-slate-200">
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <button 
+          <button
             onClick={() => setMobileMenuOpen(true)}
             className="p-2 text-slate-700 dark:text-slate-200"
           >
@@ -117,7 +125,7 @@ export default function Navbar() {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 z-50 bg-white dark:bg-dark flex flex-col pt-24 px-8"
           >
-            <button 
+            <button
               onClick={() => setMobileMenuOpen(false)}
               className="absolute top-6 right-6 p-2 text-slate-700 dark:text-slate-200"
             >

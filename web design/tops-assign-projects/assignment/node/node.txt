@@ -1,0 +1,314 @@
+
+Node.js is an **open-source, cross-platform JavaScript runtime environment** that allows developers to run JavaScript code outside the browser.
+
+It is mainly used for:
+
+* backend development
+* REST APIs
+* real-time applications
+* web servers
+* scalable network applications 
+
+Node.js is built on **Google Chrome’s V8 JavaScript engine**, which makes it fast and efficient. 
+
+---
+
+## Features of Node.js
+
+### 1. Asynchronous
+
+Node.js works asynchronously, which means it does not wait for one task to finish before starting another.
+
+Example:
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+   console.log("Hello");
+}, 2000);
+
+console.log("End");
+```
+
+### Output
+
+```text
+Start
+End
+Hello
+```
+
+This happens because Node.js uses an **event loop**. 
+---
+
+## 2. Non-Blocking I/O
+
+Node.js uses **non-blocking input/output operations**.
+
+This means tasks like:
+
+* file reading
+* database query
+* API requests
+
+do not block the execution of other code. 
+Example:
+
+```js
+const fs = require("fs");
+
+fs.readFile("data.txt", "utf8", (err, data) => {
+   console.log(data);
+});
+
+console.log("File reading started");
+```
+
+The file is read in the background.
+
+---
+
+## 3. Single Threaded
+
+Node.js works on a **single-threaded event loop model**.
+
+Instead of creating multiple threads for every request, it handles multiple requests using the event loop.
+
+This makes it lightweight and scalable.
+
+---
+
+## 4. Event Loop
+
+The event loop is the most important concept in Node.js.
+
+It continuously checks for:
+
+* pending requests
+* timers
+* callbacks
+* I/O operations
+
+and executes them efficiently. 
+
+Simple meaning:
+
+It is like a **task manager** that keeps checking what needs to be done next.
+
+---
+
+## 5. Why Node.js is Popular
+
+Node.js is popular because:
+
+* fast performance
+* scalable
+* same language for frontend and backend
+* huge package ecosystem
+* real-time support
+* easy API development 
+
+---
+
+## 6. NPM (Node Package Manager)
+
+NPM is the default package manager for Node.js.
+
+It is used to install libraries and packages.
+
+Example:
+
+```bash
+npm init -y
+npm install express
+```
+
+NPM provides thousands of ready-to-use packages. 
+
+---
+
+## 7. Modules in Node.js
+
+Node.js uses modules to organize code.
+
+### Built-in Modules
+
+* fs
+* http
+* path
+* os
+
+Example:
+
+```js
+const fs = require("fs");
+```
+
+### Custom Module
+
+```js
+function add(a, b) {
+   return a + b;
+}
+
+module.exports = add;
+```
+
+---
+
+## 8. Creating Server in Node.js
+
+Node.js can create web servers using the `http` module.
+
+Example:
+
+```js
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+   res.end("Hello from Node.js");
+});
+
+server.listen(5000);
+```
+
+This creates a server on port 5000. 
+
+---
+
+## 9. File System Module
+
+The `fs` module is used to work with files.
+
+### Write File
+
+```js
+const fs = require("fs");
+
+fs.writeFileSync("demo.txt", "Hello Node");
+```
+
+### Read File
+
+```js
+const data = fs.readFileSync("demo.txt", "utf8");
+console.log(data);
+```
+
+---
+
+## 10. Path Module
+
+Used for file paths.
+
+Example:
+
+```js
+const path = require("path");
+
+console.log(path.join(__dirname, "index.js"));
+```
+
+---
+
+## 11. OS Module
+
+Used to get system information.
+
+Example:
+
+```js
+const os = require("os");
+
+console.log(os.platform());
+console.log(os.arch());
+```
+
+
+## 12. Callbacks in Node.js
+
+Callbacks are functions passed as arguments.
+
+Example:
+
+```js
+function greet(name, callback) {
+   console.log("Hello " + name);
+   callback();
+}
+
+greet("Milan", () => {
+   console.log("Welcome");
+});
+```
+
+---
+
+## 13. Promises
+
+Promises are used for asynchronous operations.
+
+Example:
+
+```js
+const promise = new Promise((resolve, reject) => {
+   resolve("Success");
+});
+
+promise.then((data) => {
+   console.log(data);
+});
+```
+
+
+
+## 14. Async / Await
+
+Modern way to handle async code.
+
+Example:
+
+```js
+async function getData() {
+   return "Hello";
+}
+
+getData().then(console.log);
+```
+
+
+
+## 15. Use Cases of Node.js
+
+Node.js is used in:
+
+* chat applications
+* E-Commerce backend
+* REST APIs
+* streaming apps
+* dashboards
+* authentication systems
+
+
+
+## 16. Advantages
+
+* fast
+* scalable
+* lightweight
+* JavaScript everywhere
+* large community
+* huge npm ecosystem
+
+
+
+## 17. Disadvantages
+
+* not best for CPU-heavy tasks
+* callback complexity
+* single-thread limitations for heavy computation
+
+
+
+

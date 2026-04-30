@@ -5,24 +5,23 @@ import SectionLayout from '../components/SectionLayout';
 const TIMELINE = [
   {
     type: 'work',
-    title: 'Senior Frontend Engineer',
-    org: 'Tech Innovators Inc.',
-    date: '2021 - Present',
-    description: 'Lead the frontend development of a fintech web application using React, TypeScript, and Tailwind CSS. Mentored junior developers and established CI/CD pipelines.',
+    title: 'Mern stack developer',
+    date: 'Present',
+    description: 'Basically now i am working in node js and react js. also i can created many project as a mern stack developer ',
   },
   {
-    type: 'work',
-    title: 'Full Stack Developer',
-    org: 'Creative Web Agency',
-    date: '2018 - 2021',
-    description: 'Developed and maintained various client projects. Built custom e-commerce solutions with Node.js and Next.js, integrating Stripe payment gateways.',
+    type: 'Graduation',
+    title: 'Electrionics and communication engineer',
+    org: 'Gec Rajkot',
+    date: '2019 - 2023',
+    description: 'working in many subject like hardware,software and embeded ware',
   },
   {
-    type: 'education',
-    title: 'B.S. in Computer Science',
-    org: 'State University',
-    date: '2014 - 2018',
-    description: 'Graduated with honors. Specialized in human-computer interaction and web technologies. Member of the competitive programming team.',
+    type: 'Education',
+    title: '12th science',
+    org: 'Shree Parishram Science School',
+    date: '2017-2019',
+    description: 'i completed my 12th in match stream in 2019 with 55.34%',
   },
 ];
 

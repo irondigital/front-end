@@ -4,29 +4,30 @@ import { FaGithub } from 'react-icons/fa';
 import SectionLayout from '../components/SectionLayout';
 
 const PROJECTS = [
+  
   {
-    title: 'DeFi Portfolio Tracker',
-    description: 'A cryptocurrency portfolio dashboard built with React and Web3.js. Features real-time price charts, transaction history, and dark mode.',
-    image: '/project_dashboard.png', // We'll assume the generated image is placed here or it will fallback to placeholder
-    tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Web3.js'],
-    github: 'https://github.com',
-    demo: 'https://example.com'
-  },
-  {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack headless e-commerce solution using Next.js, Stripe for payments, and Sanity CMS for product management.',
+    title: 'Planto',
+    description: 'this also work like e-commerce where everyone can buy homedecor trees and flower.',
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2069&auto=format&fit=crop',
-    tech: ['Next.js', 'Stripe', 'Sanity', 'Tailwind'],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    tech: ['React js', 'Open Ai', 'Razor  pay', 'Tailwind'],
+    github: 'https://github.com/irondigital/plant-websites',
+    demo: 'https://plant-websites.vercel.app/'
   },
   {
-    title: 'AI Image Generator',
-    description: 'SaaS platform allowing users to generate images from text descriptions using OpenAI API. Includes user auth and credit system.',
+    title: 'Mr. Store',
+    description: 'this website is working like flipcart. this is gave more product compare to anyone with flat discount and easy payment methods.',
     image: 'https://images.unsplash.com/photo-1678281146604-0ee064e62aae?q=80&w=2070&auto=format&fit=crop',
-    tech: ['React', 'Node.js', 'MongoDB', 'OpenAI'],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    tech: ['React', 'Razor pay', 'Tailwind css', 'OpenAI'],
+    github: 'https://github.com/irondigital/Mr.store',
+    demo: 'https://mr-store-three.vercel.app/'
+  },
+  {
+    title: 'Edupro',
+    description: 'This website is for Students. Students can acess any course with Cheap price and study online in house. this course is very good for all because we have verify team those created this course like scrach to advanced.',
+    image: '/project_dashboard.png', // We'll assume the generated image is placed here or it will fallback to placeholder
+    tech: ['React', 'MongoDB', 'Nodejs', 'Rest api'],
+    github: 'https://github.com/irondigital/front-end/tree/master/react%20js/studypro%20-%20Copy',
+    demo: 'https://github.com/irondigital/front-end/tree/master/react%20js/studypro%20-%20Copy'
   }
 ];
 
